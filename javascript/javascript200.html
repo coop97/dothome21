@@ -179,12 +179,12 @@
     </ol>
 
     <ol>
-        <li><a href="javascript200.html">조건문</a></li>
-        <li><a href="javascript200.html">반복문</a></li>
+        <li><a href="javascript300.html">함수(function)</a></li>
     </ol>
 
     <ol>
-        <li><a href="javascript300.html">함수(function))</a></li>
+        <li><a href="javascript200.html">조건문</a></li>
+        <li><a href="javascript200.html">반복문</a></li>
     </ol>
 
     <h2 class="mt20">제어문</h2>
@@ -266,21 +266,15 @@
 <pre class="line-numbers"><code class="language-js">{
     let num = 100;
 
-    if( num == 90){
-        document.write("*** 02. 다중 if문 ***");
-        document.write("조건문이 실행되었습니다.(num == 90)");
-    } else if ( num == 100 ){
-        document.write("*** 02. 다중 if문 ***");
-        document.write("조건문이 실행되었습니다.(num == 100)");
-    } else if ( num == 200 ){
-        document.write("*** 02. 다중 if문 ***");
-        document.write("조건문이 실행되었습니다.(num == 200)");
-    } else if ( num == 300 ){
-        document.write("*** 02. 다중 if문 ***");
-        document.write("조건문이 실행되었습니다.(num == 300)");
+    if( num == 100){
+        document.write("*** 03. 중첩 if문 ***");
+        document.write("조건문이 실행되었습니다.(1)");
+        if ( num == 100 ){
+            document.write("조건문이 실행되었습니다.(2)");
+        }
     } else {
-        document.write("*** 02. 다중 if문 ***");
-        document.write("조건문이 실행되었습니다.(num == XX)");
+        document.write("*** 03. 중첩 if문 ***");
+        document.write("조건문이 실행되었습니다.(3)");
     }
 }
 </code></pre>
@@ -325,7 +319,7 @@
 
      <!-- //sample5 -->
      <div id="sample5" class="sample">
-        <h2>05. 삼항 연산자(조건부 연산자)<span class="dot"></span></h2>
+        <h2>05. 삼항 연산자<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let num = 100;
@@ -336,7 +330,7 @@
     //    document.write("false<br><br>");
     //}
 
-    document.write("*** 05. 조건부 연산자***<br>");
+    document.write("*** 05. 삼항 연산자***<br>");
     (num == 100) ? document.write("true<br><br>") : document.write("false<br><br>");
 }
 </code></pre>
@@ -408,21 +402,18 @@
         //sample3
         //03. 중첩 if문
         {
-            let num = 100;
+        let num = 100;
 
-            if( num == 100 ){
-                document.write("*** 03. 중첩 if문 ***<br>");
-                document.write("조건문이 실행되었습니다.(1)<br>");
-                if( num == 100 ){
-                    document.write("조건문이 실행되었습니다.(2)<br>");
-                    if( num == 100){
-                        document.write("조건문이 실행되었습니다.(3)<br><br>");
-                    }
-                }
-            } else {
-                document.write("*** 03. 중첩 if문 ***<br>");
-                document.write("조건문이 실행되었습니다.(4)<br><br>");
+        if( num == 100){
+            document.write("*** 03. 중첩 if문 ***<br>");
+            document.write("조건문이 실행되었습니다.(1)<br>");
+            if ( num == 100 ){
+                document.write("조건문이 실행되었습니다.(2)<br><br>");
             }
+        } else {
+            document.write("*** 03. 중첩 if문 ***<br>");
+            document.write("조건문이 실행되었습니다.(3)<br><br>");
+            }   
         }
         //sample4
         //04. switch문
