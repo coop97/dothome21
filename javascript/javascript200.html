@@ -165,6 +165,9 @@
         ol li.active a {
             color: #fff;
         }
+        .mt20{
+            margin-top: 20px;
+        }
     </style>
 
     <style>
@@ -904,10 +907,26 @@
         }
 
         //sample102 : 테이블 만들기2
-        {
-            for( let i=10; i>=1; i--);
+        {   
+            document.write("*** 102. 테이블 만들기 ***<br>");
+            
+            let num = 100;
+            let table = "<table>";
+
+            for( let i=10; i>=1; i-- ){
+                table += "<tr>";
+                for( let j=10; j>=1; j-- ){
+                    table += "<td>"+ num +"</td>";
+                    num--;
+                }
+                table += "</tr>";
+            }
+
+            table += "</table>";
+
+            document.write(table, "<br>");
         }
-        
+
         //sample11
         //11. for in문
         {
