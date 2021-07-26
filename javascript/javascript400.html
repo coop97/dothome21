@@ -356,17 +356,17 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
     let num = 1;
-    let table = "<table>";
+    let table = "&lt;table&gt;";
 
     for( let i=1; i&lt;=10; i++ ){
-        table += "<tr>";
+        table += "&lt;tr&gt;";
         for( let j=1; j&lt;=10; j++ ){
-            table += "<td>"+ num +"</td>";
+            table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
             num++;
         }
-        table += "</tr>";
+        table += "&lt;/tr&gt;";
     }
-    table += "</table>";
+    table += "&lt;/table&gt;";
 
     document.write(table);
 }
@@ -383,18 +383,18 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{       
     let num = 100;
-    let table = "<table>";
+    let table = "&lt;table&gt;";
 
     for( let i=10; i>=1; i-- ){
-        table += "<tr>";
+        table += "&lt;tr&gt;";
         for( let j=10; j>=1; j-- ){
-            table += "<td>"+ num +"</td>";
+            table += "&lt;td&gt;"+ num +"&lt;/td&gt;";
             num--;
         }
-        table += "</tr>";
+        table += "&lt;/tr&gt;";
     }
 
-    table += "</table>";
+    table += "&lt;/table&gt;";
 
     document.write(table);
 }
@@ -407,9 +407,25 @@
 
     <!-- sample9 -->
     <div id="sample9" class="sample">
-        <h2>09. 테이블 만들기3<span class="dot"></span></h2>
+        <h2>09. 테이블 만들기3 - 짝수<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">{   
+    let num = 2;
+    let table = "&lt;table&gt;";
+
+    for (let i=1; i&lt;=10; i++) {
+        table += "&lt;tr&gt;";
+        for (let j=1; j&lt;=10; j++) {
+            table += "&lt;td&gt;" + num + "&lt;/td&gt;";
+            num += 2;
+        }
+        table += "&lt;/tr&gt;";
+    }
+
+    table += "&lt;/table&gt;";
+
+    document.write(table);
+}
 </code></pre>
         </div>
     </div>
