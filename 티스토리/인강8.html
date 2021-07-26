@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>변수의 스코프</h2>
+    <h3>지역변수</h3>
+    <p>1. 변수 스코프: 변수 참조가 가능한 유효범위<br>
+        2. 함수 내에 선언된 변수, locak variable<br> 
+        3. 변수가 선언된 블록에서만 유효한 변수<br> 
+        4. 함수가 시작 시 생성, stack에 생성<br> 
+        5. 함수가 종료되면 변수도 소멸<br> 
+        6. 초기화 전 쓰레기 값을 가지고 있음<br> 
+        7. 매개변수도 지역변수<br><br>
+    </p>
+    <h3>유효변수 </h3>
+    <p>1. 변수가 선언된 블록에서만 유효<br> 
+        2. 함수 시작 시 생성되고 종료 시 소멸<br> 
+        3. 생성 시 쓰레기 값을 가짐<br> 
+        4. 매개변수도 지역변수임<br> 
+        5. 블록 내에서 변수 선언이 가능(C99)<br> 
+        6. 선언된 블록에서 유효<br><br>
+        * C 언어 표준 : 1983년 ANSI C라는 표준안을 발표, 이후 ISO 주도로 표준안을 발표<br><br>
+    </p>
+    <h3>전역변수</h3>
+    <p>1.프로그램 내 전체 함수에서 유효, Global Variable<br> 
+        2.프로그램 시작 시 생성, 데이터 영역에 생성<br>
+        3. 프로그램 종료 시 소멸<br> 
+        4. 함수 밖에서 선언<br> 
+        5. 자동으로 0으로 초기화<br> 
+        6.전역변수는 프로그램 전체에서 참조하므로 복잡성을 증대<br> 
+        7.모듈화의 독립성 확보가 어려움<br> 
+        8.메모리 공간을 점유<br><br>
+        *동일한 이름의 전역변수와 지역변수 사용 시 지역변수가 우선함<br><br>
+    </p>
+    <h3>다중 파일</h3>
+    <p>extern을 선언하여 외부에서도 참조 가능<br></p>
+    <h4>extern int 변수;</h4>
+    <p>외부에 선언된 변수를 참조한다는 선언문<br></p>
+</body>
+</html>

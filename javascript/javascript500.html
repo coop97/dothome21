@@ -382,14 +382,28 @@
         {
             const arr = [100, 200, "javascript"];
 
-            document.write("05. 배열 : 데이터 불러오기 : for문 ***<br>");
+            document.write("*** 05. 배열 : 데이터 불러오기 : for문 ***<br>");
 
             for(let i=0; i<arr.length; i++){
                 document.write(arr[i], "<br>");
             }
+            
+            document.write("<br>");
         }
 
-        // 7월 26일 숙제
-        //05. 배열 데이터의 합을 출력하세요!!
-        
+        //sample6 7월 26일 숙제
+        //06. 배열 데이터의 합을 출력하세요!!
+        {
+            let sum = 0;
+            const num = [100, 200, 300, 400, 500];
+
+            document.write("*** 06. 배열 ***<br>");
+
+            for(let i of num){
+                sum += i; 
+            }
+            document.write(sum);
+            document.write("<br><br>");
+        }
+
     </script>

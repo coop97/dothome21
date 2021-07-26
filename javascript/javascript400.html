@@ -439,7 +439,7 @@
             //    if( i % 2 == 0 ){
             //        document.write(i, "&nbsp;");
             //    }
-            for( let i =2; i<100; i+=2 ){
+            for( let i =2; i<=100; i+=2 ){
             document.write(i, "&nbsp;", "<span> </spen>");
             } 
         
@@ -553,9 +553,9 @@
             let num = 100;
             let table = "<table>";
 
-            for( let i=10; i>=1; i-- ){
+            for( let i=1; i<=10; i++ ){
                 table += "<tr>";
-                for( let j=10; j>=1; j-- ){
+                for( let j=1; j<=10; j++ ){
                     table += "<td>"+ num +"</td>";
                     num--;
                 }
@@ -568,32 +568,24 @@
         }
 
         //sample9 : 테이블 만들기3(짝수만 나오게)
-        //{   
-        //    document.write("*** 09. 테이블 만들기3 ***<br>");
-
-        //    for(let i=1; i<=200; i++){
-        //        if(i % 2 == 0);
-        //    }
-        //}
-
         {   
             document.write("*** 09. 테이블 만들기 ***<br>");
-            
-            let num = 1;
+
+            let num = 2;
             let table = "<table>";
 
-            for( let i=1; i<=20; i++){
+            for (let i=1; i<=10; i++) {
                 table += "<tr>";
-                for( let j=1; j<=10; j++ ){
-                    table += "<td>"+ num +"</td>";
-                    num++;
+                for (let j=1; j<=10; j++) {
+                    table += "<td>" + num + "</td>";
+                    num += 2;
                 }
                 table += "</tr>";
             }
 
             table += "</table>";
 
-            document.write(table, "<br>");
+            document.write(table);
         }
 
     </script>
