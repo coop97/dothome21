@@ -291,7 +291,7 @@
 </code></pre>
         </div>
     </div>
-    <!-- //sample1 -->
+    <!-- //sample2 -->
 
     <hr>
 
@@ -400,19 +400,13 @@
     document.write(num[3]);
     document.write(num[4]);
 
-    //for문
     for(let i=0; i&lt;num.length; i++){
         document.write(num[i]);
     }
 
-    //forEach()             콜백함수
     num.forEach(function(el){
         document.write(el);
     });
-
-    //forEach(element, index, array)
-    //num.forEach(function(){});  //es5
-    //num.forEach(()=>{});    //es6
 
     num.forEach((element, index, array)=>{
         document.write(element);
@@ -473,10 +467,9 @@
 <pre class="line-numbers"><code class="language-js">{
     const num = [100, 200, 300, 400, 500];
 
-    //num.map(function(){});
     num.map((el) => {
         document.write(el);
-        console.log(el);    //콘솔로 확인해야나옴
+        console.log(el);  
     });
 
     num.map((element, index, array) => {
@@ -531,7 +524,7 @@
     document.write(obj. a)
     document.write(obj. b)
     document.write(obj. c)
-    document.write(obj['a'])    //이런 방법도 있음
+    document.write(obj['a'])  
     document.write(obj['b'])
     document.write(obj['c'])
 }
@@ -632,10 +625,6 @@
     document.write(obj[2].b;
     document.write(obj[2].c);
 
-    //obj.map(function(){})
-    //obj.map((el) => {});
-    //obj.map(el => {});      //하나일 경우 생략 가능
-
     obj.map(el => {
         document.write(el.a);
         document.write(el.b);
@@ -686,7 +675,7 @@
         b: 200,
         c: "javascript",
     }
-    const spread = {...obj}     //복사한 것
+    const spread = {...obj}   
 
     document.write(spread.a);
     document.write(spread.b);
@@ -760,7 +749,7 @@
         b: 200,
         c: "javascript",
     }
-    const {a, b, c} = obj;      //위의 구조와 같은 값임
+    const {a, b, c} = obj; 
 
     document.write(a);
     document.write(b);
@@ -783,7 +772,7 @@
         b: 200,
         c: "javascript",
     }
-    const {a:name1, b:name2, c:name3} = obj;      //위의 구조와 같은 값임
+    const {a:name1, b:name2, c:name3} = obj;
 
     document.write(name1);
     document.write(name2);
