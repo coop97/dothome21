@@ -346,24 +346,20 @@
 <pre class="line-numbers"><code class="language-js">{
     const str1 = "자바스크립트";
     const str2 = "제이쿼리";
-
     document.querySelector(".sample01_R1").innerHTML = str1 + str2;
 
     const num1 = 100;
     const num2 = 200;
-
     document.querySelector(".sample01_R2").innerHTML = num1 + num2;
 
     const text1 = "모던 ";
     const text2 = "자바스크립트 ";
     const text3 = "핵심";
-
     document.querySelector(".sample01_R3").innerHTML = "나는" + text1 + "modern " + text2 + "javascript " + text3 + "을 배우고 싶다";
     
     const tem1 = "모던 ";
     const tem2 = "자바스크립트 ";
     const tem3 = "핵심";
-
     document.querySelector(".sample01_R4").innerHTML = `나는 ${tem1} modern ${tem2}javascript ${tem3}을 배우고 싶다`;
 }
 </code></pre>
@@ -412,12 +408,10 @@
 <pre class="line-numbers"><code class="language-js">{
     const str1 = "자바스크립트";
     const currentStr1 = str1.length;
-
     document.querySelector(".sample02_R1").innerHTML = currentStr1;
 
     const str2 = "javascript";
     const currentStr2 = str2.length;
-
     document.querySelector(".sample02_R2").innerHTML = currentStr2;
 }
 </code></pre>
@@ -466,12 +460,10 @@
 <pre class="line-numbers"><code class="language-js">{
     const str1 = "javascript";
     const currentStr1 = str1.toUpperCase();
-
     document.querySelector(".sample03_R1").innerHTML = currentStr1;
 
     const str2 = "JAVASCRIPT";
     const currentStr2 = str2.toLowerCase();
-
     document.querySelector(".sample03_R2").innerHTML = currentStr2;
 }
 </code></pre>
@@ -514,7 +506,6 @@
 <pre class="line-numbers"><code class="language-js">{
     const str1 = "    ' javascript '    ";
     const currentStr1 = str1.trim();
-
     document.querySelector(".sample04_R1").innerHTML = currentStr1;
 }
 </code></pre>
@@ -696,12 +687,10 @@
 <pre class="line-numbers"><code class="language-js">{
     const str1 = "자바스크립트(javascript) 공부.";
     const text1 = str1.charAt(4);
-
     document.querySelector(".sample06_R1").innerHTML = text1;
 
     const str2 = "자바스크립트(javascript) 공부.";
     const text2 = str2.charAt();
-
     document.querySelector(".sample06_R2").innerHTML = text2;
 }
 </code></pre>
@@ -865,27 +854,22 @@
 <pre class="line-numbers"><code class="language-js">{
     const str1 = "자바스크립트(javascript) 공부";
     const text1 = str1.replace("공부", "스터디");
-
     document.querySelector(".sample08_R1").innerHTML = text1;
 
     const str2 = "img01.jpg";
     const text2 = str2.replace("img01.jpg", "img02.jpg");
-
     document.querySelector(".sample08_R2").innerHTML = text2;
 
     const str3 = "010-3848-0398";
     const text3 = str3.replace("-", "");
-
     document.querySelector(".sample08_R3").innerHTML = text3;
 
     const str4 = "010-3848-0398";
     const text4 = str4.replace(/-/g, '');
-
     document.querySelector(".sample08_R4").innerHTML = text4;
 
     const str5 = "010-3848-0398";
     const text5 = str5.replace(/-/g, '');
-
     document.querySelector(".sample08_R5").innerHTML = text5;
 }
 </code></pre>
@@ -952,27 +936,22 @@
 <pre class="line-numbers"><code class="language-js">{
     const str1 = "자바스크립트(javascript) 공부";
     const text1 = str1.split('');
-
     document.querySelector(".sample09_R1").innerHTML = text1;
 
     const str2 = "자바스크립트(javascript) 공부";
     const text2 = str2.split('');
-
     document.querySelector(".sample09_R2").innerHTML = text2;
 
     const str3 = "자바스크립트(javascript) 공부";
     const text3 = str3.split('').join('/');
-
     document.querySelector(".sample09_R3").innerHTML = text3;
 
     const str4 = "https://webstoryboy.co.kr/main.html?id=1234&name=webs";
     const text4 = str4.split('&');
-
     document.querySelector(".sample09_R4").innerHTML = text4;
 
     const str5 = "https://webstoryboy.co.kr/main.html?id=1234&name=webs";
     const text5 = str5.split(/&|\?/);
-
     document.querySelector(".sample09_R5").innerHTML = text5;
     console.log(text5)
 }
@@ -1193,6 +1172,7 @@
         //substr(시작 인덱스, 글자수)
         {
             const str = "자바스크립트(javascript) 공부";
+
             const text1 = str.slice(1, 4);
 
             document.querySelector(".sample07_N1").innerHTML = "1";

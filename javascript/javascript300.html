@@ -295,9 +295,14 @@
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     function func(str){
-        document.write(str)
+        document.write(str);
     }
     func("03. 함수가 실행되었습니다.");
+
+    function func1(str1, str2){
+        document.write(str1, str2);
+    }
+    func1("함수가", "실행되었습니다.");
 }
 </code></pre>
         </div>
@@ -315,7 +320,6 @@
         const str = "함수가 실행되었습니다.<br><br>"
         return str;
     }
-
     document.write(func());
 }
 </code></pre>
@@ -588,7 +592,37 @@
     <div id="sample19" class="sample">
         <h2>19. 콜백 함수 : 동기/비동기<span class="dot"></span></h2>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">{
+    function funA(){
+        console.log("funA가 실행되었습니다.");
+    }
+    function funB(){
+        console.log("funB가 실행되었습니다.");
+    }
+    funB();
+    funA();
+
+        setTimeout(() => {
+            console.log("funC가 실행되었습니다.");
+        }, 1000);
+    }
+    function funD(){
+        console.log("funD가 실행되었습니다.");
+    }
+    funC();
+    funD();
+
+    function funE(callback){
+        setTimeout(() => {
+            console.log("funE가 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funF(){
+        console.log("funF가 실행되었습니다.");
+    }
+    funE(funF);
+}
 </code></pre>
         </div>
     </div>
@@ -627,10 +661,15 @@
         //03. 매개변수 함수
         {
             function func(str){
-                document.write("*** 03. 매개변수 함수 ***<br>")
-                document.write(str)
+                document.write("*** 03. 매개변수 함수 ***<br>");
+                document.write(str);
             }
-            func("03. 함수가 실행되었습니다.<br><br>");
+            func("03. 함수가 실행되었습니다.<br>");
+
+            function func1(str1, str2){
+                document.write(str1, str2);
+            }
+            func1("함수가", "실행되었습니다.<br><br>");
         }
 
         //sample4
@@ -643,7 +682,6 @@
 
             document.write("*** 04. 리턴값 함수 ***<br>")
             document.write(func());
-
         }
 
         //sample5
