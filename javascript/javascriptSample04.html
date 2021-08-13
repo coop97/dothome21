@@ -232,6 +232,11 @@
             //시간 표시
             const nowTime = today.toLocaleString();
 
+            
+            const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+            const day = date.getDay();   
+            $('.day').text(dayList[day]);
+            
 
             const time = document.querySelector(".time");
             time.innerHTML = nowTime;
