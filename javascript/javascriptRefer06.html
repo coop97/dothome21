@@ -32,7 +32,8 @@
             margin-bottom: 400px;
         }
         h1 {
-            padding: 20px 0;
+            padding-top: 40px;
+            padding-bottom: 20px;
         }
         h1 a {
             font-family: 'TmonMonsori';
@@ -228,25 +229,31 @@
             border-style: solid;
         }
         @media (max-width: 800px) {
-            .menu li a {
-                font-size: 12px;
-                padding: 5px 20px;
+            body {
+                font-size: 13px;
             }
-            .list li {
-                line-height: 1.2;
+            h1 {
+            text-align: center;
             }
-            .list a {
-                font-size: 12px;
-            }
+            
             .sample h2 {
-            padding: 12px 10px;
+            padding: 7px 5px 5px;
             font-size: 14px;
+            font-weight: normal;
             }
             .sample h2 .dot {
                 display: none;
             }
-            .sample pre {
-                font-size: 14px;
+            .view {
+                padding: 5px;
+                max-width: 800px;
+                overflow: auto;
+            }
+            .view th {
+                font-weight: normal;
+            }
+            .view table th.result {
+                color: #000;
             }
         }
     </style>
