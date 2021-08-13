@@ -21,8 +21,7 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;     /* width - border */
-            /* width : margin + padding + border */
+            box-sizing: border-box;
         }
         ul {
             list-style: none;
@@ -99,14 +98,13 @@
                 padding: 5px 20px;
             }
         }
-
         /* dog */
         .wrap {
             width: 300px;
             height: 300px;
-            background: #0066FF;
+            background: #0066ff;
             position: relative;
-            box-shadow: 0 -10px 0 0 #0057D9;
+            box-shadow: 0 -10px 0 0 #0057d9;
             border-radius: 50%;
         }
         .body {
@@ -154,7 +152,7 @@
             width: 45px;
             height: 40px;
             position: absolute;
-            background: #E6E6E6;
+            background: #e6e6e6;
             border-radius: 15px;
             bottom: 0px;
             overflow: hidden;
@@ -253,7 +251,7 @@
             left: auto;
             right: -10px;
             border-radius: 300px 100px 150px 50px/600px 100px 350px 50px;
-            background: #CCCCCC;
+            background: #cccccc;
             box-shadow: inset 5px 0 0 15px #fff;
             transform-origin: 0% 100%;
         }
@@ -318,7 +316,7 @@
             left: auto;
             right: 30px;
         }
-        .body .head .eyes:nth-of-type(2):before,
+        .body .head .eyes:nth-of-type(2):before, 
         .body .head .eyes:nth-of-type(2):after {
             background: #fff;
         }
@@ -437,19 +435,19 @@
                     <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
                     <li><a href="javascriptRefer10.html">요소 객체</a></li>
                     <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
+                    <li><a href="javascriptRefer12.html">숫자 객체</a></li>
                 </ul>
                 <ul>
-                    <li><a href="javascriptRefer12.html">샘플</a></li>
-                    <li><a href="javascriptRefer13.html">알고리즘</a></li>
+                    <li><a href="javascriptRefer13.html">샘플</a></li>
+                    <li><a href="javascriptRefer14.html">알고리즘</a></li>
                 </ul>
             </nav>
         </main>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script>
-         var $eyes = $('.eyes'),
+        var $eyes = $('.eyes'),
             $snout = $('.snout'),
             $spot = $('.spot'),
             $nose = $('.nose'),
@@ -475,8 +473,8 @@
             TweenMax.to(
                 $snout, 1, {
                     css: { transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -26 + 'px) translateZ(1px)'
-                },
-                ease:Expo.easeOut,
+                }, 
+                ease:Expo.easeOut, 
                 overwrite: 'all'
             });
             TweenMax.to(
@@ -550,9 +548,6 @@
                 overwrite: 'all'
             });
         });
-    </script>
-
-
     </script>
 </body>
 </html>
