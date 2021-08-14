@@ -178,10 +178,11 @@
             border: 1px solid #E6E6E6; /* 속기형 작성법 */
             text-align: center;
             vertical-align: middle;
-            border-collapse:collapse;
         }
         .view table th{
             padding: 13px 5px 11px 5px;
+            font-weight: normal;
+            white-space: nowrap;
         }
         .view table td{
             border: 1px solid #E6E6E6;
@@ -190,7 +191,7 @@
         .view table td.result{
             color : #fff;
             transition: all 0.3s;
-            cursor: zoom-in;
+            cursor: pointer;
         }
         .view table td.result:hover{
             color : #000;
@@ -238,7 +239,16 @@
             h1 {
             text-align: center;
             }
-            
+            .menu li a {
+                font-size: 12px;
+                padding: 5px 20px;
+            }
+            .list li {
+                line-height: 1.2;
+            } 
+            .list a {
+                font-size: 12px;
+            }
             .sample h2 {
             padding: 7px 5px 5px;
             font-size: 14px;
@@ -248,16 +258,20 @@
                 display: none;
             }
             .view {
-                padding: 5px;
-                max-width: 800px;
+                border-right: 1px solid #E6E6E6;
+                border-left: 1px solid #E6E6E6;
                 overflow: auto;
+            }
+            .view table {
+                border-left: 0px;
+                border-right: 0px;
             }
             .view table th,
             .view table td{
                 white-space: nowrap;
                 font-size: 13px;
             }
-            .view table th.result {
+            .view table td.result {
                 color: #bdbdbd;
                 background-color: #f1f1f1;
             }
