@@ -26,6 +26,7 @@
             padding: 0;
             font-family: 'NEXON Lv1 Gothic OTF';
             line-height: 1.6;
+            word-break: break-all;
         }
         body {
             padding: 5%;
@@ -1130,9 +1131,9 @@
             <table>
                 <colgroup>
                     <col style="width: 4%">
-                    <col style="width: 22%">
-                    <col style="width: 22%">
-                    <col style="width: 52%">
+                    <col style="width: 32%">
+                    <col style="width: 32%">
+                    <col style="width: 32%">
                 </colgroup>
                 <thead>
                     <tr>
@@ -1292,7 +1293,7 @@
         //sample05
         //05. 문자열 메서드 : indexOf() / lastIndexOf() / search() : 문자열 검색하기 : 반환(숫자)
         //문자열의 인덱스 위치를 반환, 문자열의 첫 번째 문자의 위치는 0, 다섯번째 4
-        //문자열이 엾는 경우는 -1
+        //문자열이 없는 경우는 -1
         //영문 대소문자 구별하여 검색
         //search는 정규식 표현으로 검색
         {
@@ -1555,7 +1556,7 @@
 
             document.querySelector(".sample10_N1").innerHTML = "1";
             document.querySelector(".sample10_Q1").innerHTML = num1;
-            document.querySelector(".sample10_M1").innerHTML = "padStart(2, '0')";
+            document.querySelector(".sample10_M1").innerHTML = ".padStart(2, '0')";
             document.querySelector(".sample10_R1").innerHTML = text1;
 
             const num2 = "456";
@@ -1563,7 +1564,7 @@
 
             document.querySelector(".sample10_N2").innerHTML = "2";
             document.querySelector(".sample10_Q2").innerHTML = num2;
-            document.querySelector(".sample10_M2").innerHTML = "padStart(6, '123')";
+            document.querySelector(".sample10_M2").innerHTML = ".padStart(6, '123')";
             document.querySelector(".sample10_R2").innerHTML = text2;
 
             const num3 = "abc";
@@ -1571,7 +1572,7 @@
 
             document.querySelector(".sample10_N3").innerHTML = "3";
             document.querySelector(".sample10_Q3").innerHTML = num3;
-            document.querySelector(".sample10_M3").innerHTML = "padStart(3, '0')";
+            document.querySelector(".sample10_M3").innerHTML = ".padStart(3, '0')";
             document.querySelector(".sample10_R3").innerHTML = text3;
 
             const num4 = "abc";
@@ -1579,7 +1580,7 @@
 
             document.querySelector(".sample10_N4").innerHTML = "3";
             document.querySelector(".sample10_Q4").innerHTML = num3;
-            document.querySelector(".sample10_M4").innerHTML = "padStart(6)";
+            document.querySelector(".sample10_M4").innerHTML = ".padStart(6)";
             document.querySelector(".sample10_R4").innerHTML = "<pre>'" + text4 + "'</pre>";   //<pre>는 공백을 보여주는 태그, ''를 붙여서 눈에 보기게 했음
 
             const num5 = "7";
@@ -1587,7 +1588,7 @@
 
             document.querySelector(".sample10_N5").innerHTML = "5";
             document.querySelector(".sample10_Q5").innerHTML = num5;
-            document.querySelector(".sample10_M5").innerHTML = "padEnd(2, '0')";
+            document.querySelector(".sample10_M5").innerHTML = ".padEnd(2, '0')";
             document.querySelector(".sample10_R5").innerHTML = text5;
 
 
@@ -1596,7 +1597,7 @@
 
             document.querySelector(".sample10_N6").innerHTML = "6";
             document.querySelector(".sample10_Q6").innerHTML = num6;
-            document.querySelector(".sample10_M6").innerHTML = "padEnd(6, '123')";
+            document.querySelector(".sample10_M6").innerHTML = ".padEnd(6, '123')";
             document.querySelector(".sample10_R6").innerHTML = text6;
 
             const num7 = "abc";
@@ -1604,7 +1605,7 @@
 
             document.querySelector(".sample10_N7").innerHTML = "7";
             document.querySelector(".sample10_Q7").innerHTML = num7;
-            document.querySelector(".sample10_M7").innerHTML = "padEnd(3, '0')";
+            document.querySelector(".sample10_M7").innerHTML = ".padEnd(3, '0')";
             document.querySelector(".sample10_R7").innerHTML = text7;
 
 
@@ -1613,7 +1614,7 @@
 
             document.querySelector(".sample10_N8").innerHTML = "8";
             document.querySelector(".sample10_Q8").innerHTML = num8;
-            document.querySelector(".sample10_M8").innerHTML = "padEnd(6)";
+            document.querySelector(".sample10_M8").innerHTML = ".padEnd(6)";
             document.querySelector(".sample10_R8").innerHTML = "<pre>'" + text8 + "'</pre>";
         }
 
@@ -1629,7 +1630,7 @@
 
             document.querySelector(".sample11_N1").innerHTML = "1";
             document.querySelector(".sample11_Q1").innerHTML = text1;
-            document.querySelector(".sample11_M1").innerHTML = "encodeURI()";
+            document.querySelector(".sample11_M1").innerHTML = ".encodeURI()";
             document.querySelector(".sample11_R1").innerHTML = url1;
 
             const text2 = "https://coop97.github.io/dothome21/자바스크립트.html";
@@ -1637,7 +1638,7 @@
 
             document.querySelector(".sample11_N2").innerHTML = "2";
             document.querySelector(".sample11_Q2").innerHTML = text2;
-            document.querySelector(".sample11_M2").innerHTML = "encodeURIComponent()";
+            document.querySelector(".sample11_M2").innerHTML = ".encodeURIComponent()";
             document.querySelector(".sample11_R2").innerHTML = url2;
 
             const text3 = "https://coop97.github.io/dothome21/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
@@ -1645,7 +1646,7 @@
 
             document.querySelector(".sample11_N3").innerHTML = "3";
             document.querySelector(".sample11_Q3").innerHTML = text3;
-            document.querySelector(".sample11_M3").innerHTML = "decodeURI()";
+            document.querySelector(".sample11_M3").innerHTML = ".decodeURI()";
             document.querySelector(".sample11_R3").innerHTML = url3;
 
             const text4 = "https%3A%2F%2Fcoop97.github.io%2Fdothome21%2F%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.html";
@@ -1653,7 +1654,7 @@
 
             document.querySelector(".sample11_N4").innerHTML = "4";
             document.querySelector(".sample11_Q4").innerHTML = text4;
-            document.querySelector(".sample11_M4").innerHTML = "decodeURIComponent()";
+            document.querySelector(".sample11_M4").innerHTML = ".decodeURIComponent()";
             document.querySelector(".sample11_R4").innerHTML = url4;
         }
     </script>
