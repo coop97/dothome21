@@ -348,10 +348,105 @@
             a: "함수",
             b: "실행",
             result : () => {
-                document.write(`${f.a}가 ${f.b}되었습니다.<br>`);
+                document.write(`${f.a}가 ${f.b}되었습니다.<br><br>`);
             }
         }
         f.result();
+    }
+
+    {
+        function f1(){
+            document.write("함수1<br>");
+        }
+        f1();
+        f1();
+
+        let f2 = function(){
+            document.write("익명함수<br>");
+        }
+        f2();
+
+        let f3 = function(txt){
+            document.write(txt);
+        }
+        f3("매개 변수<br>");
+
+        let f4 = function(){
+            let str = "리턴값 함수<br>";
+            return str;
+        }
+        document.write(f4());
+
+        f5 = () => {
+            document.write("화살표 함수:선언적 함수<br>")
+        }
+        f5();
+
+        f6 = (str) => {
+            document.write(str);
+        }
+        f6("화살표 함수:매개변수 함수<br>");
+
+        f7 = (str) => {
+            return str;
+        }
+        document.write(f7("화살표 함수:리턴값 함수<br>"));
+
+        f8 = (str) => str;
+        document.write(f8("화살표 함수:리턴값 생략<br>"));
+
+        f9 = str => str;
+        document.write(f9("화살표 함수:괄호 생략<br>"));
+
+        function f10(str1, str2){
+            document.write(str1 + str2);
+        }
+        f10("함수가 ", "실행되었습니다.<br>");
+        f10("함수가 ", "실행되었습니다.2<br>");
+
+        function f11(str1, str2){
+            document.write(str1 + str2);
+        }
+
+        let a1 = "함수가 ";
+        let a2 = "실행되었습니다.<br>";
+
+        f11(a1, a2)
+
+        function f12(str1, str2){
+            document.write(str1 + str2);
+        }
+
+        let a = ["함수가 ", "실행<br>"];
+
+        f12(a[0], a[1])
+
+        function f13(str1, str2){
+            document.write(str1 + str2);
+        }
+
+        let ab = {a:"함수 ", b:"실행<br>"};
+
+        f13(ab.a, ab.b);
+
+        function f14(str1, str2){
+            document.write(str1 + str2);
+        }
+
+        let abc = [{a:"함수 "}, {a:"실행<br>"}];
+
+        f14(abc[0].a, abc[1].a);
+
+        //객체 생성자 함수
+        function func15(str1, str2){
+            this.str1 = str1;
+            this.str2 = str2;
+            this.result = function(){
+                document.write(str1+str2)
+            }
+        }
+        const info1 = new func15("함수","실행");    //인스턴스 생성
+        info1.result();
     }
     </script>
 </body>
