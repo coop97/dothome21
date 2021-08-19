@@ -122,6 +122,7 @@ body {
 }
 */
 
+/* cardType02 */
 .cardType02 {
     font-family: 'S-CoreDream';
     padding: 150px 0;
@@ -129,41 +130,62 @@ body {
 .cardType02 h2 {
     font-weight: 700;
     font-size: 50px;
-    margin-bottom: 7px;
     text-align: center;
 }
 .cardType02 p {
     font-weight: 300;
     font-size: 26px;
-    line-height: 1.28;
-    margin-bottom: 40px;
     text-align: center;
 }
 /* float */
+/*
 .cardType02 .card-wrap {
     overflow: hidden;
 }
 .cardType02 .card-wrap .card {
-    width: 285px;
-    height: 356px;
-    margin: 40px 20px 0 0;
-    padding: 15px 1px 16px 14px;
-    border-radius: 5px;
-    border: 1px solid #c4c4c4;
     float: left;
-    box-sizing: border-box;
 }
-
 .cardType02 .card-wrap .card:last-child {
     margin-right: 0;
 }
-
+*/
 /* flex */
-
+/*
+.cardType02 .card-wrap {
+    display: flex;
+}
+*/
 /* grid */
+.cardType02 .card-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    gap: 20px;
+}
 
-
-
-.cardType02 .card-wrap .card-title {}
-.cardType02 .card-wrap .card-desc {}
-.cardType02 .card-wrap .card-word {}
+.cardType02 .card-wrap .card {
+    width: 285px;
+    height: 356px;
+    margin: 40px 20px 0 0;      /*바깥쪽*/
+    padding: 15px 15px 16px 14px;   /*안쪽*/
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box;
+}
+.cardType02 .card-wrap .card-title {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+}
+.cardType02 .card-wrap .card-desc {
+    display: block;
+}
+.cardType02 .card-wrap .card-word span {
+    margin: 6px 100px 0 1px;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+    background-color: #000;
+    display: inline-block;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+}
