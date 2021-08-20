@@ -70,7 +70,6 @@ body {
 
 
 
-
 /* cardType02 
 .cardType02 {
     font-family: 'S-CoreDream';
@@ -157,9 +156,12 @@ body {
 .cardType02 .card-wrap .card .card-desc {
     font-size: 14px;
     font-weight: 300;
+    display: block;
+    margin: 10px 0 13px 1px;
 }
 .cardType02 .card-wrap .card .card-word {
-    margin: 6px 202px 0 1px;
+}
+.cardType02 .card-wrap .card .card-word span {
     padding: 4px 16px 3px;
     border-radius: 20px;
     background-color: #000;
@@ -173,7 +175,7 @@ body {
 
 .cardType03 {
     font-family: 'Nanum Gothic', sans-serif;
-    padding: 96px 0;
+    padding: 100px 0;
 }
 .cardType03 h2 {
     font-size: 50px;
@@ -183,6 +185,7 @@ body {
 .cardType03 p {
     font-size: 18px;
     font-weight: 300;
+    line-height: 1.28;
 }
 .cardType03 .p2 {
     text-align: right;
