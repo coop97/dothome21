@@ -211,6 +211,7 @@
             }
             h1 {
             text-align: center;
+            font-size: 30px;
             }
             .menu li a {
                 font-size: 12px;
@@ -519,9 +520,7 @@
     const arr = [100, 200, 300, 400, 500];
 
     document.write(arr);
-
     document.write(arr[0], arr[1], arr[2], arr[3], arr[4]);
-
     document.write(...arr);
 }
 </code></pre>
@@ -565,7 +564,6 @@
         b: 200,
         c: "javascript",
     }
-
     document.write(Object.keys(obj));
     document.write(Object.values(obj));
     document.write(Object.entrise(obj));
@@ -612,7 +610,6 @@
         b: 200,
         c: "javascript",
     }
-
     for(let key in obj){
         document.write(obj[key]);
     }
@@ -634,16 +631,6 @@
         {a: 300, b: 400, c: "javascript2"},
         {a: 500, b: 600, c: "javascript3"},
     ];
-
-    document.write(obj[0].a);
-    document.write(obj[0].b);
-    document.write(obj[0].c);
-    document.write(obj[1].a);
-    document.write(obj[1].b);
-    document.write(obj[1].c);
-    document.write(obj[2].a);
-    document.write(obj[2].b;
-    document.write(obj[2].c);
 
     obj.map(el => {
         document.write(el.a);
@@ -668,7 +655,6 @@
         b: 200,
         c: "javascript",
     }
-
     document.write(obj.hasOwnProperty('a'));
     document.write(obj.hasOwnProperty('b'));
     document.write(obj.hasOwnProperty('c'));
