@@ -29,7 +29,7 @@
 
         document.write(Object.keys(obj));
 
-        document.write("<br>")
+        document.write("<br><br>")
 
 
         const obj2 = [
@@ -37,23 +37,41 @@
             {a: 2000},
             {a: 3000}
         ]
-        document.write(obj2[0].a, "<br>")
-        document.write(obj2[1].a, "<br>")
-        document.write(obj2[2].a, "<br>")
+        document.write(obj2[0].a, "<br>");
+        document.write(obj2[1].a, "<br>");
+        document.write(obj2[2].a, "<br>");
 
-        document.write(obj2[0].a+obj2[1].a+obj2[2].a, "<br>")
-        document.write(obj2[1].a+obj2[2].a, "<br>")
-        document.write(obj2[0].a+obj2[0].a+obj2[1].a, "<br>")
+        document.write(obj2[0].a+obj2[1].a+obj2[2].a, "<br>");
+        document.write(obj2[1].a+obj2[2].a, "<br>");
+        document.write(obj2[0].a+obj2[0].a+obj2[1].a, "<br>");
 
-        document.write(obj2[0].a/obj2[0].a, "<br>")
-        document.write(obj2[1].a/obj2[0].a, "<br>")
-        document.write(obj2[2].a/obj2[0].a, "<br>")
+        document.write(obj2[0].a/obj2[0].a, "<br>");
+        document.write(obj2[1].a/obj2[0].a, "<br>");
+        document.write(obj2[2].a/obj2[0].a, "<br><br>");
 
-        document.write(Array.keys(obj2));
+        /*
+        obj.map(el => {
+        document.write(keys.a)
+        });
+        */
 
         const obj3 = [1000, 2000, 3000, "a", "b", "c"]
 
-        document.write(obj3)
+        document.write(obj3[0], "<br>");
+        document.write(obj3[1], "<br>");
+        document.write(obj3[2], "<br>");
+
+        document.write(obj3[2]+obj3[2], "<br>");
+        document.write(obj3[1]+obj3[2], "<br>");
+        document.write(obj3[0]+obj3[2], "<br>");
+
+        document.write(obj3[0]/obj3[0], "<br>");
+        document.write(obj3[1]/obj3[0], "<br>");
+        document.write(obj3[2]/obj3[0], "<br>");
+
+        document.write(obj3[3], "<br>");
+        document.write(obj3[4], "<br>");
+        document.write(obj3[5], "<br>");
     }
 
     </script>

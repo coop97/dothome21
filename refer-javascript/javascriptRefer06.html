@@ -1095,13 +1095,14 @@
             document.querySelector(".sample03_P1").innerHTML = text1;
             document.querySelector(".sample03_R1").innerHTML = arr;
 
-            const text2 = arr.unshift(600);
+            const arr2 = [100, 200, 300, 400, 500];
+            const text2 = arr2.unshift(600);
 
             document.querySelector(".sample03_N2").innerHTML = "2";
             document.querySelector(".sample03_Q2").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample03_M2").innerHTML = ".unshift(600)";
             document.querySelector(".sample03_P2").innerHTML = text2;
-            document.querySelector(".sample03_R2").innerHTML = arr;
+            document.querySelector(".sample03_R2").innerHTML = arr2;
         }
 
         //sample4
@@ -1117,13 +1118,14 @@
             document.querySelector(".sample04_P1").innerHTML = text1;
             document.querySelector(".sample04_R1").innerHTML = arr1;
 
-            const text2 = arr1.pop();
+            const arr2 = [100, 200, 300, 400, 500];
+            const text2 = arr2.pop();
 
             document.querySelector(".sample04_N2").innerHTML = "2";
             document.querySelector(".sample04_Q2").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample04_M2").innerHTML = ".pop()";
             document.querySelector(".sample04_P2").innerHTML = text2;
-            document.querySelector(".sample04_R2").innerHTML = arr1;
+            document.querySelector(".sample04_R2").innerHTML = arr2;
         }
 
         //sample5
@@ -1280,7 +1282,7 @@
             document.querySelector(".sample08_M5").innerHTML = ".slice(-2)";
             document.querySelector(".sample08_R5").innerHTML = result5;
 
-            const result6 = arrNum.slice(-2, 5);
+            const result6 = arrNum.slice(-2, 5);        //앞 수가 음수일 경우 뒤의 양수가 음수 자리까지 와야 값이 나온다.(3까지는 값이 X)
 
             document.querySelector(".sample08_N6").innerHTML = "6";
             document.querySelector(".sample08_Q6").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1302,7 +1304,7 @@
             document.querySelector(".sample09_A1").innerHTML = arrNum1;
 
             const arrNum2 = [100, 200, 300, 400, 500];
-            const result2 = arrNum2.splice(2, 3);       //자릿수 2부터 시작해서 3개를 자름
+            const result2 = arrNum2.splice(2, 3);       //자릿수 2부터 시작해서 3개를 자름, slice와 달리 뒷 자리수도 포함한다.
 
             document.querySelector(".sample09_N2").innerHTML = "2";
             document.querySelector(".sample09_Q2").innerHTML = "[100, 200, 300, 400, 500]";
