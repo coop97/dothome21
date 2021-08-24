@@ -76,11 +76,13 @@ body {
     width: 387px;
     height: 387px;
     padding-right: 20px;
+    position: relative;
 }
 .imageType02 .card-wrap .card .content {
     position: absolute;
-    top: 340px;
-    margin-left: 130px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
 }
@@ -98,4 +100,93 @@ body {
     padding: 10px;
     border-radius: 20px;
     background-color: rgba(8, 5, 5, 0.5);
+}
+
+/* imageType03 */
+.imageType03 {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    padding: 100px 0;
+}
+.imageType03 h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #7E4848;
+    margin-bottom: 40px;
+}
+.imageType03 .card-wrap {
+    display: flex;
+}
+.imageType03 .card-wrap .card {
+    width: 590px;
+    height: 590px;
+    float: left;
+    margin-right: 20px;
+}
+.imageType03 .card-wrap .card .content {
+    margin: 30px;
+    padding: 15px;
+    background: rgba(0,0,0,0.3);
+    position: relative;
+    bottom: 210px;
+    color: #fff;
+}
+.imageType03 .card-wrap .content .card-title {
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+.imageType03 .card-wrap .card .content .card-desc {
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.imageType03 .card-wrap .card .content .card-keyword {
+    font-size: 14px;
+    font-weight: 400;
+}
+.imageType03 .card-wrap .card01 {
+    width: 285px;
+    height: 590px;
+    float: left;
+    margin-right: 20px;
+}
+.imageType03 .card-wrap .card01 .card-title {
+    margin: 55px 90px 0 30px;
+    padding: 5px;
+    background: rgba(0,0,0,0.3);
+    position: relative;
+    bottom: 140px;
+    color: #fff;
+    text-align: center;
+}
+.imageType03 .card-wrap .card02 {
+    width: 285px;
+    height: 590px;
+    float: left;
+}
+.imageType03 .card-wrap .card02 .card-title {
+    margin: 55px 90px 0 30px;
+    padding: 5px;
+    background: rgba(0,0,0,0.3);
+    position: relative;
+    bottom: 140px;
+    color: #fff;
+    text-align: center;
+}
+.imageType03 .card-wrap .card01 .card01-1 {
+    height: 285px;
+    margin-bottom: 20px;
+}
+.imageType03 .card-wrap .card01 .card01-2 {
+    height: 285px;
+}
+.imageType03 .card-wrap .card02 .card02-1 {
+    height: 285px;
+    margin-bottom: 20px;
+}
+.imageType03 .card-wrap .card02 .card02-2 {
+    height: 285px;
 }
