@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../refer-jquery/style.css">
 </head>
 <body>
     <h1><a href="index.html">Javascript 레퍼런스</a></h1>
@@ -42,27 +42,310 @@
         </ul>
     </nav>
     
-    <h2 class="mt20">브라우저 메서드</h2>
+    <h2 class="mt20">브라우저 객체</h2>
     <ul>
         <ol>
-            <li><a href="#sample1"></a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.alert() : 경고창 표시하기</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.confirm() : 확인창 표시하기</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.prompt() : 입력창 표시하기</a></li>
+            <br>
+            <li><a href="#sample1">브라우저 객체 : window 객체 속성 : window.innerWidth : 브라우저 화면에 가로 값 가져오기</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 속성 : window.innerHeight : 브라우저 화면에 세로 값 가져오기</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 속성 : window.outerWidth : 브라우저 전체의 가로 값 가져오기</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 속성 : window.outerHeight : 브라우저 전체의 세로 값 가져오기</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 속성 : window.screenTop / window.screenY : 브라우저 윗쪽 위치 값 가져오기</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 속성 : window.screenLeft / window.screenX : 브라우저 왼쪽 위치 값 가져오기</a></li>
+            <br>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.moveBy() : 브라우저 위치를 상대적으로 이동</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.moveTo() : 브라우저 위치를 절대적으로 이동</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.resizeBy() : 브라우저 위치를 상대적으로 조절</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.resizeTo() : 브라우저 위치를 절대적으로 조절</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.scrollBy() : 브라우저 스크롤 위치를 상대적으로 조절</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.scrollTo() : 브라우저 스크롤 위치를 절대적으로 조절</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.scrollX() : 브라우저 가로 스크롤 크기</a></li>
+            <li><a href="#sample1">브라우저 객체 : window 객체 메서드 : window.scrollY() : 브라우저 세로 스크롤 크기</a></li>
+            <br>
+            <li><a href="#sample1">브라우저 객체 : screen 객체 속성 : window.screen.width() : 화면의 가로 값 가져오기</a></li>
+            <li><a href="#sample1">브라우저 객체 : screen 객체 속성 : window.screen.height() : 화면의 세로 값 가져오기</a></li>
+            <li><a href="#sample1">브라우저 객체 : screen 객체 속성 : window.screen.availWidth() : 실제 이용 가능한 화면의 가로 값 가져오기</a></li>
+            <li><a href="#sample1">브라우저 객체 : screen 객체 속성 : window.screen.availHeight() : 실제 이용 가능한 화면의 세로 값 가져오기</a></li>
+            <li><a href="#sample1">브라우저 객체 : screen 객체 속성 : window.screen.colorDepth() : 사용 가능한 색상 수</a></li>
+            <li><a href="#sample1">브라우저 객체 : screen 객체 속성 : window.screen.pixelDepth() : 한 픽셀 당 비트 수</a></li>
         </ol>
     </ul>
 
     <hr>
     
-    <!-- sample1 -->
     <div id="sample1" class="sample">
-        <h2>01. <span class="dot"></span></h2>
+        <h2>01. window.alert()<span class="dot"></span></h2>
+        <div class="btn btn1">
+            <a href="#c" class="btn1-1">클릭하면 알림창을 표시합니다.</a>
+        </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".btn1-1").addEventListener("click", function(){
+        alert("알림창");
+    });
+}
 </code></pre>
         </div>
     </div>
-    <!-- //sample1 -->
+
+    <script>
+        document.querySelector(".btn1-1").addEventListener("click", function(){
+            alert("알림창");
+        });
+    </script>
 
     <hr>
+
+    <div id="sample2" class="sample">
+        <h2>02. window.confirm()<span class="dot"></span></h2>
+        <div class="view ex2">
+            <p class="text text2">여기는 텍스트 영역입니다.</p>
+        </div>
+        <div class="btn btn2">
+            <a href="#c" class="btn2-1">클릭하면 확인창을 표시합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const btn = document.querySelector(".btn2-1");
+
+    btn.addEventListener("click", () => {
+        const text = confirm("오늘 공부할 준비가 되었나요?");
+
+        //document.querySelector(".text2").innerHTML = text;
+
+        if(text){
+            document.querySelector(".text2").innerHTML = "오늘 공부할 준비가 되었습니다.";
+        }else{
+            document.querySelector(".text2").innerHTML = "오늘 몸이 안 좋아요.";
+        }
+    });
+}
+</code></pre>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelector(".btn2-1");
+
+        btn.addEventListener("click", () => {
+            const text = confirm("오늘 공부할 준비가 되었나요?");   //true, false
+
+            //document.querySelector(".text2").innerHTML = text;
+
+            //만약에 true가 나오면 "오늘 공부할 준비가 되었습니다."
+            if(text){
+                document.querySelector(".text2").innerHTML = "오늘 공부할 준비가 되었습니다.";
+            }else{
+                document.querySelector(".text2").innerHTML = "오늘 몸이 안 좋아요.";
+            }
+        });
+    </script>
+
     <hr>
+
+    <div id="sample3" class="sample">
+        <h2>03. window.prompt()<span class="dot"></span></h2>
+        <div class="view ex3">
+            <p class="text text3">여기는 텍스트 영역입니다.</p>
+        </div>
+        <div class="btn btn3">
+            <a href="#c" class="btn3-1">클릭하면 입력창을 표시합니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".btn3-1").addEventListener("click", function(){
+        const text = prompt("오늘 공부할 준비가 되었나요?");
+
+        document.querySelector(".text3").innerHTML = text;
+    });
+}
+</code></pre>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".btn3-1").addEventListener("click", function(){
+            const text = prompt("오늘 공부할 준비가 되었나요?");
+
+            document.querySelector(".text3").innerHTML = text;
+        });
+    </script>
+
+    <hr>
+
+    <div id="sample4" class="sample">
+        <h2>04. window.innerWidth() / innerHeight() /outerWidth() / outerHeight() / screenTop(), screenY / screenLeft(), screenX<span class="dot"></span></h2>
+        <div class="view ex4">
+            <p class="text text4-1"></p>
+            <p class="text text4-2"></p>
+            <p class="text text4-3"></p>
+            <p class="text text4-4"></p>
+            <p class="text text4-5"></p>
+            <p class="text text4-6"></p>
+            <p class="text text4-7"></p>
+            <p class="text text4-8"></p>
+        </div>
+        <div class="btn btn4">
+            <a href="#c" class="btn4-1">클릭하면 브라우저 화면의 가로 값(innerWidth)을 가져옵니다.</a>
+            <a href="#c" class="btn4-2">클릭하면 브라우저 화면의 세로 값(innerHeight)을 가져옵니다.</a>
+            <a href="#c" class="btn4-3">클릭하면 브라우저 전체의 가로 값(outerWidth)을 가져옵니다.</a>
+            <a href="#c" class="btn4-4">클릭하면 브라우저 전체의 세로 값(outerHeight)을 가져옵니다.</a>
+            <a href="#c" class="btn4-5">클릭하면 브라우저 윗쪽의 위치 값(screenTop)을 가져옵니다.</a>
+            <a href="#c" class="btn4-6">클릭하면 브라우저 왼쪽의 위치 값(screenLeft)을 가져옵니다.</a>
+            <a href="#c" class="btn4-7">클릭하면 브라우저 윗쪽의 위치 값(screenY)을 가져옵니다.</a>
+            <a href="#c" class="btn4-8">클릭하면 브라우저 왼쪽의 위치 값(screenX)을 가져옵니다.</a>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const innerW = window.innerWidth;
+    const innerH = window.innerHeight;
+    const outerW = window.outerWidth;
+    const outerH = window.outerHeight;
+    const screenT = window.screenTop;
+    const screenL = window.screenLeft;
+    const screenY = window.screenY;
+    const screenX = window.screenX;
+
+    const btn1 = document.querySelector(".btn4-1");
+    const btn2 = document.querySelector(".btn4-2");
+    const btn3 = document.querySelector(".btn4-3");
+    const btn4 = document.querySelector(".btn4-4");
+    const btn5 = document.querySelector(".btn4-5");
+    const btn6 = document.querySelector(".btn4-6");
+    const btn7 = document.querySelector(".btn4-7");
+    const btn8 = document.querySelector(".btn4-8");
+
+    btn1.addEventListener("click", function(){          
+        document.querySelector(".text4-1").innerHTML = "이 브라우저 화면의 가로 값(innerWidth)은 " + innerW + "px 입니다.";
+    });
+
+    btn2.addEventListener("click", function(){
+        document.querySelector(".text4-2").innerHTML = "이 브라우저 화면의 세로 값(innerHeight)은 " + innerH + "px 입니다.";
+    });
+
+    btn3.addEventListener("click", function(){
+        document.querySelector(".text4-3").innerHTML = "이 브라우저 화면전체의 가로 값(outerWidth)은 " + outerW + "px 입니다.";
+    });
+
+    btn4.addEventListener("click", function(){
+        document.querySelector(".text4-4").innerHTML = "이 브라우저 화면전체의 세로 값(outerHeight)은 " + outerH + "px 입니다.";
+    });
+
+    btn5.addEventListener("click", function(){
+        document.querySelector(".text4-5").innerHTML = "이 브라우저 윗쪽의 위치 값(screenTop)은 " + screenT + "px 입니다.";
+    });
+
+    btn6.addEventListener("click", function(){
+        document.querySelector(".text4-6").innerHTML = "이 브라우저 왼쪽의 위치 값(screenLeft)은 " + screenL + "px 입니다.";
+    });
+
+    btn7.addEventListener("click", function(){
+        document.querySelector(".text4-7").innerHTML = "이 브라우저 윗쪽의 위치 값(screenY)은 " + screenY + "px 입니다.";
+    });
+
+    btn8.addEventListener("click", function(){
+        document.querySelector(".text4-8").innerHTML = "이 브라우저 왼쪽의 위치 값(screenX)은 " + screenX + "px 입니다.";
+    });
+
+    window.addEventListener("resize", () => {   
+        const innerW = window.innerWidth;       
+        const innerH = window.innerHeight;
+        const outerW = window.outerWidth;
+        const outerH = window.outerHeight;
+        const screenT = window.screenTop;
+        const screenL = window.screenLeft;
+        const screenY = window.screenY;
+        const screenX = window.screenX;
+
+        document.querySelector(".text4-1").innerHTML = "이 브라우저 화면의 가로 값(innerWidth)은 " + innerW + "px 입니다.";
+        document.querySelector(".text4-2").innerHTML = "이 브라우저 화면의 세로 값(innerHeight)은 " + innerH + "px 입니다.";
+        document.querySelector(".text4-3").innerHTML = "이 브라우저 화면전체의 가로 값(outerWidth)은 " + outerW + "px 입니다.";
+        document.querySelector(".text4-4").innerHTML = "이 브라우저 화면전체의 세로 값(outerHeight)은 " + outerH + "px 입니다.";
+        document.querySelector(".text4-5").innerHTML = "이 브라우저 윗쪽의 위치 값(screenTop)은 " + screenT + "px 입니다.";
+        document.querySelector(".text4-6").innerHTML = "이 브라우저 왼쪽의 위치 값(screenLeft)은 " + screenL + "px 입니다.";
+        document.querySelector(".text4-7").innerHTML = "이 브라우저 윗쪽의 위치 값(screenY)은 " + screenY + "px 입니다.";
+        document.querySelector(".text4-8").innerHTML = "이 브라우저 왼쪽의 위치 값(screenX)은 " + screenX + "px 입니다.";
+    });
+}
+</code></pre>
+        </div>
+    </div>
+
+    <script>
+        const innerW = window.innerWidth;
+        const innerH = window.innerHeight;
+        const outerW = window.outerWidth;
+        const outerH = window.outerHeight;
+        const screenT = window.screenTop;
+        const screenL = window.screenLeft;
+        const screenY = window.screenY;
+        const screenX = window.screenX;
+
+        const btn1 = document.querySelector(".btn4-1");
+        const btn2 = document.querySelector(".btn4-2");
+        const btn3 = document.querySelector(".btn4-3");
+        const btn4 = document.querySelector(".btn4-4");
+        const btn5 = document.querySelector(".btn4-5");
+        const btn6 = document.querySelector(".btn4-6");
+        const btn7 = document.querySelector(".btn4-7");
+        const btn8 = document.querySelector(".btn4-8");
+
+        btn1.addEventListener("click", function(){          //브라우저 화면 비율이 100보다 작으면 outer보다 inner가 더 크게 나옴
+            document.querySelector(".text4-1").innerHTML = "이 브라우저 화면의 가로 값(innerWidth)은 " + innerW + "px 입니다.";
+        });
+
+        btn2.addEventListener("click", function(){
+            document.querySelector(".text4-2").innerHTML = "이 브라우저 화면의 세로 값(innerHeight)은 " + innerH + "px 입니다.";
+        });
+
+        btn3.addEventListener("click", function(){
+            document.querySelector(".text4-3").innerHTML = "이 브라우저 화면전체의 가로 값(outerWidth)은 " + outerW + "px 입니다.";
+        });
+
+        btn4.addEventListener("click", function(){
+            document.querySelector(".text4-4").innerHTML = "이 브라우저 화면전체의 세로 값(outerHeight)은 " + outerH + "px 입니다.";
+        });
+
+        btn5.addEventListener("click", function(){
+            document.querySelector(".text4-5").innerHTML = "이 브라우저 윗쪽의 위치 값(screenTop)은 " + screenT + "px 입니다.";
+        });
+
+        btn6.addEventListener("click", function(){
+            document.querySelector(".text4-6").innerHTML = "이 브라우저 왼쪽의 위치 값(screenLeft)은 " + screenL + "px 입니다.";
+        });
+
+        btn7.addEventListener("click", function(){
+            document.querySelector(".text4-7").innerHTML = "이 브라우저 윗쪽의 위치 값(screenY)은 " + screenY + "px 입니다.";
+        });
+
+        btn8.addEventListener("click", function(){
+            document.querySelector(".text4-8").innerHTML = "이 브라우저 왼쪽의 위치 값(screenX)은 " + screenX + "px 입니다.";
+        });
+
+        window.addEventListener("resize", () => {   //화면 크기를 변경할 때마다 수치가 바뀜
+            const innerW = window.innerWidth;       //전역변수 설정했지만 계속 리사이징 되기 때문에 지역변수로 지정을 해줘야함
+            const innerH = window.innerHeight;
+            const outerW = window.outerWidth;
+            const outerH = window.outerHeight;
+            const screenT = window.screenTop;
+            const screenL = window.screenLeft;
+            const screenY = window.screenY;
+            const screenX = window.screenX;
+
+            document.querySelector(".text4-1").innerHTML = "이 브라우저 화면의 가로 값(innerWidth)은 " + innerW + "px 입니다.";
+            document.querySelector(".text4-2").innerHTML = "이 브라우저 화면의 세로 값(innerHeight)은 " + innerH + "px 입니다.";
+            document.querySelector(".text4-3").innerHTML = "이 브라우저 화면전체의 가로 값(outerWidth)은 " + outerW + "px 입니다.";
+            document.querySelector(".text4-4").innerHTML = "이 브라우저 화면전체의 세로 값(outerHeight)은 " + outerH + "px 입니다.";
+            document.querySelector(".text4-5").innerHTML = "이 브라우저 윗쪽의 위치 값(screenTop)은 " + screenT + "px 입니다.";
+            document.querySelector(".text4-6").innerHTML = "이 브라우저 왼쪽의 위치 값(screenLeft)은 " + screenL + "px 입니다.";
+            document.querySelector(".text4-7").innerHTML = "이 브라우저 윗쪽의 위치 값(screenY)은 " + screenY + "px 입니다.";
+            document.querySelector(".text4-8").innerHTML = "이 브라우저 왼쪽의 위치 값(screenX)은 " + screenX + "px 입니다.";
+        });
+    </script>
+
     <hr>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

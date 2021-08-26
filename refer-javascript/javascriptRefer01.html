@@ -87,6 +87,37 @@
         </div>
     </div>
 
+    <style>
+
+    </style>
+    <div class="btn btn1">
+        <a href="#c" class="btn1">결과보기</a>
+    </div>
+    <div class="view ex1">
+        <p class="text text1"></p>
+    </div>
+    <script>
+    {
+        var x = 100; //변수 x에 숫자 100을 저장
+        var y = 200; //변수 y에 숫자 200을 저장
+        var z = "javascript"; //변수 z에 문자 javascript 저장
+
+        document.write(x);
+        document.write(y);
+        document.write(z);
+
+        document.querySelectorAll(".ex1").forEach((el) => {
+        el.addEventListener("click", function(){
+            document.querySelectorAll(".ex1").forEach((el) => {
+                el.classList.toggle("active", function(){
+                    document.querySelector(".text1").innerHTML = text;
+                });
+            });
+        });
+    });
+    }
+    </script>
+
     <hr>
 
     <div id="sample2" class="sample">
