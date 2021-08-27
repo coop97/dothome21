@@ -79,10 +79,9 @@ a {
     color: #fff;
     padding: 15px;
     border-radius: 0 0 5px 5px;
-    display: block;
     display: none;
 }
-.btn .wrap.active {
+.btn div.active {
     display: block;
 }
 .sample h2 .dot {

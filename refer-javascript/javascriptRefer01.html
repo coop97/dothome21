@@ -103,9 +103,16 @@
 
         document.querySelector(".text1").innerHTML = `${x} ${y} ${z}`;
 
-        document.querySelector(".btn h3").addEventListener("click", function(){ 
-            document.querySelector(".btn div").classList.toggle("active"); 
-        });
+        // document.querySelector(".btn h3").addEventListener("click", function(){ 
+        //     document.querySelector(".btn div").classList.toggle("active"); 
+        // });
+
+        document.querySelectorAll(".btn h3").forEach(el => {
+            el.addEventListener("click", function(e){
+                e.preventDefault();
+                this.parentNode.classList.toggle("active");
+            })
+        })
     };
     </script>
 
