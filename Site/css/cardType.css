@@ -207,3 +207,50 @@ body {
 .cardType03 .card-wrap .card .card-date.last {
     margin-top: 43px;
 }
+
+/* cardType04 */
+.cardType04 {
+    padding: 100px 0;
+    font-family: 'Nanum Gothic';
+}
+.cardType04 .container {
+    width: 1200px;
+}
+.cardType04 h2 {
+    font-size: 52px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.cardType04 .card-wrap {
+    display: flex;
+}
+.cardType04 .card-wrap .card {
+    background: #F1F1F1;
+    height: 610px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+.cardType04 .card-wrap .card:last-child {
+    margin-right: 0;
+}
+.cardType04 .card-wrap .card a {
+    margin: 66px 0 0 56px;
+    display: block;
+}
+.cardType04 .card-wrap .card a em {
+    display: block;
+    color: #909090;
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.cardType04 .card-wrap .card a h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+.cardType04 .card-wrap .card a img {
+    box-shadow: -4px 7px 6px #cfcfcf;
+}
+

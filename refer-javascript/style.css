@@ -66,6 +66,17 @@ a {
     border-bottom: 1px solid #E6E6E6;
     border-radius: 5px 5px 0 0;
 }
+.btn a {
+    position: relative;
+    font-size: 16px;
+    background-color: #F2F2F2;
+    padding: 15px;
+    border-bottom: 1px solid #E6E6E6;
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 700;
+}
 .sample h2 .dot {
     width: 10px;
     height: 10px;
@@ -124,7 +135,9 @@ a {
     border-bottom: 1px solid #E6E6E6;
     line-height: 1.6;
 }
-.sample pre {margin: 0 !important; border-radius: 0;;}
+.sample pre {
+    margin: 0 !important; border-radius: 0;;
+}
 .sample .desc {
     padding: 25px;
     border-bottom: 1px solid #E6E6E6;
@@ -166,6 +179,8 @@ table tr td {
 }
 .view{
     padding: 20px;
+    background-color: #000;
+    color: #fff;
 }
 .view table{
     width: 100%;

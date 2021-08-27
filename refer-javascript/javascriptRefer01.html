@@ -95,26 +95,28 @@
     </div>
     <div class="view ex1">
         <p class="text text1"></p>
+        <p class="text text2"></p>
+        <p class="text text3"></p>
     </div>
     <script>
     {
         var x = 100; //변수 x에 숫자 100을 저장
         var y = 200; //변수 y에 숫자 200을 저장
         var z = "javascript"; //변수 z에 문자 javascript 저장
+    
+        // document.querySelector(".btn1").addEventListener("click", function(){
+        //     document.querySelector(".text1").innerHTML = x;
+        //     document.querySelector(".text2").innerHTML = y;
+        //     document.querySelector(".text3").innerHTML = z;
+        // });
 
-        document.write(x);
-        document.write(y);
-        document.write(z);
-
-        document.querySelectorAll(".ex1").forEach((el) => {
-        el.addEventListener("click", function(){
-            document.querySelectorAll(".ex1").forEach((el) => {
-                el.classList.toggle("active", function(){
-                    document.querySelector(".text1").innerHTML = text;
-                });
-            });
+        document.querySelectorAll(".btn1").forEach((el) => {
+            el.addEventListener("click", function(){   
+            this.classList.toggle("active");  
+            document.querySelector(".text1").innerHTML = x;
         });
     });
+
     }
     </script>
 
