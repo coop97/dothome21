@@ -66,6 +66,15 @@ a {
     border: 1px solid #E6E6E6;
 }
 .btn a {
+    border: 1px solid #e6e6e6;
+    padding: 7px 25px;
+    display: inline-block;
+    border-radius: 40px;
+    margin: 4px 0;
+    color: #222;
+    transition: all 0.2s;
+}
+.push a {
     font-size: 16px;
     background-color: #F2F2F2;
     padding: 15px;
@@ -74,14 +83,14 @@ a {
     margin-top: 10px;
     font-weight: 700;
 }
-.result {
+.subs {
     background: #222;
     color: #fff;
     padding: 15px;
     border-radius: 0 0 5px 5px;
     display: none;
 }
-.btn div.active {
+.push div.active {
     display: block;
 }
 .sample h2 .dot {
@@ -144,6 +153,7 @@ a {
 }
 .sample pre {
     margin: 0 !important; border-radius: 0 0 5px 5px;;
+    border: 1px solid #E6E6E6;
 }
 .sample .desc {
     padding: 25px;
@@ -186,12 +196,15 @@ table tr td {
 }
 .view{
     padding: 20px;
+    overflow: auto;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
 }
 .view table{
     width: 100%;
-    border: 1px solid #E6E6E6; /* 속기형 작성법 */
+    border: 1px solid #E6E6E6;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: center;
     border-collapse:collapse;
 }
 .view table th{
@@ -275,6 +288,7 @@ table tr td {
     .sample h2 .dot {
         display: none;
     }
+    /*
     .view {
         border-right: 1px solid #E6E6E6;
         border-left: 1px solid #E6E6E6;
@@ -293,4 +307,5 @@ table tr td {
         color: #bdbdbd;
         background-color: #f1f1f1;
     }
+    */
 }
