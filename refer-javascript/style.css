@@ -77,6 +77,13 @@ a {
     margin-top: 10px;
     font-weight: 700;
 }
+.wrap {
+    background: #222;
+    color: #fff;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    display: block;
+}
 .sample h2 .dot {
     width: 10px;
     height: 10px;
@@ -179,8 +186,6 @@ table tr td {
 }
 .view{
     padding: 20px;
-    background-color: #000;
-    color: #fff;
 }
 .view table{
     width: 100%;
@@ -219,7 +224,7 @@ table tr td {
     color: #222;
 }
 .page li a:hover {
-    color: #4bffa8;
+    color: #0066ff;
 }
 .menu li {
     display: inline;

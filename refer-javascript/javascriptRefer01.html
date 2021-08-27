@@ -85,19 +85,14 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <a href="#c" class="btn1">결과보기</a>
+            <div class="wrap text1"></div>
+        </div>
     </div>
 
-    <style>
-
-    </style>
-    <div class="btn btn1">
-        <a href="#c" class="btn1">결과보기</a>
-    </div>
-    <div class="view ex1">
-        <p class="text text1"></p>
-        <p class="text text2"></p>
-        <p class="text text3"></p>
-    </div>
+    
+    
     <script>
     {
         var x = 100; //변수 x에 숫자 100을 저장
@@ -110,12 +105,10 @@
         //     document.querySelector(".text3").innerHTML = z;
         // });
 
-        document.querySelectorAll(".btn1").forEach((el) => {
-            el.addEventListener("click", function(){   
-            this.classList.toggle("active");  
-            document.querySelector(".text1").innerHTML = x;
+        document.querySelector("#sample1 .btn .text1").innerHTML = `${x} ${y} ${z}`;
+        document.querySelector("#sample1 .btn .btn1").addEventListener("click", function(){   
+            document.querySelector("#sample1 .btn .text1").classList.toggle("active");
         });
-    });
 
     }
     </script>
