@@ -87,7 +87,7 @@
         </div>
         <div class="btn">
             <h3><a href="#c">결과보기</a></h3>
-            <div class="wrap">
+            <div class="result">
                 <span class="text1"></span>
             </div>
         </div>
@@ -103,17 +103,17 @@
 
         document.querySelector(".text1").innerHTML = `${x} ${y} ${z}`;
 
-        // document.querySelector(".btn h3").addEventListener("click", function(){ 
-        //     document.querySelector(".btn div").classList.toggle("active"); 
-        // });
+        document.querySelector("#sample1 .btn h3").addEventListener("click", function(){ 
+            document.querySelector("#sample1 .btn div").classList.toggle("active"); 
+        });
+    }
+        // document.querySelectorAll(".result h3").forEach(el => {
+        //     el.addEventListener("click", function(e){
+        //         e.preventDefault();
+        //         this.parentNode.classList.toggle("show");
+        //     })
+        // })
 
-        document.querySelectorAll(".btn h3").forEach(el => {
-            el.addEventListener("click", function(e){
-                e.preventDefault();
-                this.parentNode.classList.toggle("active");
-            })
-        })
-    };
     </script>
 
     <hr>
@@ -135,7 +135,30 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text2"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+    {
+        let x = 100;
+        let y = 200;
+        let z = "javascript";
+        x = 300;    //변수 x에 값이 100에서 300으로 변경
+        y = 400;
+        z = "jquery";
+
+        document.querySelector(".text2").innerHTML = `${x} ${y} ${z}`;
+
+        document.querySelector("#sample2 .btn h3").addEventListener("click", function(){ 
+            document.querySelector("#sample2 .btn div").classList.toggle("active"); 
+        });
+    }
+    </script>
 
     <hr>
 
@@ -156,8 +179,31 @@
 }       
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text3"></span>
+            </div>
+        </div>
     </div>
     
+    <script>
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript";
+            x += 300;       // x = x + 300; (대입연산자)
+            y += 400;       // y = y + 400;
+            z += "jquery";  // z = z + "jquery";
+
+            document.querySelector(".text3").innerHTML = `${x} ${y} ${z}`;
+
+            document.querySelector("#sample3 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample3 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
+
     <hr>
 
     <div id="sample4" class="sample">
@@ -192,7 +238,39 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text4"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            let x = 100;        //변수 설정 : 전역 변수
+            let y = 200;
+            let z = "javascript";
+            let a = 300;
+
+            function func(){        
+                let x = 100;    //변수 설정 : 지역 변수
+                let y = 200;
+                let z = "javascript";
+                a = 400;        //전역 변수 : 변수 값이 300 -> 400 변경
+                y = 500;        //지역 변수 : 변수 값이 200 -> 500 변경
+
+                document.querySelector(".text4").innerHTML += `함수 안: ${x} ${y} ${z} ${a}<br>`;
+            }
+            func();
+
+            document.querySelector(".text4").innerHTML += `함수 밖: ${x} ${y} ${z} ${a}`;
+
+            document.querySelector("#sample4 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample4 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
 
     <hr>
 
@@ -220,7 +298,38 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text5"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            let x = 100;
+            let y = "100";
+
+            document.querySelector(".text5").innerHTML += `x: ${x} : ${typeof(x)}&nbsp y: ${y} : ${typeof(y)}<br>`;
+
+            x = "" + x;     //숫자를 문자열로 형 변환
+            document.querySelector(".text5").innerHTML += `x: ${x} : ${typeof(x)}<br>`;
+
+            y = Number(y);  //내장 객체를 이용한 형 변환
+            document.querySelector(".text5").innerHTML += `y: ${y} : ${typeof(y)}<br>`;
+
+            x = Number(x);
+            document.querySelector(".text5").innerHTML += `x: ${x} : ${typeof(x)}<br>`;
+
+            y = String(y);
+            document.querySelector(".text5").innerHTML += `y: ${y} : ${typeof(y)}<br>`;
+
+            document.querySelector("#sample5 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample5 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -250,7 +359,35 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text6"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            let num1 = 100;
+            let str = "javascript"
+            let func = function(){};
+            let arr = [1, 2, 3];
+            let obj = {a:1, b:2, c:3};
+            let boo = true;
+            let nul;                //아무런 값이 없을 때
+            let und = undefined;    //값이 정의 되어 있지 않을 때
+            let sym = Symbol();
+
+            document.querySelector(".text6").innerHTML = 
+            `${typeof(num1)}&nbsp ${typeof(str)}&nbsp ${typeof(func)}&nbsp ${typeof(arr)}&nbsp 
+            ${typeof(obj)}&nbsp ${typeof(boo)}&nbsp ${typeof(nul)}&nbsp ${typeof(und)}&nbsp ${typeof(sym)}`;
+
+            document.querySelector("#sample6 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample6 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
 
     <hr>
     
@@ -268,7 +405,31 @@
 }         
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text7"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const x = 100;
+            const y = 200;
+            const z = "javascript";
+            // x = 300;
+            // y = 400;
+            // z = "jquery";
+            //Uncaught TypeError: Assignment to constant variable.
+
+            document.querySelector(".text7").innerHTML = `${x} ${y} ${z}`;
+
+            document.querySelector("#sample7 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample7 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -287,9 +448,31 @@
 }        
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text8"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const arr = new Array();    //배열 선언
+            arr[0] = 100;               //첫번째 배열 저장소에 숫자 100을 저장
+            arr[1] = 200;               //두번째 배열 저장소에 숫자 200을 저장
+            arr[2] = "javascript";      //세번째 배열 저장소에 문자 javascript를 저장
+
+            document.querySelector(".text8").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+
+            document.querySelector("#sample8 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample8 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
+
     <div id="sample9" class="sample">
         <h2>09. 배열 : 표현방법2<span class="dot"></span></h2>
         <div class="code">
@@ -302,7 +485,25 @@
 }          
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text9"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const arr = new Array(100, 200, "javascript");
+
+            document.querySelector(".text9").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+
+            document.querySelector("#sample9 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample9 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -321,7 +522,28 @@
 }           
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text10"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const arr = [];
+            arr[0] = 100;
+            arr[1] = 200;
+            arr[2] = "javascript";
+
+            document.querySelector(".text10").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+
+            document.querySelector("#sample10 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample10 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -337,7 +559,25 @@
 }           
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text11"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const arr = [100, 200, "javascript"];
+
+            document.querySelector(".text11").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+
+            document.querySelector("#sample11 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample11 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -356,11 +596,32 @@
 }          
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text12"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const obj = new Object();
+            obj[0] = 100;
+            obj[1] = 200;
+            obj[2] = "javascript";
+
+            document.querySelector(".text12").innerHTML = `${obj[0]} ${obj[1]} ${obj[2]}`;
+
+            document.querySelector("#sample12 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample12 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
-    <div id="sampl13" class="sample">
+    <div id="sample13" class="sample">
         <h2>13. 객체 : 데이터 저장(키와 값) : 표현 방법2 : 객체 스타일<span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -375,7 +636,28 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text13"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const obj = new Object();
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript";
+
+            document.querySelector(".text13").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+
+            document.querySelector("#sample13 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample13 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -394,7 +676,28 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text14"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const obj = {};
+            obj.a = 100;
+            obj.b = 200;
+            obj.c = "javascript";
+
+            document.querySelector(".text14").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+
+            document.querySelector("#sample14 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample14 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -410,7 +713,25 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text15"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const obj = {a:100, b:200, c:"javascript"};
+
+            document.querySelector(".text15").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+
+            document.querySelector("#sample15 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample15 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -429,7 +750,28 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text16"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const obj = [
+                {a:100, b:200},
+                {c:"javascript"}
+            ];
+
+            document.querySelector(".text16").innerHTML = `${obj[0].a} ${obj[0].b} ${obj[1].c}`;
+
+            document.querySelector("#sample16 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample16 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -451,7 +793,29 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text17"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const obj = {
+                a: 100,
+                b: [200,300],
+                c: "javascript"
+            }
+
+            document.querySelector(".text17").innerHTML = `${obj.a}&nbsp ${obj.b}&nbsp ${obj.b[0]}&nbsp ${obj.b[1]}&nbsp ${obj.c}`;
+
+            document.querySelector("#sample17 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample17 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
 
@@ -470,7 +834,29 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text18"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const a = 100;
+            const b = 200;
+            const c = "javascript";
+
+            const obj = { a, b, c }
+
+            document.querySelector(".text18").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+
+            document.querySelector("#sample18 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample18 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
 
     <hr>
     
@@ -504,7 +890,38 @@
 }
 </code></pre>
         </div>
+        <div class="btn">
+            <h3><a href="#c">결과보기</a></h3>
+            <div class="result">
+                <span class="text19"></span>
+            </div>
+        </div>
     </div>
+
+    <script>
+        {
+            const obj = {
+                a: 100,
+                b: [200,300],
+                c: "javascript",
+                d: function(){
+                    document.querySelector(".text19").innerHTML += "자바스크립트가 실행되었습니다.<br>"
+                },
+                e: function(){
+                    document.querySelector(".text19").innerHTML += obj.c + "가 실행되었습니다.<br>"
+                },
+                f: function(){
+                    document.querySelector(".text19").innerHTML += this.c + "가 실행되었습니다.<br>"
+                }
+            }
+            document.querySelector(".text19").innerHTML += `${obj.a}&nbsp ${obj.b}&nbsp ${obj.b[0]}&nbsp ${obj.b[1]}&nbsp ${obj.c}<br>`; +
+            obj.d(); obj.e(); obj.f();
+
+            document.querySelector("#sample19 .btn h3").addEventListener("click", function(){ 
+                document.querySelector("#sample19 .btn div").classList.toggle("active"); 
+            });
+        }
+    </script>
     
     <hr>
     <hr>
