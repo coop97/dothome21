@@ -144,7 +144,7 @@ a {
     line-height: 1.6;
 }
 .sample pre {
-    margin: 0 !important; border-radius: 0;;
+    margin: 0 !important; border-radius: 0 0 5px 5px;;
 }
 .sample .desc {
     padding: 25px;
