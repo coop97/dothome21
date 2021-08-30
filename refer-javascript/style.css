@@ -84,13 +84,19 @@ a {
     font-weight: 700;
 }
 .subs {
-    background: #222;
+    background: #272822;
     color: #fff;
     padding: 15px;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 5px 5px 5px;
     display: none;
 }
-.push div.active {
+.subs span {
+    display: block;
+}
+/* .subs .active div {
+    display: block;
+} */
+.push.active div {
     display: block;
 }
 .sample h2 .dot {

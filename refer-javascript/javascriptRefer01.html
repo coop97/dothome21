@@ -85,15 +85,15 @@
 }
 </code></pre>
         </div>
-        <div class="push">
+        <div class="push active">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text1"></span>
+                <span class="text1-1"></span>
+                <span class="text1-2"></span>
+                <span class="text1-3"></span>
             </div>
         </div>
     </div>
-    
-    
 
     <script>
     {
@@ -101,19 +101,15 @@
         var y = 200; //변수 y에 숫자 200을 저장
         var z = "javascript"; //변수 z에 문자 javascript 저장
 
-        document.querySelector(".text1").innerHTML = `${x} ${y} ${z}`;
+        // document.querySelector(".text1").innerHTML = `${x} ${y} ${z}`;
+        document.querySelector(".text1-1").innerHTML = x;
+        document.querySelector(".text1-2").innerHTML = y;
+        document.querySelector(".text1-3").innerHTML = z;
 
-        document.querySelector("#sample1 .push h3").addEventListener("click", function(){ 
-            document.querySelector("#sample1 .push div").classList.toggle("active"); 
-        });
+        // document.querySelector("#sample1 .push h3").addEventListener("click", function(){ 
+        //     document.querySelector("#sample1 .push div").classList.toggle("active"); 
+        // });
     }
-        // document.querySelectorAll(".subs h3").forEach(el => {
-        //     el.addEventListener("click", function(e){
-        //         e.preventDefault();
-        //         this.parentNode.classList.toggle("show");
-        //     })
-        // })
-
     </script>
 
     <hr>
@@ -135,10 +131,12 @@
 }
 </code></pre>
         </div>
-        <div class="push">
+        <div class="push active">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text2"></span>
+                <span class="text2-1"></span>
+                <span class="text2-2"></span>
+                <span class="text2-3"></span>
             </div>
         </div>
     </div>
@@ -152,12 +150,17 @@
         y = 400;
         z = "jquery";
 
-        document.querySelector(".text2").innerHTML = `${x} ${y} ${z}`;
+        // document.querySelector(".text2").innerHTML = `${x} ${y} ${z}`;
+        document.querySelector(".text2-1").innerHTML = x;
+        document.querySelector(".text2-2").innerHTML = y;
+        document.querySelector(".text2-3").innerHTML = z;
 
-        document.querySelector("#sample2 .push h3").addEventListener("click", function(){ 
-            document.querySelector("#sample2 .push div").classList.toggle("active"); 
-        });
+        // document.querySelector("#sample2 .push h3").addEventListener("click", function(){ 
+        //     document.querySelector("#sample2 .push div").classList.toggle("active"); 
+        // });
+
     }
+    
     </script>
 
     <hr>
@@ -179,10 +182,12 @@
 }       
 </code></pre>
         </div>
-        <div class="push">
+        <div class="push active">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text3"></span>
+                <span class="text3-1"></span>
+                <span class="text3-2"></span>
+                <span class="text3-3"></span>
             </div>
         </div>
     </div>
@@ -196,11 +201,14 @@
             y += 400;       // y = y + 400;
             z += "jquery";  // z = z + "jquery";
 
-            document.querySelector(".text3").innerHTML = `${x} ${y} ${z}`;
+            //document.querySelector(".text3").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector(".text3-1").innerHTML = x;
+            document.querySelector(".text3-2").innerHTML = y;
+            document.querySelector(".text3-3").innerHTML = z;
 
-            document.querySelector("#sample3 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample3 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample3 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample3 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
 
@@ -241,7 +249,14 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text4"></span>
+                <span class="text4-1"></span>
+                <span class="text4-2"></span>
+                <span class="text4-3"></span>
+                <span class="text4-4"></span>
+                <span class="text4-5"></span>
+                <span class="text4-6"></span>
+                <span class="text4-7"></span>
+                <span class="text4-8"></span>
             </div>
         </div>
     </div>
@@ -260,15 +275,23 @@
                 a = 400;        //전역 변수 : 변수 값이 300 -> 400 변경
                 y = 500;        //지역 변수 : 변수 값이 200 -> 500 변경
 
-                document.querySelector(".text4").innerHTML += `함수 안: ${x} ${y} ${z} ${a}<br>`;
+                // document.querySelector(".text4").innerHTML += `함수 안: ${x} ${y} ${z} ${a}<br>`;
+                document.querySelector(".text4-1").innerHTML = x;
+                document.querySelector(".text4-2").innerHTML = y;
+                document.querySelector(".text4-3").innerHTML = z;
+                document.querySelector(".text4-4").innerHTML = a;
             }
             func();
 
-            document.querySelector(".text4").innerHTML += `함수 밖: ${x} ${y} ${z} ${a}`;
+            // document.querySelector(".text4").innerHTML += `함수 밖: ${x} ${y} ${z} ${a}`;
+            document.querySelector(".text4-5").innerHTML = x;
+            document.querySelector(".text4-6").innerHTML = y;
+            document.querySelector(".text4-7").innerHTML = z;
+            document.querySelector(".text4-8").innerHTML = a;
 
-            document.querySelector("#sample4 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample4 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample4 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample4 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
 
@@ -301,7 +324,12 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text5"></span>
+                <span class="text5-1"></span>
+                <span class="text5-2"></span>
+                <span class="text5-3"></span>
+                <span class="text5-4"></span>
+                <span class="text5-5"></span>
+                <span class="text5-6"></span>
             </div>
         </div>
     </div>
@@ -311,23 +339,29 @@
             let x = 100;
             let y = "100";
 
-            document.querySelector(".text5").innerHTML += `x: ${x} : ${typeof(x)}&nbsp y: ${y} : ${typeof(y)}<br>`;
+            //document.querySelector(".text5").innerHTML += `x: ${x} : ${typeof(x)}&nbsp y: ${y} : ${typeof(y)}<br>`;
+            document.querySelector(".text5-1").innerHTML = "x"+" : "+ x +" : "+ typeof(x);
+            document.querySelector(".text5-2").innerHTML = "y"+" : "+ y +" : "+ typeof(y);
 
             x = "" + x;     //숫자를 문자열로 형 변환
-            document.querySelector(".text5").innerHTML += `x: ${x} : ${typeof(x)}<br>`;
+            //document.querySelector(".text5").innerHTML += `x: ${x} : ${typeof(x)}<br>`;
+            document.querySelector(".text5-3").innerHTML = "x"+" : "+ x +" : "+ typeof(x);
 
             y = Number(y);  //내장 객체를 이용한 형 변환
-            document.querySelector(".text5").innerHTML += `y: ${y} : ${typeof(y)}<br>`;
+            //document.querySelector(".text5").innerHTML += `y: ${y} : ${typeof(y)}<br>`;
+            document.querySelector(".text5-4").innerHTML = "y"+" : "+ y +" : "+ typeof(y);
 
             x = Number(x);
-            document.querySelector(".text5").innerHTML += `x: ${x} : ${typeof(x)}<br>`;
+            //document.querySelector(".text5").innerHTML += `x: ${x} : ${typeof(x)}<br>`;
+            document.querySelector(".text5-5").innerHTML = "x"+" : "+ x +" : "+ typeof(x);
 
             y = String(y);
-            document.querySelector(".text5").innerHTML += `y: ${y} : ${typeof(y)}<br>`;
+            //document.querySelector(".text5").innerHTML += `y: ${y} : ${typeof(y)}<br>`;
+            document.querySelector(".text5-6").innerHTML = "y"+" : "+ y +" : "+ typeof(y);
 
-            document.querySelector("#sample5 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample5 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample5 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample5 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -362,7 +396,15 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text6"></span>
+                <span class="text6-1"></span>
+                <span class="text6-2"></span>
+                <span class="text6-3"></span>
+                <span class="text6-4"></span>
+                <span class="text6-5"></span>
+                <span class="text6-6"></span>
+                <span class="text6-7"></span>
+                <span class="text6-8"></span>
+                <span class="text6-9"></span>
             </div>
         </div>
     </div>
@@ -379,13 +421,22 @@
             let und = undefined;    //값이 정의 되어 있지 않을 때
             let sym = Symbol();
 
-            document.querySelector(".text6").innerHTML = 
-            `${typeof(num1)}&nbsp ${typeof(str)}&nbsp ${typeof(func)}&nbsp ${typeof(arr)}&nbsp 
-            ${typeof(obj)}&nbsp ${typeof(boo)}&nbsp ${typeof(nul)}&nbsp ${typeof(und)}&nbsp ${typeof(sym)}`;
+            // document.querySelector(".text6").innerHTML = 
+            // `${typeof(num1)}&nbsp ${typeof(str)}&nbsp ${typeof(func)}&nbsp ${typeof(arr)}&nbsp 
+            // ${typeof(obj)}&nbsp ${typeof(boo)}&nbsp ${typeof(nul)}&nbsp ${typeof(und)}&nbsp ${typeof(sym)}`;
+            document.querySelector(".text6-1").innerHTML = typeof(num1);
+            document.querySelector(".text6-2").innerHTML = typeof(str);
+            document.querySelector(".text6-3").innerHTML = typeof(func);
+            document.querySelector(".text6-4").innerHTML = typeof(arr);
+            document.querySelector(".text6-5").innerHTML = typeof(obj);
+            document.querySelector(".text6-6").innerHTML = typeof(boo);
+            document.querySelector(".text6-7").innerHTML = typeof(nul);
+            document.querySelector(".text6-8").innerHTML = typeof(und);
+            document.querySelector(".text6-9").innerHTML = typeof(sym);
 
-            document.querySelector("#sample6 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample6 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample6 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample6 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
 
@@ -408,7 +459,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text7"></span>
+                <span class="text7-1"></span>
+                <span class="text7-2"></span>
+                <span class="text7-3"></span>
             </div>
         </div>
     </div>
@@ -423,11 +476,14 @@
             // z = "jquery";
             //Uncaught TypeError: Assignment to constant variable.
 
-            document.querySelector(".text7").innerHTML = `${x} ${y} ${z}`;
+            //document.querySelector(".text7").innerHTML = `${x} ${y} ${z}`;
+            document.querySelector(".text7-1").innerHTML = x;
+            document.querySelector(".text7-2").innerHTML = y;
+            document.querySelector(".text7-3").innerHTML = z;
 
-            document.querySelector("#sample7 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample7 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample7 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample7 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -451,7 +507,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text8"></span>
+                <span class="text8-1"></span>
+                <span class="text8-2"></span>
+                <span class="text8-3"></span>
             </div>
         </div>
     </div>
@@ -463,11 +521,14 @@
             arr[1] = 200;               //두번째 배열 저장소에 숫자 200을 저장
             arr[2] = "javascript";      //세번째 배열 저장소에 문자 javascript를 저장
 
-            document.querySelector(".text8").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+            //document.querySelector(".text8").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+            document.querySelector(".text8-1").innerHTML = arr[0];
+            document.querySelector(".text8-2").innerHTML = arr[1];
+            document.querySelector(".text8-3").innerHTML = arr[2];
 
-            document.querySelector("#sample8 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample8 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample8 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample8 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -488,7 +549,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text9"></span>
+                <span class="text9-1"></span>
+                <span class="text9-2"></span>
+                <span class="text9-3"></span>
             </div>
         </div>
     </div>
@@ -497,11 +560,14 @@
         {
             const arr = new Array(100, 200, "javascript");
 
-            document.querySelector(".text9").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+            //document.querySelector(".text9").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+            document.querySelector(".text9-1").innerHTML = arr[0];
+            document.querySelector(".text9-2").innerHTML = arr[1];
+            document.querySelector(".text9-3").innerHTML = arr[2];
 
-            document.querySelector("#sample9 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample9 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample9 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample9 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -525,7 +591,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text10"></span>
+                <span class="text10-1"></span>
+                <span class="text10-2"></span>
+                <span class="text10-3"></span>
             </div>
         </div>
     </div>
@@ -537,11 +605,14 @@
             arr[1] = 200;
             arr[2] = "javascript";
 
-            document.querySelector(".text10").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+            //document.querySelector(".text10").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+            document.querySelector(".text10-1").innerHTML = arr[0];
+            document.querySelector(".text10-2").innerHTML = arr[1];
+            document.querySelector(".text10-3").innerHTML = arr[2];
 
-            document.querySelector("#sample10 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample10 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample10 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample10 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -562,7 +633,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text11"></span>
+                <span class="text11-1"></span>
+                <span class="text11-2"></span>
+                <span class="text11-3"></span>
             </div>
         </div>
     </div>
@@ -571,11 +644,14 @@
         {
             const arr = [100, 200, "javascript"];
 
-            document.querySelector(".text11").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+            //document.querySelector(".text11").innerHTML = `${arr[0]} ${arr[1]} ${arr[2]}`;
+            document.querySelector(".text11-1").innerHTML = arr[0];
+            document.querySelector(".text11-2").innerHTML = arr[1];
+            document.querySelector(".text11-3").innerHTML = arr[2];
 
-            document.querySelector("#sample11 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample11 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample11 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample11 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -599,7 +675,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text12"></span>
+                <span class="text12-1"></span>
+                <span class="text12-2"></span>
+                <span class="text12-3"></span>
             </div>
         </div>
     </div>
@@ -611,11 +689,14 @@
             obj[1] = 200;
             obj[2] = "javascript";
 
-            document.querySelector(".text12").innerHTML = `${obj[0]} ${obj[1]} ${obj[2]}`;
+            //document.querySelector(".text12").innerHTML = `${obj[0]} ${obj[1]} ${obj[2]}`;
+            document.querySelector(".text12-1").innerHTML = obj[0];
+            document.querySelector(".text12-2").innerHTML = obj[1];
+            document.querySelector(".text12-3").innerHTML = obj[2];
 
-            document.querySelector("#sample12 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample12 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample12 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample12 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -639,7 +720,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text13"></span>
+                <span class="text13-1"></span>
+                <span class="text13-2"></span>
+                <span class="text13-3"></span>
             </div>
         </div>
     </div>
@@ -651,11 +734,14 @@
             obj.b = 200;
             obj.c = "javascript";
 
-            document.querySelector(".text13").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            //document.querySelector(".text13").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            document.querySelector(".text13-1").innerHTML = obj.a;
+            document.querySelector(".text13-2").innerHTML = obj.b;
+            document.querySelector(".text13-3").innerHTML = obj.c;
 
-            document.querySelector("#sample13 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample13 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample13 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample13 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -679,7 +765,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text14"></span>
+                <span class="text14-1"></span>
+                <span class="text14-2"></span>
+                <span class="text14-3"></span>
             </div>
         </div>
     </div>
@@ -691,11 +779,14 @@
             obj.b = 200;
             obj.c = "javascript";
 
-            document.querySelector(".text14").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            //document.querySelector(".text14").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            document.querySelector(".text14-1").innerHTML = obj.a;
+            document.querySelector(".text14-2").innerHTML = obj.b;
+            document.querySelector(".text14-3").innerHTML = obj.c;
 
-            document.querySelector("#sample14 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample14 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample14 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample14 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -716,7 +807,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text15"></span>
+                <span class="text15-1"></span>
+                <span class="text15-2"></span>
+                <span class="text15-3"></span>
             </div>
         </div>
     </div>
@@ -725,11 +818,14 @@
         {
             const obj = {a:100, b:200, c:"javascript"};
 
-            document.querySelector(".text15").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            //document.querySelector(".text15").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            document.querySelector(".text15-1").innerHTML = obj.a;
+            document.querySelector(".text15-2").innerHTML = obj.b;
+            document.querySelector(".text15-3").innerHTML = obj.c;
 
-            document.querySelector("#sample15 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample15 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample15 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample15 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -753,7 +849,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text16"></span>
+                <span class="text16-1"></span>
+                <span class="text16-2"></span>
+                <span class="text16-3"></span>
             </div>
         </div>
     </div>
@@ -765,11 +863,14 @@
                 {c:"javascript"}
             ];
 
-            document.querySelector(".text16").innerHTML = `${obj[0].a} ${obj[0].b} ${obj[1].c}`;
+            //document.querySelector(".text16").innerHTML = `${obj[0].a} ${obj[0].b} ${obj[1].c}`;
+            document.querySelector(".text16-1").innerHTML = obj[0].a;
+            document.querySelector(".text16-2").innerHTML = obj[0].b;
+            document.querySelector(".text16-3").innerHTML = obj[1].c;
 
-            document.querySelector("#sample16 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample16 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample16 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample16 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -796,7 +897,11 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text17"></span>
+                <span class="text17-1"></span>
+                <span class="text17-2"></span>
+                <span class="text17-3"></span>
+                <span class="text17-4"></span>
+                <span class="text17-5"></span>
             </div>
         </div>
     </div>
@@ -809,11 +914,16 @@
                 c: "javascript"
             }
 
-            document.querySelector(".text17").innerHTML = `${obj.a}&nbsp ${obj.b}&nbsp ${obj.b[0]}&nbsp ${obj.b[1]}&nbsp ${obj.c}`;
+            //document.querySelector(".text17").innerHTML = `${obj.a}&nbsp ${obj.b}&nbsp ${obj.b[0]}&nbsp ${obj.b[1]}&nbsp ${obj.c}`;
+            document.querySelector(".text17-1").innerHTML = obj.a;
+            document.querySelector(".text17-2").innerHTML = obj.b;
+            document.querySelector(".text17-3").innerHTML = obj.b[0];
+            document.querySelector(".text17-4").innerHTML = obj.b[1];
+            document.querySelector(".text17-5").innerHTML = obj.c;
 
-            document.querySelector("#sample17 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample17 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample17 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample17 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
     
@@ -837,7 +947,9 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text18"></span>
+                <span class="text18-1"></span>
+                <span class="text18-2"></span>
+                <span class="text18-3"></span>
             </div>
         </div>
     </div>
@@ -850,11 +962,14 @@
 
             const obj = { a, b, c }
 
-            document.querySelector(".text18").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            //document.querySelector(".text18").innerHTML = `${obj.a} ${obj.b} ${obj.c}`;
+            document.querySelector(".text18-1").innerHTML = obj.a;
+            document.querySelector(".text18-2").innerHTML = obj.b;
+            document.querySelector(".text18-3").innerHTML = obj.c;
 
-            document.querySelector("#sample18 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample18 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample18 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample18 .push div").classList.toggle("active"); 
+            // });
         }
     </script>
 
@@ -893,7 +1008,14 @@
         <div class="push">
             <h3><a href="#c">결과보기</a></h3>
             <div class="subs">
-                <span class="text19"></span>
+                <span class="text19-1"></span>
+                <span class="text19-2"></span>
+                <span class="text19-3"></span>
+                <span class="text19-4"></span>
+                <span class="text19-5"></span>
+                <span class="text19-6"></span>
+                <span class="text19-7"></span>
+                <span class="text19-8"></span>
             </div>
         </div>
     </div>
@@ -905,22 +1027,40 @@
                 b: [200,300],
                 c: "javascript",
                 d: function(){
-                    document.querySelector(".text19").innerHTML += "자바스크립트가 실행되었습니다.<br>"
+                    document.querySelector(".text19-6").innerHTML = "자바스크립트가 실행되었습니다.";
                 },
                 e: function(){
-                    document.querySelector(".text19").innerHTML += obj.c + "가 실행되었습니다.<br>"
+                    document.querySelector(".text19-7").innerHTML = obj. c + "가 실행되었습니다.";
                 },
                 f: function(){
-                    document.querySelector(".text19").innerHTML += this.c + "가 실행되었습니다.<br>"
+                    document.querySelector(".text19-8").innerHTML = this. c + "가 실행되었습니다.";
                 }
             }
-            document.querySelector(".text19").innerHTML += `${obj.a}&nbsp ${obj.b}&nbsp ${obj.b[0]}&nbsp ${obj.b[1]}&nbsp ${obj.c}<br>`; +
-            obj.d(); obj.e(); obj.f();
+            // document.querySelector(".text19").innerHTML += `${obj.a}&nbsp ${obj.b}&nbsp ${obj.b[0]}&nbsp ${obj.b[1]}&nbsp ${obj.c}<br>`; +
+            // obj.d(); obj.e(); obj.f();
+            document.querySelector(".text19-1").innerHTML = obj.a;
+            document.querySelector(".text19-2").innerHTML = obj.b;
+            document.querySelector(".text19-3").innerHTML = obj.b[0];
+            document.querySelector(".text19-4").innerHTML = obj.b[1];
+            document.querySelector(".text19-5").innerHTML = obj.c; +
+            obj.d;
+            obj.e;
+            obj.f;
 
-            document.querySelector("#sample19 .push h3").addEventListener("click", function(){ 
-                document.querySelector("#sample19 .push div").classList.toggle("active"); 
-            });
+            // document.querySelector("#sample19 .push h3").addEventListener("click", function(){ 
+            //     document.querySelector("#sample19 .push div").classList.toggle("active"); 
+            // });
         }
+    </script>
+
+    <!-- 결과보기 클릭 -->
+    <script>
+        document.querySelectorAll(".push h3").forEach(el => {
+            el.addEventListener("click", function(e){
+                e.preventDefault();
+                this.parentNode.classList.toggle("active");
+            })
+        })
     </script>
     
     <hr>
