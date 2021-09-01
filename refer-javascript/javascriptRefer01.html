@@ -109,6 +109,10 @@
         // document.querySelector("#sample1 .push h3").addEventListener("click", function(){ 
         //     document.querySelector("#sample1 .push div").classList.toggle("active"); 
         // });
+
+        $(".push h3").click(function(){
+            $("#sample1 .push div").toggleClass("active");
+        });
     }
     </script>
 
@@ -1055,12 +1059,16 @@
 
     <!-- 결과보기 클릭 -->
     <script>
-        document.querySelectorAll(".push h3").forEach(el => {
-            el.addEventListener("click", function(e){
-                e.preventDefault();
-                this.parentNode.classList.toggle("active");
-            })
-        })
+        // document.querySelectorAll(".push h3").forEach(el => {
+        //     el.addEventListener("click", function(e){
+        //         e.preventDefault();
+        //         this.parentNode.classList.toggle("active");
+        //     })
+        // })
+
+        // $(".push h3").click(function(){
+        //     $(this).toggleClass("active");
+        // });
     </script>
     
     <hr>

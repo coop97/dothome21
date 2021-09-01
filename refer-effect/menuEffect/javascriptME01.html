@@ -7,13 +7,48 @@
     <title>Menu Effect</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body class="bg1">
+<body class="bg bg0">
     <!-- info -->
     <div class="info">
-        <h1>javascript Menu Effect</h1>
+        <h1>javascript Menu Effect01</h1>
         <p>메뉴 이벤트 - 탭 메뉴</p>
     </div>
+    
+    <div class="info right">
+        <ul>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button>소스 보기</button>
+    </div>
     <!-- //info -->
+    
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <h2>레이어 팝업</h2>
+                <p>240조원 투자와 4만명 직접 채용 등 코로나19 이후 미래 준비 계획을 내놓은 이재용 삼성전자 부회장이 이번엔 청소년들의 꿈을 찾아주기 위한 '교육격차 해소'에 나섰다. 사회적 거리두기 상황 등을 고려해 오프라인 중심 교육 프로그램을 온라인으로 개편하고 진로탐색 프로그램을 강화하는 등 어려운 형편의 학생들이 꿈과 희망을 가질 수 있도록 돕는다.</p>
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".bottom button").click(function(){
+            $("#modal").removeClass().addClass("show");
+        });
+
+        $(".modal-cont button").click(function(){
+            $("#modal").addClass("hide");
+        });
+    </script>
 </body>
 </html>
