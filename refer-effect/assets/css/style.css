@@ -1,0 +1,240 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NEXONLv1Gothic';
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv1Gothic';
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv1Gothic';
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv2Gothic';
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv2Gothic';
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXONLv2Gothic';
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
+  font-style: normal;
+}
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #222;
+  font-family: var(--fontNexon1M), AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
+}
+
+/* 링크 초기화 */
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+/* 목록 초기화 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 스타일 초기화 */
+strong {
+  font-weight: normal;
+}
+
+em {
+  font-style: normal;
+}
+
+img {
+  width: 100%;
+}
+
+.bg1 {
+  height: 100vh;
+  background-image: url(../img/bg01@1.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #11e8bb;
+  /* Old browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(#11e8bb), to(#8200c9));
+  background: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
+  /* FF3.6-15 */
+}
+
+#main.game {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3e7e9), to(#faaca8));
+  background: linear-gradient(to bottom, #f3e7e9 0%, #faaca8 100%);
+}
+
+#main.menu {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff1eb), to(#ace0f9));
+  background: linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);
+}
+
+#main.mouse {
+  background: -webkit-gradient(linear, left top, left bottom, from(#feada6), to(#f5efef));
+  background: linear-gradient(to bottom, #feada6 0%, #f5efef 100%);
+}
+
+#main.parallax {
+  background: -webkit-gradient(linear, left top, left bottom, from(#93a5cf), to(#e4efe9));
+  background: linear-gradient(to bottom, #93a5cf 0%, #e4efe9 100%);
+}
+
+#main.slider {
+  background: -webkit-gradient(linear, left top, left bottom, from(#abecd6), to(#fbed96));
+  background: linear-gradient(to bottom, #abecd6 0%, #fbed96 100%);
+}
+
+#contents h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 10vw;
+  white-space: nowrap;
+  font-family: "Six Caps", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #8200c9), to(#240038));
+  background-image: linear-gradient(to bottom, #8200c9 40%, #240038);
+}
+
+#contents h1.game {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #cc5c56), to(#dda0aa));
+  background-image: linear-gradient(to bottom, #cc5c56 40%, #dda0aa);
+}
+
+#contents h1.menu {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #499fc7), to(#ffdbcb));
+  background-image: linear-gradient(to bottom, #499fc7 40%, #ffdbcb);
+}
+
+#contents h1.mouse {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #eeaaaa), to(#ca594f));
+  background-image: linear-gradient(to bottom, #eeaaaa 40%, #ca594f);
+}
+
+#contents h1.parallax {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #f2fff8), to(#576fa7));
+  background-image: linear-gradient(to bottom, #f2fff8 40%, #576fa7);
+}
+
+#contents h1.slider {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #e2c81e), to(#25bd8a));
+  background-image: linear-gradient(to bottom, #e2c81e 40%, #25bd8a);
+}
+
+#nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 10px;
+  top: auto;
+}
+
+#nav li {
+  list-style: none;
+  display: inline;
+}
+
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+  margin: 4px;
+  font-family: "NEXONLv1Gothic";
+  -webkit-box-shadow: inset 0 0 0 #fff;
+          box-shadow: inset 0 0 0 #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#nav li a:hover {
+  -webkit-box-shadow: inset 0 -100px 0 #fff;
+          box-shadow: inset 0 -100px 0 #fff;
+  color: #6c4a70;
+}
