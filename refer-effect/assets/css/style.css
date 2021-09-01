@@ -113,6 +113,24 @@ img {
   width: 100%;
 }
 
+@media (max-width: 800px) {
+  #contents h1 a {
+    font-size: 17vw;
+  }
+  #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #nav ul li a {
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    margin: 3px;
+  }
+}
+
 .bg {
   position: relative;
   height: 100vh;
