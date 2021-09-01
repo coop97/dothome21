@@ -245,28 +245,28 @@ img {
 }
 
 #contents h1.game {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #cc5c56), to(#dda0aa));
-  background-image: linear-gradient(to bottom, #cc5c56 40%, #dda0aa);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #be4741), to(#c5848f));
+  background-image: linear-gradient(to bottom, #be4741 40%, #c5848f);
 }
 
 #contents h1.menu {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #499fc7), to(#ffdbcb));
-  background-image: linear-gradient(to bottom, #499fc7 40%, #ffdbcb);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #026ea0), to(#f0af93));
+  background-image: linear-gradient(to bottom, #026ea0 40%, #f0af93);
 }
 
 #contents h1.mouse {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #eeaaaa), to(#ca594f));
-  background-image: linear-gradient(to bottom, #eeaaaa 40%, #ca594f);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #ce6b6b), to(#7e2921));
+  background-image: linear-gradient(to bottom, #ce6b6b 40%, #7e2921);
 }
 
 #contents h1.parallax {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #f2fff8), to(#576fa7));
-  background-image: linear-gradient(to bottom, #f2fff8 40%, #576fa7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #7ea1f1), to(#28334e));
+  background-image: linear-gradient(to bottom, #7ea1f1 40%, #28334e);
 }
 
 #contents h1.slider {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #e2c81e), to(#25bd8a));
-  background-image: linear-gradient(to bottom, #e2c81e 40%, #25bd8a);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #40d1a1), to(#064b34));
+  background-image: linear-gradient(to bottom, #40d1a1 40%, #064b34);
 }
 
 #nav {
