@@ -208,8 +208,8 @@ img {
 }
 
 #main.game {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f3e7e9), to(#faaca8));
-  background: linear-gradient(to bottom, #f3e7e9 0%, #faaca8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fffcd4), to(#2d31ff));
+  background: linear-gradient(to bottom, #fffcd4 0%, #2d31ff 100%);
 }
 
 #main.menu {
@@ -251,8 +251,8 @@ img {
 }
 
 #contents h1.game {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #be4741), to(#c5848f));
-  background-image: linear-gradient(to bottom, #be4741 40%, #c5848f);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #000280), to(#4244e2));
+  background-image: linear-gradient(to bottom, #000280 40%, #4244e2);
 }
 
 #contents h1.menu {
