@@ -129,6 +129,9 @@ img {
     font-size: 12px;
     margin: 3px;
   }
+  .modal-cont button {
+    margin-top: 10px;
+  }
 }
 
 .bg {
