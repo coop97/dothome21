@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
     
@@ -110,9 +111,9 @@
         //     document.querySelector("#sample1 .push div").classList.toggle("active"); 
         // });
 
-        $(".push h3").click(function(){
-            $("#sample1 .push div").toggleClass("active");
-        });
+        // $(".push h3").click(function(){
+        //     $("#sample1 .push").toggleClass("active");
+        // });
     }
     </script>
 
@@ -1031,13 +1032,13 @@
                 b: [200,300],
                 c: "javascript",
                 d: function(){
-                    document.querySelector(".text19-6").innerHTML = "자바스크립트가 실행되었습니다.";
+                    document.write("javascript가 실행되었습니다.");
                 },
                 e: function(){
-                    document.querySelector(".text19-7").innerHTML = obj. c + "가 실행되었습니다.";
+                    document.write(obj. c + "가 실행되었습니다.");
                 },
                 f: function(){
-                    document.querySelector(".text19-8").innerHTML = this. c + "가 실행되었습니다.";
+                    document.write(this. c + "가 실행되었습니다.");
                 }
             }
             // document.querySelector(".text19").innerHTML += `${obj.a}&nbsp ${obj.b}&nbsp ${obj.b[0]}&nbsp ${obj.b[1]}&nbsp ${obj.c}<br>`; +
@@ -1046,10 +1047,10 @@
             document.querySelector(".text19-2").innerHTML = obj.b;
             document.querySelector(".text19-3").innerHTML = obj.b[0];
             document.querySelector(".text19-4").innerHTML = obj.b[1];
-            document.querySelector(".text19-5").innerHTML = obj.c; +
-            obj.d;
-            obj.e;
-            obj.f;
+            document.querySelector(".text19-5").innerHTML = obj.c;
+            obj.d(".text19-6");
+            obj.e(".text19-7");
+            obj.f(".text19-8");
 
             // document.querySelector("#sample19 .push h3").addEventListener("click", function(){ 
             //     document.querySelector("#sample19 .push div").classList.toggle("active"); 
@@ -1059,16 +1060,12 @@
 
     <!-- 결과보기 클릭 -->
     <script>
-        // document.querySelectorAll(".push h3").forEach(el => {
-        //     el.addEventListener("click", function(e){
-        //         e.preventDefault();
-        //         this.parentNode.classList.toggle("active");
-        //     })
-        // })
-
-        // $(".push h3").click(function(){
-        //     $(this).toggleClass("active");
-        // });
+        document.querySelectorAll(".push h3").forEach(el => {
+            el.addEventListener("click", function(e){
+                e.preventDefault();
+                this.parentNode.classList.toggle("active");
+            })
+        })
     </script>
     
     <hr>
