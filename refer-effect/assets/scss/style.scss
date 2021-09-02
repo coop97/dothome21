@@ -129,6 +129,10 @@ img {
     .modal-cont button {
         margin-top: 10px;
     }
+    .h1 {
+        font-size: 16px;
+    }
+    .code-view {}
 }
 
 //variable
@@ -444,6 +448,7 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
     border: 1px solid #f2f2f2;
     border-radius: 10px;
     overflow: hidden;
+    font-size: 16px;
 
     .view-header {
         border-bottom: 1px solid #f2f2f2;
@@ -494,6 +499,7 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
     .view-cont {
         height: 70vh;
         overflow-y: scroll;     //y축이 500이 넘으면 스크롤이 생겨라
+        background: #F8F8F9;
 
         > div {
             display: none;

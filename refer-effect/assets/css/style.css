@@ -135,6 +135,9 @@ img {
   .modal-cont button {
     margin-top: 10px;
   }
+  .h1 {
+    font-size: 16px;
+  }
 }
 
 .bg {
@@ -574,6 +577,7 @@ img {
   border: 1px solid #f2f2f2;
   border-radius: 10px;
   overflow: hidden;
+  font-size: 16px;
 }
 
 .code-view .view-header {
@@ -631,6 +635,7 @@ img {
 .code-view .view-cont {
   height: 70vh;
   overflow-y: scroll;
+  background: #F8F8F9;
 }
 
 .code-view .view-cont > div {

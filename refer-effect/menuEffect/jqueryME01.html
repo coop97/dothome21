@@ -28,6 +28,7 @@
             width: 20%;
             list-style: none;
             text-align: center;
+            font-size: 16px;
         }
         .tab-btn li a {
             color: rgb(110, 197, 116);
@@ -36,7 +37,7 @@
             display: block;
         }
         .tab-btn li.active a {
-            border-bottom: 3px solid rgb(134, 255, 144);
+            border-bottom: 4px solid rgb(134, 255, 144);
             color: #fff;
         }
         .tab-cont {
@@ -52,9 +53,11 @@
         }
         .tab-cont > div h2 {
             margin-bottom: 10px;
+            font-size: 22px;
         }
         .tab-cont > div p {
             line-height: 1.6;
+            font-size: 16px;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -75,24 +78,24 @@
             </div>
             <div class="tab-cont">
                 <div>
-                    <h2>margin</h2>
-                    <p>margin 속성은 박스 요소의 바깥 여백을 일괄적으로 설정합니다.</p>
+                    <h2>Tomorrow hopes we have learned something from yesterday</h2>
+                    <p>내일은 우리가 어제로부터 무엇인가 배웠기를 바란다</p>
                 </div>
                 <div>
-                    <h2>margin-top</h2>
-                    <p>margin-top 속성은 박스 요소의 위쪽에 바깥 여백을 설정합니다.</p>
+                    <h2>The direction in which education starts a man will determine his future life</h2>
+                    <p>교육이 한 인간을 양성하기 시작할 때의 방향이 훗날 그의 삶을 결정할 것이다</p>
                 </div>
                 <div>
-                    <h2>margin-right</h2>
-                    <p>margin-right 속성은 박스 요소의 오른쪽에 바깥 여백을 설정합니다.</p>
+                    <h2>Learning is not attained by chance, it must be sought for with ardor and attended to with diligence</h2>
+                    <p>배움은 우연히 얻어지는 것이 아니라 열성을 다해 갈구하고 부지런히 집중해야 얻을 수 있는 것이다</p>
                 </div>
                 <div>
-                    <h2>margin-bottom</h2>
-                    <p>margin-bottom 속성은 박스 요소의 아래쪽에 바깥 여백을 설정합니다.</p>
+                    <h2>Education is a kind of continuing dialogue, and a dialogue assumes, in the nature of the case, different points of view</h2>
+                    <p>교육은 일종의 계속되는 대화이고, 그 대화는 세상일이 보통 그렇듯 여러 가지 관점이 있음을 인정한다</p>
                 </div>
                 <div>
-                    <h2>margin-left</h2>
-                    <p>margin-left 속성은 박스 요소의 왼쪽에 바깥 여백을 설정합니다.</p>
+                    <h2>That is what learning is. You suddenly understand something you've understood all your life, but in a new way</h2>
+                    <p>배움이란 일생동안 알고 있었던 것을 어느 날 갑자기 완전히 새로운 방식으로 이해하는 것이다</p>
                 </div>
             </div>
         </div>
@@ -185,7 +188,7 @@
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code="language-css">#tab-menu {
+<pre><code class="language-css">#tab-menu {
     max-width: 600px;
     background: rgb(78, 169, 55);
     position: absolute;
@@ -235,7 +238,7 @@
 </code></pre>
                         </div>
                         <div class="jquery">
-<pre><code="language-javascript">const tabBtn = $(".tab-btn ul li");                                                            
+<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li");                                                            
 const tabCont = $(".tab-cont > div"); 
 
 tabBtn.click(function(){
