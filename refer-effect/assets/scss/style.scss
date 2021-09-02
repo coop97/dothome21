@@ -390,7 +390,7 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
       }
       button {
         float: right;
-        border: 1px solid #000;
+        border: 1px solid rgb(76, 148, 81);
         background: rgb(76, 148, 81);
         border-radius: 20px;
         color: #fff;
@@ -398,7 +398,7 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
         cursor: pointer;
         position: absolute;
         bottom: -30px;
-        right: 50px;
+        right: 0px;
         font-size: 18px;
       }
     }

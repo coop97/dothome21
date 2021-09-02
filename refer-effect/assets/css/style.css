@@ -431,7 +431,7 @@ img {
 
 #modal .modal-bg button {
   float: right;
-  border: 1px solid #000;
+  border: 1px solid #4c9451;
   background: #4c9451;
   border-radius: 20px;
   color: #fff;
@@ -439,7 +439,7 @@ img {
   cursor: pointer;
   position: absolute;
   bottom: -30px;
-  right: 50px;
+  right: 0px;
   font-size: 18px;
 }
 
