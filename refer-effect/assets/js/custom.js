@@ -24,10 +24,10 @@
 //Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15
 //Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0
 
-//UserArgent 호환성 체크
+//UserAgent 호환성 체크
 function agentCheck(){
     const agent = navigator.userAgent.toLowerCase();
-    
+    console.log(agent);
     const browserList = {
         mac : agent.match(/macintosh/i),
         window : agent.match(/windows/i),
@@ -49,7 +49,7 @@ function agentCheck(){
     for(prop in browserList){
         if(browserList[prop]){
             document.querySelector("body").classList.add(prop)
-            console.log(prop)
+            //document.getElementsByTagName("body")     옛날 문법
         }
     }
 }
