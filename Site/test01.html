@@ -74,7 +74,7 @@
                                 <a href="#">
                                     <div class="slide-inner">
                                         <em>로고전문가 최은빈과 함께하는</em>
-                                        <h3>세상에서 제일 쉬운
+                                        <h3>세상에서 제일 쉬운<br>
                                             나만의 로고 만들기</h3>
                                         <p>지금 만나보세요 →</p>
                                     </div>
@@ -121,7 +121,8 @@
                                 </a>
                             </div> -->
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination01"></div>
+                        <div class="swiper-pagination02"></div>
 
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
@@ -129,6 +130,22 @@
                 </div>
             </section>
             <!-- //sliderType -->
+
+            <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+            <script>
+                const swiper = new Swiper('.swiper', {
+                    direction: 'horizontal',
+
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            </script>
             
             <!-- imageType -->
             <section class="imageType">
