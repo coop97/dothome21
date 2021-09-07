@@ -1421,14 +1421,17 @@
     <h2>쩌리<span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">
+    //리셋버튼을 클릭하면 첫번째 네번째에 클래스 추가
+    $(".btn3-0").click(function(){
+        $(".ex3 > div:nth-child(1)").addClass("active")
+        $(".ex3 > div:nth-child(4)").addClass("active")
+    });
 
-.iphone main {
-    display: none;
-};
-.android main {
-    padding: 10px;
-};
-
+    $(".btn3-1").click(function(){
+        if( $(".ex3 > div").hasClass("active") ){
+            $(".ex3 > div.active").removeClass("active");
+        }
+    });
 </code></pre>
     </div>
 </div>

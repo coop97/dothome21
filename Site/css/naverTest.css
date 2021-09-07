@@ -1,0 +1,14 @@
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {color: #222; text-decoration: none;}
+
+
+#wrap {}
+#header {
+    position: fixed;
+}
+.banner {
+    padding: 200px 0;
+    text-align: center;
+    color: #fff;
+}
