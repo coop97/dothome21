@@ -182,7 +182,6 @@
     <!-- //main -->
 ​
     <!-- footer -->
-    <!-- footer -->
     <footer class="paraFooter">
         <h1>Parallax <em>Scrolling</em></h1>
         <div class="footerInfo">
@@ -207,7 +206,6 @@
             </ul>
         </div>
     </footer>
-    <!-- //footer -->
     <!-- //footer -->
 ​
     <!-- source -->
@@ -237,15 +235,19 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">&lt;div id="tab-menu"&gt;
+<pre><code class="language-html">
     
 </code></pre> 
                         </div>
                         <div class="css">
-<pre><code class="language-css"></code></pre> 
+<pre><code class="language-css">
+
+</code></pre> 
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript"></code></pre> 
+<pre><code class="language-javascript">
+
+</code></pre> 
                         </div>
                     </div>
                 </div>
@@ -300,7 +302,9 @@
             });
         }
     </script>
+
     <script>
+        //버튼 클릭 시 영역 이동
         document.querySelectorAll(".paraDot ul li a").forEach(el => {
             el.addEventListener("click", e => {
                 e.preventDefault();
@@ -309,7 +313,8 @@
                 });
             });
         });
-
+        
+        //영역에 맞는 버튼 활성화
         window.addEventListener("scroll", () => {
             let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
 

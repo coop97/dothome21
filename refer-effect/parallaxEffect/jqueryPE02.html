@@ -300,6 +300,7 @@
             });
         }
     </script>
+
     <script>
         //버튼 클릭 시 영역 이동
         $(".paraDot ul li").click(function(e){
@@ -317,7 +318,17 @@
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
 
-            $(".paraScroll span").text(parseInt(scrollTop));
+            // for(let i=0; i<=$(".content-item").length; i++){
+            //     if(scrollTop >= $(".content-item").eq(i).offset().top - 2){
+            //         $(".paraDot ul li").eq(i).addClass("active").siblings().removeClass("active");
+            //     }
+            // }
+            // each()
+            $(".content-item").each(function(index){
+                if(scrollTop >= $(this).offset().top - 2){
+                    $(".paraDot ul li").eq(index).addClass("active").siblings().removeClass("active");
+                }
+            });
 
             // if(scrollTop >= $(".content-item").eq(0).offset().top - 2){
             //     $(".paraDot ul li").eq(0).addClass("active").siblings().removeClass("active");
@@ -347,17 +358,8 @@
             //     $(".paraDot ul li").eq(8).addClass("active").siblings().removeClass("active");
             // }
 
-            // for(let i=0; i<=$(".content-item").length; i++){
-            //     if(scrollTop >= $(".content-item").eq(i).offset().top - 2){
-            //         $(".paraDot ul li").eq(i).addClass("active").siblings().removeClass("active");
-            //     }
-            // }
-            // each()
-            $(".content-item").each(function(index){
-                if(scrollTop >= $(this).offset().top - 2){
-                    $(".paraDot ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-            });
+            //info
+            $(".paraScroll span").text(parseInt(scrollTop) + "px");
         });
     </script>
     
