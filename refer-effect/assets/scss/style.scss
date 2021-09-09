@@ -190,6 +190,11 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
         background: rgba(196, 196, 191, 0.3);
         z-index: -1;
     }
+    &.blue {
+        &::before {
+            background-color: rgba(31, 57, 83, 0.445);;
+        }
+    }
 }
 
 @for $i from 0 through 9 {
@@ -314,6 +319,11 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
         bottom: 0;
         right: 0;
     }
+    &.left {
+        top: auto;
+        left: 0;
+        bottom: 0;
+    }
 
     h1 {
         font-weight: 300;
@@ -353,6 +363,21 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
                 background: #fff;
                 color: #000;
             }   
+        }
+    }
+    &.list {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 20px;
+            font-size: 12px;
+            line-height: 1.8;
+            border-radius: 10px;
+        li {
+            display: block;
         }
     }
     button {

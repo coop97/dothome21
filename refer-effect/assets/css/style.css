@@ -156,6 +156,10 @@ img {
   z-index: -1;
 }
 
+.bg.blue::before {
+  background-color: rgba(31, 57, 83, 0.445);
+}
+
 .bg0 {
   background-image: url(../img/bg0@0.jpg);
 }
@@ -336,6 +340,12 @@ img {
   right: 0;
 }
 
+.info.left {
+  top: auto;
+  left: 0;
+  bottom: 0;
+}
+
 .info h1 {
   font-weight: 300;
   font-size: 20px;
@@ -376,6 +386,23 @@ img {
 .info li.active a {
   background: #fff;
   color: #000;
+}
+
+.info.list {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.8;
+  border-radius: 10px;
+}
+
+.info.list li {
+  display: block;
 }
 
 .info button {

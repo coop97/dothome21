@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="bg bg4 blue">
+
+    <!-- contents -->
+    <main>
+        <div class="cursor"></div>
+
+        <article class="mouseCont">
+            <p>Happiness lies in the <em>joy</em> of achievement and the <em>thrill</em> of creative effort.</p>
+            <h2>행복은 성취의 <em>기쁨</em>과 창조적 노력이 주는 <em>쾌감</em> 속에 있다</h2>
+        </article>
+    </main>
+    <!-- //contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">javascript Mouse Effect01</a></h1>
+        <p>마우스 이펙트 - 마우스 따라다니기</p>
+    </div>
+    
+    <div class="info right">
+        <ul>
+            <li class="active"><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jqueryME01.html">1</a></li>
+            <li><a href="jqueryME02.html">2</a></li>
+            <li><a href="jqueryME03.html">3</a></li>
+            <li><a href="jqueryME04.html">4</a></li>
+            <li><a href="jqueryME05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info left list">
+        <ul>
+            <li>clientX : <span class="clientX">0</span></li>
+            <li>clientY : <span class="clientY">0</span></li>
+            <li>offsetX : <span class="offsetX">0</span></li>
+            <li>offsetY : <span class="offsetY">0</span></li>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+            <li>screenX : <span class="screenX">0</span></li>
+            <li>screenY : <span class="screenY">0</span></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button>소스 보기</button>
+    </div>
+    <!-- //info -->
+    
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JAVASCRIPT</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">
+</code></pre>
+                        </div>
+                        <div class="jquery">
+<pre><code class="language-javascript">
+
+</code></pre>
+                        </div>
+                    </div>
+                                    
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        const viewBtn = $(".code-view .view-title li");                                                               
+        const viewCont = $(".code-view .view-cont > div");     
+        
+        viewBtn.click(function(){
+            let target = $(this);
+            viewBtn.removeClass("active");
+            target.addClass("active");
+
+            let index = target.index();
+            viewCont.css("display","none");
+            viewCont.eq(index).css("display","block");
+        });
+    </script>
+    <script>
+        
+    </script>
+    <!-- //modal -->
+</body>
+</html>
