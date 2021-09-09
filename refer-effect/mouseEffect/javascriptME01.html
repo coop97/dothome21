@@ -9,19 +9,97 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <style>
-        
+        .mouseCont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            font-family: ‘NEXONLv1Gothic’;
+            cursor: none;
+        }
+        .mouseCont p {
+            font-size: 2.5vw;
+            line-height: 2.3;
+            font-weight: 300;
+        }
+        .mouseCont h2 {
+            font-size: 3vw;
+            font-weight: normal;
+            font-weight: 400;
+        }
+        .mouseCont span {
+            font-style: normal;
+            border-bottom: 0.2vw dashed #fff;
+        }
+        .cursor {
+            position: absolute;
+            left: 0; top: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            z-index: 9999;
+            background-color: rgba(255,255,255,0.1);
+            user-select: none;
+            pointer-events: none;
+            transition: 
+                background-color .2s,
+                border-color .2s,
+                border-radius .2s,
+                transform .6s
+        }
+        .cursor.style1 {
+            background-color: rgba(255, 187, 234, 0.4);
+            border-color: rgb(255, 187, 234);
+            transform: rotateX(720deg) scale(2);
+        }
+        .cursor.style2 {
+            background-color: rgb(140, 0, 255, 0.4);
+            border-color: rgb(140, 0, 255);
+            transform: rotateY(720deg) scale(2);
+        }
+        .cursor.style3 {
+            background-color: rgba(46, 51, 119, 0.4);
+            border-color: rgba(46, 51, 119);
+            background-image: url(https://coop97.github.io/dothome21/class/img/img03.jpg);
+            background-size: cover;
+            transform: scale(2);
+        }
+        .cursor.style4 {
+            background-color: rgba(253, 255, 112, 0.4);
+            border-color: rgb(253, 255, 112);
+            border-radius: 5px;
+            background-image: url(https://coop97.github.io/dothome21/class/img/img02.jpg);
+            background-size: cover;
+            transform: scale(2);
+        }
+        .cursor.style5 {
+            background-color: rgba(168, 75, 255, 0.4);
+            border-color: rgba(168, 75, 255);
+            border-radius: 3px;
+            transform: scale(1.5) rotateY(90deg);    
+        }
+        .cursor.style6 {
+            background-color: rgba(255, 165, 0, 0.4);
+            border-color: orange;
+            transform: rotateX(90deg)
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body class="bg bg4 blue">
+<body class="bg bg2 blue">
 
     <!-- contents -->
     <main>
         <div class="cursor"></div>
 
         <article class="mouseCont">
-            <p>Happiness lies in the <em>joy</em> of achievement and the <em>thrill</em> of creative effort.</p>
-            <h2>행복은 성취의 <em>기쁨</em>과 창조적 노력이 주는 <em>쾌감</em> 속에 있다</h2>
+            <p><span class="style3">The Bible</span> <span class="style4">promises</span> no loaves to the loafer</p>
+            <h2><span class="style1">성경은</span> <span class="style5">게으름뱅이에게</span> <span class="style2">빵을</span> <span class="style6">약속하지</span> 않는다</h2>
         </article>
     </main>
     <!-- //contents -->
@@ -83,7 +161,7 @@
                         <ul>
                             <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">JAVASCRIPT</a></li>
+                            <li><a href="#">JQUERY</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
@@ -106,7 +184,8 @@
             </div>
         </div>
     </div>
-    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
@@ -123,9 +202,98 @@
             viewCont.eq(index).css("display","block");
         });
     </script>
-    <script>
-        
-    </script>
     <!-- //modal -->
+    <script>
+        //출력용
+        window.addEventListener("mousemove", function(e){
+            document.querySelector(".clientX").innerText = e.clientX + "px";
+            document.querySelector(".clientY").innerText = e.clientY + "px";
+            document.querySelector(".offsetX").innerText = e.offsetX + "px";
+            document.querySelector(".offsetY").innerText = e.offsetY + "px";
+            document.querySelector(".pageX").innerText = e.pageX + "px";
+            document.querySelector(".pageY").innerText = e.pageY + "px";
+            document.querySelector(".screenX").innerText = e.screenX + "px";
+            document.querySelector(".screenY").innerText = e.screenY + "px";
+        });
+
+        //마우스 움직임(좌표)
+        window.addEventListener("mousemove", function(e){
+            // document.querySelector(".cursor").style.left = e.clientX -25 + "px";
+            // document.querySelector(".cursor").style.top = e.clientY -25 + "px";
+
+            let x = e.clientX - 25 + "px";
+            let y = e.clientY - 25 + "px";
+            document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
+        });
+
+        //마우스 오버
+            // document.querySelector(".mouseCont .style1").addEventListener("mouseover", function(){
+            //     document.querySelector(".cursor").classList.add("style1");
+            // });
+            // document.querySelector(".mouseCont .style1").addEventListener("mouseout", function(){
+            //     document.querySelector(".cursor").classList.remove("style1");
+            // });
+            // document.querySelector(".mouseCont .style2").addEventListener("mouseover", function(){
+            //     document.querySelector(".cursor").classList.add("style2");
+            // });
+            // document.querySelector(".mouseCont .style2").addEventListener("mouseout", function(){
+            //     document.querySelector(".cursor").classList.remove("style2");
+            // });
+            // document.querySelector(".mouseCont .style3").addEventListener("mouseover", function(){
+            //     document.querySelector(".cursor").classList.add("style3");
+            // });
+            // document.querySelector(".mouseCont .style3").addEventListener("mouseout", function(){
+            //     document.querySelector(".cursor").classList.remove("style3");
+            // });
+            // document.querySelector(".mouseCont .style4").addEventListener("mouseover", function(){
+            //     document.querySelector(".cursor").classList.add("style4");
+            // });
+            // document.querySelector(".mouseCont .style4").addEventListener("mouseout", function(){
+            //     document.querySelector(".cursor").classList.remove("style4");
+            // });
+            // document.querySelector(".mouseCont .style5").addEventListener("mouseover", function(){
+            //     document.querySelector(".cursor").classList.add("style5");
+            // });
+            // document.querySelector(".mouseCont .style5").addEventListener("mouseout", function(){
+            //     document.querySelector(".cursor").classList.remove("style5");
+            // });
+            // document.querySelector(".mouseCont .style6").addEventListener("mouseover", function(){
+            //     document.querySelector(".cursor").classList.add("style6");
+            // });
+            // document.querySelector(".mouseCont .style6").addEventListener("mouseout", function(){
+            //     document.querySelector(".cursor").classList.remove("style6");
+            // });
+
+            //for문
+            // for(let i=1; i<=6; i++){
+            //     document.querySelector(".mouseCont .style"+i).addEventListener("mouseover", function(){
+            //         document.querySelector(".cursor").classList.add("style"+i);
+            //     });
+            //     document.querySelector(".mouseCont .style"+i).addEventListener("mouseout", function(){
+            //         document.querySelector(".cursor").classList.remove("style"+i);
+            //     });
+            // }
+            
+            //forEach
+            document.querySelectorAll(".mouseCont span").forEach((element, index) => {
+                element.addEventListener("mouseover", () => {
+                    document.querySelector(".cursor").classList.add("style"+ (index+1));
+                });
+                element.addEventListener("mouseout", () => {
+                    document.querySelector(".cursor").classList.remove("style"+ (index+1));
+                });
+            });
+
+            //getAtrribute()
+            // document.querySelectorAll(".mouseCont span").forEach((element) => {
+            //     let style = element.getAttribute("class");
+            //     element.addEventListener("mouseover", () => {
+            //         document.querySelector(".cursor").classList.add(style);
+            //     });
+            //     element.addEventListener("mouseout", () => {
+            //         document.querySelector(".cursor").classList.remove(style);
+            //     });
+            // });
+        </script>
 </body>
 </html>

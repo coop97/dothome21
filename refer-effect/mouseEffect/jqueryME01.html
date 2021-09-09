@@ -52,12 +52,6 @@
                 border-radius .2s,
                 transform .6s
         }
-        .cursor.active {
-            background-color: rgba(168, 75, 255, 0.4);
-            border-color: rgba(168, 75, 255);
-            border-radius: 3px;
-            transform: scale(1.5) rotateY(90deg);            
-        }
         .cursor.style1 {
             background-color: rgba(255, 187, 234, 0.4);
             border-color: rgb(255, 187, 234);
@@ -84,9 +78,10 @@
             transform: scale(2);
         }
         .cursor.style5 {
-            background-color: rgba(46, 119, 64, 0.4);
-            border-color: rgba(46, 119, 64);
-            transform: skew(30deg);
+            background-color: rgba(168, 75, 255, 0.4);
+            border-color: rgba(168, 75, 255);
+            border-radius: 3px;
+            transform: scale(1.5) rotateY(90deg);   
         }
         .cursor.style6 {
             background-color: rgba(255, 165, 0, 0.4);
@@ -103,8 +98,8 @@
         <div class="cursor"></div>
 
         <article class="mouseCont">
-            <p><span class="style3">The Bible</span> <span class="style4">promises</span> <span class="style5">no loaves</span> to <em>the loafer</em></p>
-            <h2><span class="style1">성경은</span> <em>게으름뱅이에게</em> <span class="style2">빵을</span> <span class="style6">약속하지</span> 않는다</h2>
+            <p><span class="style3">The Bible</span> <span class="style4">promises</span> no loaves to the loafer</p>
+            <h2><span class="style1">성경은</span> <span class="style5">게으름뱅이에게</span> <span class="style2">빵을</span> <span class="style6">약속하지</span> 않는다</h2>
         </article>
     </main>
     <!-- //contents -->
@@ -207,6 +202,7 @@
             viewCont.eq(index).css("display","block");
         });
     </script>
+    <!-- //modal -->
     <script>
         //출력용
         $(window).mousemove(function(e){
@@ -230,14 +226,14 @@
             // $(".cursor").css({left : 100, "background-color" : 100});
             // $(".cursor").css({left : 100, backgroundcolor : 100});
             $(".cursor").css({left : e.clientX - 25, top : e.clientY - 25});    //높이와 넓이의 반값인 25를 -해주면 커서의 가운데에 원이 옴
-
+        });
             //방법1
-            $(".mouseCont em").mouseover(function(){
-                $(".cursor").addClass("active")
-            });
-            $(".mouseCont em").mouseout(function(){
-                $(".cursor").removeClass("active")
-            });
+            // $(".mouseCont em").mouseover(function(){
+            //     $(".cursor").addClass("active")
+            // });
+            // $(".mouseCont em").mouseout(function(){
+            //     $(".cursor").removeClass("active")
+            // });
 
             //방법2
             // $(".mouseCont em").mouseenter(function(){
@@ -253,39 +249,63 @@
             // }, function(){
             //     $(".cursor").removeClass("active");
             // })
+            
+            // $(".mouseCont .style1").hover(function(){
+            //     $(".cursor").addClass("style1");
+            // }, function(){
+            //     $(".cursor").removeClass("style1");
+            // });
+            // $(".mouseCont .style2").hover(function(){
+            //     $(".cursor").addClass("style2");
+            // }, function(){
+            //     $(".cursor").removeClass("style2");
+            // });
+            // $(".mouseCont .style3").hover(function(){
+            //     $(".cursor").addClass("style3");
+            // }, function(){
+            //     $(".cursor").removeClass("style3");
+            // });
+            // $(".mouseCont .style4").hover(function(){
+            //     $(".cursor").addClass("style4");
+            // }, function(){
+            //     $(".cursor").removeClass("style4");
+            // });
+            // $(".mouseCont .style5").hover(function(){
+            //     $(".cursor").addClass("style5");
+            // }, function(){
+            //     $(".cursor").removeClass("style5");
+            // });
+            // $(".mouseCont .style6").hover(function(){
+            //     $(".cursor").addClass("style6");
+            // }, function(){
+            //     $(".cursor").removeClass("style6");
+            // });
 
-            $(".mouseCont .style1").hover(function(){
-                $(".cursor").addClass("style1");
-            }, function(){
-                $(".cursor").removeClass("style1");
+            //for문
+            // for(let i=1; i<=6; i++){
+            //     $(".mouseCont .style"+i).hover(function(){
+            //         $(".cursor").addClass("style"+i);
+            //     }, function(){
+            //         $(".cursor").removeClass("style"+i);
+            //     });
+            // }
+        
+            //each()
+            $(".mouseCont span").each((index, element) => {
+                $(element).hover(function(){
+                    $(".cursor").addClass("style"+ (index+1));
+                }, function(){
+                    $(".cursor").removeClass("style"+(index+1));
+                });
             });
-            $(".mouseCont .style2").hover(function(){
-                $(".cursor").addClass("style2");
-            }, function(){
-                $(".cursor").removeClass("style2");
-            });
-            $(".mouseCont .style3").hover(function(){
-                $(".cursor").addClass("style3");
-            }, function(){
-                $(".cursor").removeClass("style3");
-            });
-            $(".mouseCont .style4").hover(function(){
-                $(".cursor").addClass("style4");
-            }, function(){
-                $(".cursor").removeClass("style4");
-            });
-            $(".mouseCont .style5").hover(function(){
-                $(".cursor").addClass("style5");
-            }, function(){
-                $(".cursor").removeClass("style5");
-            });
-            $(".mouseCont .style6").hover(function(){
-                $(".cursor").addClass("style6");
-            }, function(){
-                $(".cursor").removeClass("style6");
-            });
-        });
+
+            //attr()
+            // $(".mouseCont span").hover(function(){
+            //     $(".cursor").addClass($(this).attr("class"));
+            // }, function(){
+            //     $(".cursor").removeClass($(this).attr("class"));
+            // });
     </script>
-    <!-- //modal -->
+    </script>
 </body>
 </html>
