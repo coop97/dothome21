@@ -132,7 +132,7 @@ header .login a {
     color: rgb(146, 146, 146);
     margin-bottom: 40px;
 }
-.cardType01 .btn01 {
+.cardType01 .btn01 a {
     background: #0cd796;
     padding: 16px 65px 16px 65px;
     display: inline-block;
@@ -198,7 +198,7 @@ header .login a {
     color: rgb(146, 146, 146);
     margin-bottom: 40px;
 }
-.cardType02 .btn02 {
+.cardType02 .btn02 a {
     background: #0cd796;
     padding: 16px 65px 16px 65px;
     display: inline-block;
@@ -272,7 +272,7 @@ header .login a {
     color: rgb(146, 146, 146);
     margin-bottom: 40px;
 }
-.cardType03 .btn03 {
+.cardType03 .btn03 a {
     background: #0cd796;
     padding: 16px 30px 16px 30px;
     display: inline-block;
@@ -283,7 +283,7 @@ header .login a {
     box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
     margin-right: 10px;
 }
-.cardType03 .btn04 {
+.cardType03 .btn04 a {
     background: rgb(75, 130, 247);
     padding: 16px 30px 16px 30px;
     display: inline-block;
