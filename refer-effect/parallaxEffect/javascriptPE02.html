@@ -324,7 +324,13 @@
                 })
                 document.querySelector(".paraDot ul li:nth-child(1)").classList.add("active");
             }
-
+            if(scrollTop > document.getElementById("section2").offsetTop - 2){
+                document.querySelectorAll(".paraDot ul li").forEach((el) => {
+                    el.classList.remove("active");
+                })
+                document.querySelector(".paraDot ul li:nth-child(2)").classList.add("active");
+            }
+            //......
 
             //info
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
