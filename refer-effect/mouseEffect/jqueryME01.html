@@ -98,8 +98,8 @@
         <div class="cursor"></div>
 
         <article class="mouseCont">
-            <p><span class="style3">The Bible</span> <span class="style4">promises</span> no loaves to the loafer</p>
-            <h2><span class="style1">성경은</span> <span class="style5">게으름뱅이에게</span> <span class="style2">빵을</span> <span class="style6">약속하지</span> 않는다</h2>
+            <p><span class="style1">The Bible</span> <span class="style2">promises</span> no loaves to the loafer</p>
+            <h2><span class="style3">성경은</span> <span class="style4">게으름뱅이에게</span> <span class="style5">빵을</span> <span class="style6">약속하지</span> 않는다</h2>
         </article>
     </main>
     <!-- //contents -->
@@ -227,29 +227,8 @@
             // $(".cursor").css({left : 100, backgroundcolor : 100});
             $(".cursor").css({left : e.clientX - 25, top : e.clientY - 25});    //높이와 넓이의 반값인 25를 -해주면 커서의 가운데에 원이 옴
         });
-            //방법1
-            // $(".mouseCont em").mouseover(function(){
-            //     $(".cursor").addClass("active")
-            // });
-            // $(".mouseCont em").mouseout(function(){
-            //     $(".cursor").removeClass("active")
-            // });
 
-            //방법2
-            // $(".mouseCont em").mouseenter(function(){
-            //     $(".cursor").addClass("active")
-            // });
-            // $(".mouseCont em").mouseleave(function(){
-            //     $(".cursor").removeClass("active")
-            // });
-            
-            //방법3
-            // $(".mouseCont em").hover(function(){
-            //     $(".cursor").addClass("active");
-            // }, function(){
-            //     $(".cursor").removeClass("active");
-            // })
-            
+        //마우스 오버
             // $(".mouseCont .style1").hover(function(){
             //     $(".cursor").addClass("style1");
             // }, function(){
