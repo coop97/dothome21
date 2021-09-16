@@ -107,7 +107,7 @@ header .login a {
     background-position: center;
     
 }
-/* .slider-wrap .slider-slide:nth-child(2) {
+.slider-wrap .slider-slide:nth-child(2) {
     background-image: url(../img/test01_slide02.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -136,7 +136,7 @@ header .login a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-} */
+}
 
 .sliderType .slide-inner {
     width: 100%;

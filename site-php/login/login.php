@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>로그인</title>
 
     <!-- //style -->
     <link rel="stylesheet" href="../assets/css/fonts.css">
@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="skip">
-        <a href="#contents">회원가입 바로가기</a>
+        <a href="#contents">로그인 바로가기</a>
         <a href="#footer">푸터 바로가기</a>
     </div>
     <!-- //skip -->
@@ -38,11 +38,11 @@
                             <div class="member-box">
                                 <div>
                                     <label for="youEmail">이메일</label>
-                                    <input type="email" name="youEmail" id="youEmail" class="input_write" placeholder="Sample@naver.com" autocmplete="off" autofocus>
+                                    <input type="email" name="youEmail" id="youEmail" class="input_write" placeholder="Sample@naver.com" autocmplete="off" autofocus required>
                                 </div>
                                 <div>
                                     <label for="youPass">비밀번호</label>
-                                    <input type="password" name="youPass" id="youPass" class="input_write" maxlength="20" placeholder="비밀번호를 적어주세요!" autocmplete="off">
+                                    <input type="password" name="youPass" id="youPass" class="input_write" maxlength="20" placeholder="비밀번호를 적어주세요!" autocmplete="off" required>
                                 </div>
                             </div>
                         </fieldset>

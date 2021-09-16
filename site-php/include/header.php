@@ -11,6 +11,12 @@
 </nav>
 <div class="member">
     <strong class="ir_so">회원 정보 영역</strong>
-    <a href="../login/login.php">로그인</a>
-    <a href="../login/join.php">회원가입</a>
+    <?php if(isset($_SESSION['myMemberID'])){ ?>
+            <a href="#"><?=$_SESSION['youName']?>님 환영합니다.</a>
+            <a href="../login/logout.php">로그아웃</a>
+    <?php    } else { ?>
+            <a href="../login/login.php">로그인</a>
+            <a href="../login/join.php">회원가입</a>
+    <?php    } ?>
 </div>
+
