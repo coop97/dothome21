@@ -1421,12 +1421,16 @@
     <h2>쩌리<span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">
-    {
-        let num = 100;
-    
-        if( num == 100 ) document.write("true");
-        else document.write("false");
-    }
+    $(".circle7").draggable({
+        start: function(){$(".text7-5").text("드래그가 시작되었습니다.")},
+        drag: function() {
+            $(".text7-1 span").text(parseInt($(".circle7").offset().left) + "px");
+            $(".text7-2 span").text(parseInt($(".circle7").offset().top) + "px");
+            $(".text7-3 span").text(parseInt($(".circle7").position().left) + "px");
+            $(".text7-4 span").text(parseInt($(".circle7").position().top) + "px");
+        }, 
+        stop: function(){$(".text7-5").text("드래그가 끝났습니다.")}
+    });
 </code></pre>
     </div>
 </div>
