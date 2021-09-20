@@ -91,47 +91,75 @@ header .login a {
 
 /* sliderType */
 .sliderType {
-    position: relative;
     width: 100%;
-    overflow: hidden;
 }
-.slider-wrap .slider-slide {
+
+/* .swiper-wrapper .swiper-slide a em {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    opacity: 0.6;
+}
+.swiper-wrapper .swiper-slide a h3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 7px;
+}
+.swiper-wrapper .swiper-slide a p {
+    font-size: 16px;
+    font-weight: 800;
+    position: absolute;
+    bottom: -46px;
+} */
+.sliderType {
+    width: 100%;
+}
+.swiper {
+    position: relative;
+}
+.swiper .swiper-slide {
     height: 400px;
     border-radius: 15px;
     margin-top: 170px;
 }
-.slider-wrap .slider-slide:nth-child(1) {
+.swiper .swiper-slide:nth-child(1) {
     background-image: url(../img/test01_slide01.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
 }
-.slider-wrap .slider-slide:nth-child(2) {
+.swiper .swiper-slide:nth-child(2) {
+    background-image: url(../img/test01_slide01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.swiper .swiper-slide:nth-child(3) {
     background-image: url(../img/test01_slide02.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.slider-wrap .slider-slide:nth-child(3) {
+.swiper .swiper-slide:nth-child(4) {
     background-image: url(../img/test01_slide03.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.slider-wrap .slider-slide:nth-child(4) {
+.swiper .swiper-slide:nth-child(5) {
     background-image: url(../img/test01_slide04.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.slider-wrap .slider-slide:nth-child(5) {
+.swiper .swiper-slide:nth-child(6) {
     background-image: url(../img/test01_slide05.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.slider-wrap .slider-slide:nth-child(6) {
+.swiper .swiper-slide:nth-child(7) {
     background-image: url(../img/test01_slide06.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -142,7 +170,6 @@ header .login a {
     width: 100%;
     color: #fff;
     padding: 50px 0px 0px 70px;
-    position: relative;
 }
 .sliderType .slide-inner em {
     font-size: 15px;
@@ -159,45 +186,38 @@ header .login a {
     font-size: 16px;
     font-weight: 800;
     position: absolute;
-    bottom: -46px;
+    margin-top: 10px;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+.sliderType .swiper-button-prev {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    margin-top: 50px;
+    background: #111111;
+    padding: 20px;
+    border-radius: 50%;
+    left: 0;
+}
+.sliderType .swiper-button-prev::after {
+    font-size: 18px;
+}
+.sliderType .swiper-button-next {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    margin-top: 50px;
+    background: #111111;
+    padding: 20px;
+    border-radius: 50%;
+    right: 0;
+}
+.sliderType .swiper-button-next::after {
+    font-size: 18px;
 }
 
-.swiper-pagination01 {
-    position: absolute;
-    left: 0;
-    top: 84%;
-    transform: translate(-50%, -50%);
-    display: block;
-    height: 65px;
-    width: 65px;
-    box-sizing: content-box;
-    border-radius: 50%;
-    background: #111111;
-}
-.swiper-pagination02 {
-    position: absolute;
-    right: -65px;
-    top: 84%;
-    transform: translate(-50%, -50%);
-    display: block;
-    height: 65px;
-    width: 65px;
-    box-sizing: content-box;
-    border-radius: 50%;
-    background: #111111;
-}
-.swiper-button-prev {
-    position: absolute;
-    left: -70px;
-    top: 84%;
-    transform: translate(-50%, -50%);
-    display: block;
-    height: 65px;
-    width: 65px;
-    transform: translateY(-50%);
-    color: #fff;
-    z-index: 1000;
-}
 
 /* imageType */
 .imageType {

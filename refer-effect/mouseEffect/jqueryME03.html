@@ -141,16 +141,87 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;div class="cursor"&gt;&lt;/div&gt;
+
+&lt;article class="mouseCont"&gt;
+    &lt;p&gt;If we take care of &lt;em&gt;the moments&lt;/em&gt;, the years will take care of themselves&lt;/p&gt;
+    &lt;h2&gt;&lt;em&gt;순간들&lt;/em&gt;을 소중히 여기다 보면, 긴 세월은 저절로 흘러간다&lt;/h2&gt;
+&lt;/article&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: ‘NEXONLv1Gothic’;
+    cursor: none;
+}
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
+}
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    font-weight: 400;
+}
+.mouseCont em {
+    font-style: normal;
+    border-bottom: 0.2vw dashed rgb(111, 221, 216);
+    color: rgb(111, 221, 216);
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: #fff;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s;
+    mix-blend-mode: difference;
+}
+.cursor.active {
+    transform: scale(20);
+}
+.info.left.list li.active {
+    text-decoration: underline;
+    color: rgb(111, 221, 216);
+}
 </code></pre>
                         </div>
                         <div class="jquery">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">//출력용
+$(".info.left.list li").click(function(){
+    $(".info.left.list li").removeClass();
+    $(this).addClass("active");
+    const text = $(this).text();
+    $(".cursor").css("mix-blend-mode", text);
+});
 
+//움직임 효과
+const w = $(".cursor").width() / 2;
+const h = $(".cursor").height() / 2;
+
+$(window).mousemove(function(e){
+    gsap.to(".cursor", {duration: 0.4, left: e.pageX - w, top: e.pageY - h});
+});
+
+//오버 효과
+$(".mouseCont").hover(function(){
+    $(".cursor").addClass("active");
+}, function(){
+    $(".cursor").removeClass("active")
+});
 </code></pre>
                         </div>
                     </div>

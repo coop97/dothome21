@@ -227,72 +227,72 @@
                         </div>
                         <div class="css">
 <pre><code class="language-css">#tab-menu {
-        max-width: 600px;
-        background: rgb(78, 169, 55);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        border-radius: 5px;
-        font-family: 'NEXONLv2Gothic';
-        color: #fff;
-        overflow: hidden;
-    }
-    .tab-btn ul {
-        display: flex;
-    }
-    .tab-btn li {
-        width: 20%;
-        list-style: none;
-        text-align: center;
-    }
-    .tab-btn li a {
-        color: rgb(110, 197, 116);
-        text-decoration: none;
-        padding: 18px 15px 15px 15px;
-        display: block;
-    }
-    .tab-btn li.active a {
-        border-bottom: 3px solid rgb(134, 255, 144);
-        color: #fff;
-    }
-    .tab-cont {
-        background: #fff;
-        padding: 20px;
-        color: rgb(54, 36, 17);
-    }
-    .tab-cont > div {
-        display: none;
-    }
-    .tab-cont > div:first-child {
-        display: block;
-    }
-    .tab-cont > div h2 {
-        margin-bottom: 10px;
-    }
-    .tab-cont > div p {
-        line-height: 1.6;
-    }
+    max-width: 600px;
+    background: rgb(78, 169, 55);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    font-family: 'NEXONLv2Gothic';
+    color: #fff;
+    overflow: hidden;
+}
+.tab-btn ul {
+    display: flex;
+}
+.tab-btn li {
+    width: 20%;
+    list-style: none;
+    text-align: center;
+}
+.tab-btn li a {
+    color: rgb(110, 197, 116);
+    text-decoration: none;
+    padding: 18px 15px 15px 15px;
+    display: block;
+}
+.tab-btn li.active a {
+    border-bottom: 3px solid rgb(134, 255, 144);
+    color: #fff;
+}
+.tab-cont {
+    background: #fff;
+    padding: 20px;
+    color: rgb(54, 36, 17);
+}
+.tab-cont > div {
+    display: none;
+}
+.tab-cont > div:first-child {
+    display: block;
+}
+.tab-cont > div h2 {
+    margin-bottom: 10px;
+}
+.tab-cont > div p {
+    line-height: 1.6;
+}
 </code></pre>
                         </div>
                         <div class="javascript">
 <pre><code class="language-javascript">const tabBtn = document.querySelectorAll(".tab-btn ul li");
-        const tabCont = document.querySelectorAll(".tab-cont > div");
+const tabCont = document.querySelectorAll(".tab-cont > div");
 
-        tabBtn.forEach((element, index) => {
-            element.addEventListener("click", function(){
-                
-                tabBtn.forEach(el => {
-                    el.classList.remove("active");
-                });
-                element.classList.add("active");
-
-                tabCont.forEach(el => {
-                    el.style.display = "none";
-                })
-                tabCont[index].style.display = "block";
-            });
+tabBtn.forEach((element, index) => {
+    element.addEventListener("click", function(){
+        
+        tabBtn.forEach(el => {
+            el.classList.remove("active");
         });
+        element.classList.add("active");
+
+        tabCont.forEach(el => {
+            el.style.display = "none";
+        })
+        tabCont[index].style.display = "block";
+    });
+});
 </code></pre>
                         </div>
                     </div>

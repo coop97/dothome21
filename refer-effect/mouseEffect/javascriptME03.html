@@ -136,21 +136,100 @@
                         <ul>
                             <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">JQUERY</a></li>
+                            <li><a href="#">JAVASCRIPT</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;div class="cursor"&gt;&lt;/div&gt;
+
+&lt;article class="mouseCont"&gt;
+    &lt;p&gt;The best way to predict the future is to &lt;em&gt;invent&lt;/em&gt; it&lt;/p&gt;
+    &lt;h2&gt;미래를 예측하는 최선의 방법은 미래를 &lt;em&gt;창조&lt;/em&gt;하는 것이다&lt;/h2&gt;
+&lt;/article&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: ‘NEXONLv1Gothic’;
+    cursor: none;
+}
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
+}
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    font-weight: 400;
+}
+.mouseCont em {
+    font-style: normal;
+    border-bottom: 0.2vw dashed rgb(56, 208, 255);
+    color: rgb(56, 208, 255);
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: #fff;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s;
+    mix-blend-mode: difference;
+}
+.cursor.active {
+    transform: scale(20);
+}
+.info.left.list li.active {
+    text-decoration: underline;
+    color: rgb(56, 208, 255);
+}
 </code></pre>
                         </div>
-                        <div class="jquery">
-<pre><code class="language-javascript">
+                        <div class="javascript">
+<pre><code class="language-javascript">//출력용
+document.querySelectorAll(".info.left.list li").forEach(info => {
+    info.addEventListener("click", function(){                       
+        document.querySelectorAll(".info.left.list li").forEach(li => {
+            li.classList.remove("active");
+            this.classList.add("active");
+        });
 
+        let text = info.textContent || info.innerText;  //최근 버전 || 옛날 버전
+        document.querySelector(".cursor").style.mixBlendMode = text;
+    });
+});
+
+//움직임 효과
+const w = document.querySelector(".cursor").clientWidth/2;    //offsetWidth도 가능
+const h = document.querySelector(".cursor").clientHeight/2;    //offsetHeight도 가능
+
+document.addEventListener("mousemove", e => {
+    gsap.to(".cursor", {duration: .5, left: e.pageX - w, top: e.pageY -h});
+});
+
+//오버 효과
+document.querySelectorAll(".mouseCont").forEach(em => {
+    em.addEventListener("mouseenter", () => {
+        document.querySelector(".cursor").classList.add("active");
+    });
+    em.addEventListener("mouseleave", () => {
+        document.querySelector(".cursor").classList.remove("active");
+    });
+});
 </code></pre>
                         </div>
                     </div>

@@ -17,6 +17,9 @@
     <!--imageType CSS-->
     <link rel="stylesheet" href="css/test01.css">
 
+    <!-- swiper CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
     <!-- 나눔스퀘어 웹 폰트 -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 </head>
@@ -57,10 +60,10 @@
                         <h2>인플루언서에게 필요한 모든 것</h2>
                         <p>네이버 인플루언서 센터는 여러분들에게 다양한 지원 프로그램을 운영하고 있습니다.<br>
                             더 큰 수익과 성장을 위한 다양한 혜택과 지원 프로그램을 지금 경험해보세요.</p>
-
-                        <div>
-                        <div class="slider-wrap">
-                            <div class="slider-slide">
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
                                 <a href="#">
                                     <div class="slide-inner">
                                         <em>로고전문가 최은빈과 함께하는</em>
@@ -70,7 +73,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="slider-slide">
+                            <div class="swiper-slide">
                                 <a href="#">
                                     <div class="slide-inner">
                                         <em>로고전문가 최은빈과 함께하는</em>
@@ -80,7 +83,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="slider-slide">
+                            <div class="swiper-slide">
                                 <a href="#">
                                     <div class="slide-inner">
                                         <em>광고 표시, 어떻게 하지?</em>
@@ -90,7 +93,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="slider-slide">
+                            <div class="swiper-slide">
                                 <a href="#">
                                     <div class="slide-inner">
                                         <em>@여행작가 박은하의</em>
@@ -100,7 +103,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="slider-slide">
+                            <div class="swiper-slide">
                                 <a href="#">
                                     <div class="slide-inner">
                                         <em>세남자와 해결해요!</em>
@@ -110,7 +113,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="slider-slide">
+                            <div class="swiper-slide">
                                 <a href="#">
                                     <div class="slide-inner">
                                         <em>세남자와 해결해요!</em>
@@ -121,31 +124,61 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="swiper-pagination01"></div>
-                        <div class="swiper-pagination02"></div>
+                        <div class="swiper-pagination"></div>
 
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
-                </div>
+                    
+
+                    <!-- <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <em>로고전문가 최은빈과 함께하는</em>
+                                        <h3>세상에서 제일 쉬운<br>
+                                            로고 만들기 심화편</h3>
+                                        <p>지금 만나보세요 →</p>
+                                        <img src="img/test01_slide01.png" alt="슬라이드01">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="img/test01_slide02.png" alt="슬라이드02">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="img/test01_slide03.jpg" alt="슬라이드03">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="img/test01_slide04.jpg" alt="슬라이드04">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="img/test01_slide05.png" alt="슬라이드05">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="img/test01_slide06.png" alt="슬라이드06">
+                                    </a>
+                                </div>
+                            </div>
+                        
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div> -->
             </section>
             <!-- //sliderType -->
 
-            <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-            <script>
-                const swiper = new Swiper('.swiper', {
-                    direction: 'horizontal',
-
-                    pagination: {
-                        el: '.swiper-pagination',
-                    },
-
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-            </script>
+         
             
             <!-- imageType -->
             <section class="imageType">
@@ -260,5 +293,22 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
