@@ -206,8 +206,8 @@
         });
 
         //움직임 효과
-        const w = document.querySelector(".cursor").clientWidth;    //offsetWidth도 가능
-        const h = document.querySelector(".cursor").clientHeight;    //offsetHeight도 가능
+        const w = document.querySelector(".cursor").clientWidth/2;    //offsetWidth도 가능
+        const h = document.querySelector(".cursor").clientHeight/2;    //offsetHeight도 가능
 
         document.addEventListener("mousemove", e => {
             gsap.to(".cursor", {duration: .5, left: e.pageX - w, top: e.pageY -h});
