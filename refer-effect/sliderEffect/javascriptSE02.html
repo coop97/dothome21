@@ -31,7 +31,6 @@
             position: relative;
             width: 4000px;
             height: 480px;
-            overflow: hidden;
             transition: all 0.6s;
             left: 0;
         }
@@ -176,7 +175,12 @@
         //sliderInner.style.left = 0;
 
         setInterval(() => {
-            currentIndex < sliderCount-1 ? currentIndex++ : currentIndex = 0;
+            if(currentIndex < 4){
+                currentIndex++;
+            }else{
+                currentIndex = 0;
+            }
+            //currentIndex < sliderCount-1 ? currentIndex++ : currentIndex = 0;
 
             let sliderPosition = currentIndex * -800 + "px";
             sliderInner.style.left = sliderPosition;

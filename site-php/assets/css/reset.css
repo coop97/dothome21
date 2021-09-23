@@ -79,6 +79,12 @@ button {
     cursor: pointer;
 }
 
+/* 테이블 초기화 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 /* 제목 초기화 */
 h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
