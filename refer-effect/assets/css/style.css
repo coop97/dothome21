@@ -160,6 +160,10 @@ img {
   background-color: rgba(31, 57, 83, 0.445);
 }
 
+.bg.brown::before {
+  background-color: rgba(50, 37, 11, 0.85);
+}
+
 .bg0 {
   background-image: url(../img/bg0@0.jpg);
 }

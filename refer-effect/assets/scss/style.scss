@@ -195,6 +195,11 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
             background-color: rgba(31, 57, 83, 0.445);;
         }
     }
+    &.brown {
+        &::before {
+            background-color: rgba(50, 37, 11, 0.85);
+        }
+    }
 }
 
 @for $i from 0 through 9 {
