@@ -110,15 +110,69 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;div class="slider-wrap"&gt;
+    &lt;div class="slider-img"&gt;
+        &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg0.jpg" alt="이미지1"&gt;&lt;/div&gt;
+        &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg1.jpg" alt="이미지2"&gt;&lt;/div&gt;
+        &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg2.jpg" alt="이미지3"&gt;&lt;/div&gt;
+        &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg3.jpg" alt="이미지4"&gt;&lt;/div&gt;
+        &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg4.jpg" alt="이미지5"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider-img {
+    position: relative;
+    width: 800px;
+    height: 480px;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider {
+    position: absolute;
+    left: 0; top: 0;
+    transition: all 0.3s;
+}
+.slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+    font-family: "NEXONLv1Gothic";
+}
+.slider:nth-child(1) {z-index: 5;}
+.slider:nth-child(2) {z-index: 4;}
+.slider:nth-child(3) {z-index: 3;}
+.slider:nth-child(4) {z-index: 2;}
+.slider:nth-child(5) {z-index: 1;}
+.slider::before {content: attr(data-name);}
 </code></pre>
                         </div>
                         <div class="javascript">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = document.querySelector(".slider-img");
+const slider = document.querySelectorAll(".slider");
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+
+setInterval(() => {
+    let nextIndex = (currentIndex + 1) % sliderCount;   //0 1 2 3 4 0 1 2 3 4...
+
+    slider[currentIndex].style.opacity = "0";
+    slider[nextIndex].style.opacity = "1";
+
+    currentIndex = nextIndex;
+}, 2000);
 </code></pre>
                         </div>
                     </div>
