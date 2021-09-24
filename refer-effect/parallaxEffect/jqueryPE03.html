@@ -32,7 +32,7 @@
 ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect03 - jQuery</a></h1>
+        <h1><a href="index.html">jQuery Parallax Effect03</a></h1>
         <p>패랠랙스 스크로링 효과 - 숨김메뉴</p>
     </header>
     <!-- //header -->
@@ -442,18 +442,18 @@ $(window).scroll(function(){
             let scrollTop = $(this).scrollTop();
 
             //숨김 메뉴
-            // if(scrollTop > 10){
-            //     $(".paraNav").addClass("show");
-            // } else {
-            //     $(".paraNav").removeClass("show");
-            // }
+            if(scrollTop > 10){
+                $(".paraNav").addClass("show");
+            } else {
+                $(".paraNav").removeClass("show");
+            }
 
             //한 줄 쓰기
-            //(scrollTop > 10) ? $(".paraNav").addClass("show") : $(".paraNav").removeClass("show");
+            (scrollTop > 10) ? $(".paraNav").addClass("show") : $(".paraNav").removeClass("show");
 
             //두 줄 쓰기
-            if(scrollTop > 10) $(".paraNav").addClass("show");
-            else $(".paraNav").removeClass("show");
+        //     if(scrollTop > 10) $(".paraNav").addClass("show");
+        //     else $(".paraNav").removeClass("show");
 
             //버튼용
             $(".content-item").each(function(index){
