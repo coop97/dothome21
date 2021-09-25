@@ -152,7 +152,7 @@
     .banner_menu .bm_right li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
     .swiper-pagination-bullet {width: 13px !important; height: 13px !important;}
 
-    #movie .container {}
+    #movie .container {position: relative;}
     #movie .container:after {content: ''; position: absolute; z-index: 20; top: 0; right: 0; width: 8px; height: 100%; background: #d9d7e0;}
     #movie .row {position: relative; margin: 8px; padding: 16px; margin-right: 0; padding-right: 0;}
     #movie .row:after {content: ''; position: absolute; top: 0; right: 0; z-index: 10; width: 24px; height: 100%; background-color: #fff;}
