@@ -54,19 +54,19 @@ header .main-menu li a {
 header .main-menu li a:hover {
     color: #05c3a7;
 }
-header .download {
+header a .download {
     position: absolute;
-    right: 80px;
+    right: 60px;
+    top: 20px;
 }
-header .download a {
+header a .download {
     font-size: 18px;
-    font-weight: 600;
     border: 1px solid #15c5aa;
-    padding: 14px 28px;
+    padding: 10px 28px;
     border-radius: 5px;
     color: #15c5aa;
 }
-header .download a:hover {
+header a .download:hover {
     background: #15c5aa;
     color: #fff;
     transition: .4s;
@@ -136,7 +136,7 @@ header .bar {
     font-size: 30px;
     line-height: 100px;
 }
-.imageType .image-cont .image-down {
+.imageType .image-cont a .image-down {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,12 +146,12 @@ header .bar {
     border-radius: 45px;
     margin-top: 20px;
 }
-.imageType .image-cont .image-down span a {
+.imageType .image-cont a .image-down span {
     font-size: 30px;
     color: #fff;
     margin-right: 15px;
 }
-.imageType .image-cont .image-down img {
+.imageType .image-cont a .image-down img {
     width: 30px;
     height: 30px;
 }
@@ -500,7 +500,7 @@ header .bar {
 .content .inner img {
     width: 560px;
 }
-.content .inner .img-wrap {
+.content .inner a .img-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -515,12 +515,12 @@ header .bar {
     transform: translate(-50%, -50%);
     margin-top: 200px;
 }
-.content .inner .img-wrap span a {
+.content .inner a .img-wrap span {
     font-size: 30px;
     color: #fff;
     margin-right: 15px;
 }
-.content .inner .img-wrap img {
+.content .inner a .img-wrap img {
     width: 30px;
     height: 30px;
 }
@@ -533,9 +533,6 @@ footer {
 }
 footer .inner {
     padding-top: 50px;
-}
-footer .logo-wrap {
-    
 }
 footer .logo-wrap a {
     display: flex;
@@ -569,22 +566,25 @@ footer .menu .main-menu li a {
     padding: 0 15px;
     border-right: 1px solid #d6d6d6;
 }
-/* footer .inner .main-menu li a:nth-last-child(1) {
+/* footer .inner .main-menu li:nth-child(6) {
     border: none;
 } */
-footer .menu .download {
+footer .menu a .download {
     border: 1px solid #c0c0c0;
-    padding: 7px 15px;
+    padding: 9px 16px;
     border-radius: 5px;
     position: absolute;
-    right: 0;
+    right: -32px;
     top: 90px;
+    display: flex;
 }
-footer .menu .download img {
+footer .menu a .download img {
     width: 20px;
     height: 20px;
+    display: inline-block;
+    margin: 2px 7px 0 0;
 }
-footer .menu .download span a {
+footer .menu a .download span {
     font-size: 16px;
     color: #c0c0c0;
     font-weight: 400;
@@ -628,9 +628,6 @@ footer .menu .download span a {
         text-align: center;
         width: 33%;
     }
-    .banner .menu-wrap li:nth-child(2) {
-        
-    }
     .banner .menu-wrap li a {
         font-size: 12px;
         color: #838383;
@@ -665,16 +662,16 @@ footer .menu .download span a {
         font-size: 16px;
         line-height: 60px;
     }
-    .imageType .image-cont .image-down {
+    .imageType .image-cont a .image-down {
         width: 154px;
         height: 52px;
         margin-top: 10px;
     }
-    .imageType .image-cont .image-down span a {
+    .imageType .image-cont a .image-down span {
         font-size: 17px;
         margin-right: 10px;
     }
-    .imageType .image-cont .image-down img {
+    .imageType .image-cont a .image-down img {
         width: 20px;
         height: 20px;
     }
@@ -950,17 +947,17 @@ footer .menu .download span a {
     .content .inner img {
         width: 310px;
     }
-    .content .inner .img-wrap {
+    .content .inner a .img-wrap {
         width: 154px;
         height: 52px;
         margin-top: 100px;
     }
-    .content .inner .img-wrap span a {
+    .content .inner a .img-wrap span {
         font-size: 17px;
         color: #fff;
         margin-right: 10px;
     }
-    .content .inner .img-wrap img {
+    .content .inner a .img-wrap img {
         width: 20px;
         height: 20px;
     }
@@ -995,17 +992,17 @@ footer .menu .download span a {
         padding: 0 15px;
         border-right: none;
     }
-    footer .menu .download {
+    footer .menu a .download {
         border: 1px solid #c0c0c0;
         padding: 7px 15px;
         border-radius: 5px;
         transform: translate(-115%, 200%);
     }
-    footer .menu .download img {
+    footer .menu a .download img {
         width: 16px;
         height: 16px;
     }
-    footer .menu .download span a {
+    footer .menu a .download span {
         font-size: 14px;
         color: #c0c0c0;
         font-weight: 400;
