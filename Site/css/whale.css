@@ -71,6 +71,9 @@ header .download a:hover {
     color: #fff;
     transition: .4s;
 }
+header .bar {
+    display: none;
+}
 
 /* banner */
 .banner {
@@ -551,14 +554,15 @@ footer .logo-wrap a .logo01 {
 footer .logo-wrap a .logo02 {
     font-size: 22px;
 }
-footer .inner {
+footer .menu {
     display: flex;
     justify-content: center;
+    margin-top: 55px;
 }
-footer .inner .main-menu {
+footer .menu .main-menu {
     display: flex;
 }
-footer .inner .main-menu li a {
+footer .menu .main-menu li a {
     font-size: 16px;
     color: #c0c0c0;
     font-weight: 400;
@@ -568,7 +572,7 @@ footer .inner .main-menu li a {
 /* footer .inner .main-menu li a:nth-last-child(1) {
     border: none;
 } */
-footer .inner .download {
+footer .menu .download {
     border: 1px solid #c0c0c0;
     padding: 7px 15px;
     border-radius: 5px;
@@ -576,12 +580,435 @@ footer .inner .download {
     right: 0;
     top: 90px;
 }
-footer .inner .download img {
+footer .menu .download img {
     width: 20px;
     height: 20px;
 }
-footer .inner .download span a {
+footer .menu .download span a {
     font-size: 16px;
     color: #c0c0c0;
     font-weight: 400;
+}
+
+@media (max-width: 768px){
+    .container {
+        width: 430px;
+    }
+    /* header */
+    header .inner {
+        height: 60px;
+        position: relative;
+    }
+    header .logo-wrap {
+        left: 20px;
+    }
+    header .main-menu {
+        display: none;
+    }
+    header .download {
+        display: none;
+    }
+    header .bar {
+        display: inline-block;
+        font-size: 27px;
+        position: absolute;
+        right: 20px;
+        top: 20%;
+    }
+
+    /* banner */
+    .banner {
+        margin-top: 60px;
+    }
+    .banner .menu-wrap {
+        height: 50px; 
+    }
+    .banner .menu-wrap li {
+        line-height: 50px;
+        text-align: center;
+        width: 33%;
+    }
+    .banner .menu-wrap li:nth-child(2) {
+        
+    }
+    .banner .menu-wrap li a {
+        font-size: 12px;
+        color: #838383;
+        padding: 0px;
+    }
+
+    /* imageType */
+    .imageType {
+        height: 120vw;
+        background-image: linear-gradient(to bottom left, #3FDDC6 0%, #1AC9C0 40%, #3398DE);
+    }
+    .imageType .image01 {
+        width: 100%;
+        height: 120vw;
+        background-image: url(../img/whale_m_bg.png);
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .imageType .image-cont {
+        left: 20px; top: 50px;
+    }
+    .imageType .image-cont h2 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+    .imageType .image-cont h2 span {
+        display: block;
+    }
+    .imageType .image-cont p {
+        font-size: 16px;
+        line-height: 60px;
+    }
+    .imageType .image-cont .image-down {
+        width: 154px;
+        height: 52px;
+        margin-top: 10px;
+    }
+    .imageType .image-cont .image-down span a {
+        font-size: 17px;
+        margin-right: 10px;
+    }
+    .imageType .image-cont .image-down img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* .gifType01 */
+    .gifType01 {
+        height: 108vw;
+    }
+    .gifType01 .gif {
+        padding-top: 50px;
+    }
+    .gifType01 .gif-cont .gif-icon img {
+        width: 44px;
+        height: 44px;
+        margin-right: 10px;
+    }
+    .gifType01 .gif-cont .gif-icon h2 {
+        font-size: 28px;
+        margin-top: 2px;
+    }
+    .gifType01 .gif-cont p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .gifType01 .gif-cont .gif-arrow {
+        margin-top: 30px;
+    }
+    .gifType01 .gif-cont .gif-arrow img {
+        width: 14px;
+        height: 14px;
+        margin: 2px 8px 0 0;
+    }
+    .gifType01 .gif-cont .gif-arrow span a {
+        font-size: 14px;
+    }
+    .gifType01 .gif-cont .img-wrap img {
+        width: 90px;
+        height: 40px;
+        margin-top: 30px;
+    }
+    .gifType01 .gif .gif-img {
+        width: 80%;
+        top: 310px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    /* .gifType02 */
+    .gifType02 {
+        height: 110vw;
+    }
+    .gifType02 .gif {
+        padding-top: 50px;
+    }
+    .gifType02 .gif-cont {
+        position: absolute;
+        right: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+    .gifType02 .gif-cont .gif-icon img {
+        width: 44px;
+        height: 44px;
+    }
+    .gifType02 .gif-cont .gif-icon h2 {
+        font-size: 28px;
+        margin-top: 2px;
+    }
+    .gifType02 .gif-cont p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .gifType02 .gif-cont .gif-arrow01 {
+        margin-top: 25px;
+    }
+    .gifType02 .gif-cont .gif-arrow01 img {
+        width: 14px;
+        height: 14px;
+        margin: 2px 8px 0 0;
+    }
+    .gifType02 .gif-cont .gif-arrow02 img {
+        width: 14px;
+        height: 14px;
+        margin: 2px 8px 0 0;
+    }
+    .gifType02 .gif-cont .gif-arrow01 span a {
+        font-size: 14px;
+    }
+    .gifType02 .gif-cont .gif-arrow02 span a {
+        font-size: 14px;
+    }
+    .gifType02 .gif-cont .img-wrap img {
+        width: 90px;
+        height: 40px;
+        margin-top: 30px;
+    }
+    .gifType02 .gif .gif-img {
+        width: 80%;
+        top: 165px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    /* .gifType03 */
+    .gifType03 {
+        height: 110vw;
+    }
+    .gifType03 .gif {
+        padding-top: 50px;
+    }
+    .gifType03 .gif-cont {
+        position: absolute;
+        right: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+    .gifType03 .gif-cont .gif-icon img {
+        width: 44px;
+        height: 44px;
+    }
+    .gifType03 .gif-cont .gif-icon h2 {
+        font-size: 28px;
+        margin-top: 2px;
+    }
+    .gifType03 .gif-cont p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .gifType03 .gif-cont .gif-arrow01 {
+        margin-top: 25px;
+    }
+    .gifType03 .gif-cont .gif-arrow01 img {
+        width: 14px;
+        height: 14px;
+        margin: 2px 8px 0 0;
+    }
+    .gifType03 .gif-cont .gif-arrow02 img {
+        width: 14px;
+        height: 14px;
+        margin: 2px 8px 0 0;
+    }
+    .gifType03 .gif-cont .gif-arrow01 span a {
+        font-size: 14px;
+    }
+    .gifType03 .gif-cont .gif-arrow02 span a {
+        font-size: 14px;
+    }
+    .gifType03 .gif-cont .img-wrap img {
+        width: 90px;
+        height: 40px;
+        margin-top: 30px;
+    }
+    .gifType03 .gif .gif-img {
+        width: 80%;
+        top: 165px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    /* .gifType04 */
+    .gifType04 {
+        height: 110vw;
+    }
+    .gifType04 .gif {
+        padding-top: 50px;
+    }
+    .gifType04 .gif-cont {
+        position: absolute;
+        right: 0;
+        padding-top: 0;
+        width: 100%;
+    }
+    .gifType04 .gif-cont .gif-icon img {
+        width: 44px;
+        height: 44px;
+    }
+    .gifType04 .gif-cont .gif-icon h2 {
+        font-size: 28px;
+        margin-top: 2px;
+    }
+    .gifType04 .gif-cont p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .gifType04 .gif-cont .gif-arrow01 {
+        margin-top: 25px;
+    }
+    .gifType04 .gif-cont .gif-arrow01 img {
+        width: 14px;
+        height: 14px;
+        margin: 2px 8px 0 0;
+    }
+    .gifType04 .gif-cont .gif-arrow02 img {
+        width: 14px;
+        height: 14px;
+        margin: 2px 8px 0 0;
+    }
+    .gifType04 .gif-cont .gif-arrow01 span a {
+        font-size: 14px;
+    }
+    .gifType04 .gif-cont .gif-arrow02 span a {
+        font-size: 14px;
+    }
+    .gifType04 .gif-cont .img-wrap img {
+        width: 90px;
+        height: 40px;
+        margin-top: 30px;
+    }
+    .gifType04 .gif .gif-img {
+        width: 80%;
+        top: 165px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    /* gifType05 */
+    .gifType05 {
+        height: 108vw;
+    }
+    .gifType05 .gif {
+        padding-top: 50px;
+    }
+    .gifType05 .gif-cont .gif-icon img {
+        width: 44px;
+        height: 44px;
+        margin-right: 10px;
+    }
+    .gifType05 .gif-cont .gif-icon h2 {
+        font-size: 28px;
+        margin-top: 2px;
+    }
+    .gifType05 .gif-cont p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .gifType05 .gif-cont .gif-arrow {
+        margin-top: 30px;
+    }
+    .gifType05 .gif-cont .gif-arrow img {
+        width: 14px;
+        height: 14px;
+        margin: 2px 8px 0 0;
+    }
+    .gifType05 .gif-cont .gif-arrow span a {
+        font-size: 14px;
+    }
+    .gifType04 .gif-cont .tab {
+        font-size: 12px;
+        bottom: 40px;
+    }
+    .gifType04 .gif-cont .tab span:nth-child(1) {
+        padding-right: 62px;
+    }
+    .gifType05 .gif-cont .img-wrap img {
+        width: 90px;
+        height: 40px;
+        margin-top: 30px;
+    }
+    .gifType05 .gif .gif-img {
+        width: 80%;
+        top: 310px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    /* content */
+    .content {
+        height: 50vw;
+    }
+    .content .inner {
+        padding-top: 70px;    
+    }
+    .content .inner img {
+        width: 310px;
+    }
+    .content .inner .img-wrap {
+        width: 154px;
+        height: 52px;
+        margin-top: 100px;
+    }
+    .content .inner .img-wrap span a {
+        font-size: 17px;
+        color: #fff;
+        margin-right: 10px;
+    }
+    .content .inner .img-wrap img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* footer */
+    footer {
+        height: 50vw;
+    }
+    footer .inner {
+        padding-top: 5px;
+    }
+    footer .logo-wrap a {
+        display: flex;
+        font-weight: 900;
+        color: #999999;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    footer .menu {
+        display: flex;
+        justify-content: center;
+    }
+    footer .menu .main-menu {
+        display: flex;
+        margin-top: 30px;
+    }
+    footer .menu .main-menu li a {
+        font-size: 12px;
+        font-weight: 600;
+        padding: 0 15px;
+        border-right: none;
+    }
+    footer .menu .download {
+        border: 1px solid #c0c0c0;
+        padding: 7px 15px;
+        border-radius: 5px;
+        transform: translate(-115%, 200%);
+    }
+    footer .menu .download img {
+        width: 16px;
+        height: 16px;
+    }
+    footer .menu .download span a {
+        font-size: 14px;
+        color: #c0c0c0;
+        font-weight: 400;
+    }
+
 }
