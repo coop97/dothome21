@@ -559,6 +559,9 @@ footer .menu {
 footer .menu .main-menu {
     display: flex;
 }
+footer .menu .main-menu > div {
+    display: flex;
+}
 footer .menu .main-menu li a {
     font-size: 16px;
     color: #c0c0c0;
@@ -566,9 +569,9 @@ footer .menu .main-menu li a {
     padding: 0 15px;
     border-right: 1px solid #d6d6d6;
 }
-/* footer .inner .main-menu li:nth-child(6) {
-    border: none;
-} */
+footer .menu .main-menu li:last-child a {
+    border-right: none;
+}
 footer .menu a .download {
     border: 1px solid #c0c0c0;
     padding: 9px 16px;
@@ -985,6 +988,8 @@ footer .menu a .download span {
     footer .menu .main-menu {
         display: flex;
         margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     footer .menu .main-menu li a {
         font-size: 12px;
@@ -996,7 +1001,7 @@ footer .menu a .download span {
         border: 1px solid #c0c0c0;
         padding: 7px 15px;
         border-radius: 5px;
-        transform: translate(-115%, 200%);
+        transform: translate(-133%, 200%);
     }
     footer .menu a .download img {
         width: 16px;
@@ -1007,5 +1012,4 @@ footer .menu a .download span {
         color: #c0c0c0;
         font-weight: 400;
     }
-
 }
