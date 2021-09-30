@@ -43,22 +43,22 @@
         .content-item .num {
             opacity: 0;
             transform: translateY(200px);
-            transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
+            transition: all 2s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
         }
         .content-item .title {
             opacity: 0;
             transform: translateX(-100px);
-            transition: all 1s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
+            transition: all 2s 0.3s cubic-bezier(0, 0.66, 0.38, 1.01);
         }
         .content-item .img-Wrap {
             opacity: 0;
             transform: translateY(200px) rotate(30deg);
-            transition: all 1s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
+            transition: all 2s 0.6s cubic-bezier(0, 0.66, 0.38, 1.01);
         }
         .content-item .desc {
             opacity: 0;
             transform: translateX(-200px);
-            transition: all 1s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
+            transition: all 2s 0.9s cubic-bezier(0, 0.66, 0.38, 1.01);
         }
 
         .content-item.show .num {
@@ -215,6 +215,9 @@
                 <li><a href="jqueryPE03.html">3</a></li>
                 <li><a href="jqueryPE04.html">4</a></li>
                 <li class="active"><a href="jqueryPE05.html">5</a></li>
+                <li><a href="jqueryPE06.html">6</a></li>
+                <li><a href="jqueryPE07.html">7</a></li>
+                <li><a href="jqueryPE08.html">8</a></li>
             </ul>
         </div>
         <div class="footerInfo">
@@ -225,7 +228,9 @@
                 <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
-
+                <li><a href="javascriptPE06.html">6</a></li>
+                <li><a href="javascriptPE07.html">7</a></li>
+                <li><a href="javascriptPE08.html">8</a></li>
             </ul>
         </div>
     </footer>
@@ -348,7 +353,7 @@
             $(".content-item").each(function(index){
                 if(scrollTop > $(this).offset().top){
                     $(this).addClass("show");
-                    $(this).siblings().removeClass("show");
+                    // $(this).siblings().removeClass("show");
                     $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
                 }
             });
