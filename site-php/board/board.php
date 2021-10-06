@@ -42,7 +42,7 @@
                                 <form action="boardSearch.php" name="boardSearch" method="get">
                                     <fieldset>
                                         <legend class="ir_so">게시판 검색 영역</legend>
-                                        <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요" aria-label="search">
+                                        <input type="search" name="searchKeyword" class="form-search" placeholder="검색어를 입력하세요" aria-label="search" required>
                                         <select name="searchOption" id="searchOption" class="form-select">
                                             <option value="title">제목</option>
                                             <option value="content">내용</option>
@@ -72,47 +72,112 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <?php
+                                            if(isset($_GET['page'])){
+                                                $page = (int) $_GET['page'];
+                                            } else {
+                                                $page = 1;
+                                            }
+
+                                            $numView = 10;
+                                            $viewLimit = ($numView * $page) - $numView;
+
+                                            //1~10   : DESC LIMIT 0,  10  --> $page = 1 ($numView * $page) - $numView
+                                            //11~20  : DESC LIMIT 10, 10  --> $page = 2 ($numView * $page) - $numView
+                                            //21~30  : DESC LIMIT 20, 10  --> $page = 3 ($numView * $page) - $numView
+                                            //31~40  : DESC LIMIT 30, 10  --> $page = 4 ($numView * $page) - $numView
+                                            //41~50 : DESC LIMIT 40, 10  --> $page = 5 ($numView * $page) - $numView
+
+                                            //board + member
+                                            $sql = "SELECT b.myBoardID, b.boardTitle, m.youName, b.boardView, b.regTime FROM myMember m JOIN myBoard b ON (m.myMemberID = b.myMemberID) ORDER BY myBoardID DESC LIMIT {$viewLimit}, {$numView}";
+                                            $result = $connect -> query($sql);
+
+                                            if($result){
+                                                $count = $result -> num_rows;
+
+                                                if($count > 0){
+                                                    for($i=1; $i<=$count; $i++){
+                                                        $info = $result -> fetch_array(MYSQLI_ASSOC);
+                                                        echo "<tr>";
+                                                        echo "<td>".$info['myBoardID']."</td>";
+                                                        echo "<td><a href='boardView.php?boardID={$info['myBoardID']}'>".$info['boardTitle']."</a></td>";
+                                                        echo "<td>".$info['youName']."</td>";
+                                                        echo "<td>".date('Y-m-d', $info['regTime'])."</td>";
+                                                        echo "<td>".$info['boardView']."</td>";
+                                                        echo "</tr>";
+                                                    }
+                                                }
+                                            }
+                                        ?>
+                                        <!-- <tr>
                                             <td>1</td>
                                             <td>2</td>
                                             <td>3</td>
                                             <td>4</td>
                                             <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>4</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>4</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>4</td>
-                                            <td>5</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>4</td>
-                                            <td>5</td>
-                                        </tr>
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
                             <div class="board-page">
                                 <ul>
-                                    <li><a href="#">처음으로</a></li>
+                                    <?php
+                                        $sql = "SELECT count(myBoardID) FROM myBoard";
+                                        $result = $connect -> query($sql);
+
+                                        $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+                                        $boardTotalCount = $boardTotalCount['count(myBoardID)'];
+
+                                        //echo "전체 갯수 : " .$boardTotalCount;
+
+                                        //총 페이지 수
+                                        $boardTotalPage = ceil($boardTotalCount/$numView);
+
+                                        //echo "총 페이지 수 : " .$boardTotalPage;
+
+                                        //1 2 3 4 5 6 7 8 9 10 11
+                                        //현재 페이지를 기준으로 보여주고 싶은 갯수
+                                        $pageView = 5;
+                                        $startPage = $page - $pageView;
+                                        $endPage = $page + $pageView;
+
+                                        //처음페이지 초기화
+                                        if($startPage < 1) $startPage = 1;
+
+                                        //마지막페이지 초기화
+                                        if($endPage >= $boardTotalPage) $endPage = $boardTotalPage;
+
+                                        //처음으로
+                                        if($page != 1){
+                                            echo "<li><a href='board.php?page=1'>처음으로</a></li>";
+                                        }
+
+                                        //이전페이지
+                                        if($page != 1){
+                                            $prevPage = $page -1;
+                                            echo "<li><a href='board.php?page={$prevPage}'>이전</a></li>";
+                                        }
+
+                                        for($i=$startPage; $i<=$endPage; $i++){
+                                            $active = "";
+                                            if($i == $page) $active = "active";
+
+                                            echo "<li class='{$active}'><a href='board.php?page={$i}'>{$i}</a></li>";
+                                        }
+
+                                        //다음페이지
+                                        if($page != $endPage){
+                                            $nextPage = $page +1;
+                                            echo "<li><a href='board.php?page={$nextPage}'>다음</a></li>";
+                                        }
+
+                                        //마지막으로
+                                        if($page != $endPage){
+                                            echo "<li><a href='board.php?page={$boardTotalPage}'>마지막으로</a></li>";
+                                        }
+                                    ?>
+                                    
+                                    <!-- <li><a href="#">처음으로</a></li>
                                     <li><a href="#">이전</a></li>
                                     <li class="active"><a href="#">1</a></li>
                                     <li><a href="#">2</a></li>
@@ -122,7 +187,7 @@
                                     <li><a href="#">6</a></li>
                                     <li><a href="#">7</a></li>
                                     <li><a href="#">다음</a></li>
-                                    <li><a href="#">마지막으로</a></li>
+                                    <li><a href="#">마지막으로</a></li> -->
                                 </ul>
                             </div>
                         </div>

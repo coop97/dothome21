@@ -8,9 +8,24 @@
 
     //echo $boardTitle, $boardContent;
 
-    $boardTitle = $connect -> real_eacape_string($boardTitle);
-    $boardContent = $connect -> real_eacape_string($boardContent);
+    $boardTitle = $connect -> real_escape_string($boardTitle);
+    $boardContent = $connect -> real_escape_string($boardContent);
     $boardView = 0;
     $regTime = time();
-    $memberID = $_SESSION['myMemberID'];
+    $myMemberID = $_SESSION['myMemberID'];
+
+    //데이터 입력
+    $sql = "INSERT INTO myBoard(myMemberID, boardTitle, boardContent, boardView, regTime) VALUES('$myMemberID', '$boardTitle', '$boardContent', '$boardView', '$regTime')";
+
+    $result = $connect -> query($sql);
+
+    // if($result){
+    //     echo "good";
+    // } else{
+    //     echo "bad";
+    // }
 ?>
+
+<script>
+    location.href = "board.php"
+</script>

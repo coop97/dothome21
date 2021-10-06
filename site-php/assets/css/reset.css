@@ -169,6 +169,14 @@ dl.list li::before {
     box-shadow: inset 0 0 0 60px #4c40ac;
 }
 
+/* 간격 */
+.mt0 {margin-top: 0;}
+.mt10 {margin-top: 10px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mt40 {margin-top: 40px;}
+.mt50 {margin-top: 50px;}
+
 /* 이미지 표현 방법 */
 /* 
     img 태그를 이용해서 표현 --> 이미지에 의미가 있을 때 --> alt(대체 문자 필요)
