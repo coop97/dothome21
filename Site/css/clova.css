@@ -8,14 +8,14 @@ body {
 
 /* header */
 header {
+    width: 100%;
+    position: fixed;
     background: #fff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(0,0,0,.05);
 }
 header .inner {
-    width: 100%;
     height: 90px;
 }
 header .menu-group {
@@ -84,4 +84,276 @@ header a .biz span:hover {
     transition: .3s;
 }
 
-/* banner */
+/* cardType05 */
+.cardType05 {
+    padding: 100px 0;
+    font-family: 'NanumSquare';
+}
+.cardType05 h2 {
+    font-family: 'Nanum Gothic';
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.cardType05 p {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.cardType05 .card-wrap {
+    display: flex;
+}
+.cardType05 .card-wrap .card {
+    margin-top: 20px;
+}
+.cardType05 .card-wrap .card .content {
+    padding: 34px 0 34px 30px;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    position: relative;
+}
+.cardType05 .card-wrap img {
+    width: 100%;
+    height: 387px;
+    float: left;
+}
+.cardType05 .card-wrap h3 {
+    font-family: 'Nanum Gothic';
+    font-size: 24px;
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.cardType05 .card-wrap em {
+    font-size: 12px;
+    display: inline;
+    font-weight: 700;
+    background: #FA615B;
+    color: #fff;
+    padding: 3px 10px 1px 10px;
+    border-radius: 10px;
+    margin-left: 7px;
+    margin-bottom: 10px;
+    position: absolute;
+    right: 145px;
+    top: 425px;
+}
+.cardType05 .card-wrap .desc {
+    font-size: 18px;
+    display: block;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.cardType05 .card-wrap .word01 {
+    font-size: 16px;
+    font-weight: 400;
+    background: #05D686;
+    color: #fff;
+    padding: 8px 13px 8px 13px;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+.cardType05 .card-wrap .word02 {
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #DBDBDB;
+    padding: 8px 13px 8px 13px;
+    border-radius: 3px;
+}
+.cardType05 .card-wrap .card01 {
+    margin-right: 20px;
+}
+.cardType05 .card-wrap .card02 {
+    margin-right: 20px;
+}
+
+/* cardType06 */
+.cardType06 {
+    padding-bottom: 250px;
+    font-family: 'NanumSquare';
+}
+.cardType06 h2 {
+    font-family: 'Nanum Gothic';
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.cardType06 p {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.cardType06 .card-wrap {
+    display: flex;
+}
+.cardType06 .card-wrap .card {
+    margin-top: 20px;
+}
+.cardType06 .card-wrap .card .content {
+    padding: 84px 0 34px 30px;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    position: relative;
+}
+.cardType06 .card-wrap img {
+    width: 100%;
+    height: 387px;
+    float: left;
+    margin-bottom: 30px;
+}
+.cardType06 .card-wrap h3 {
+    font-family: 'Nanum Gothic';
+    font-size: 24px;
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.cardType06 .card-wrap em {
+    font-size: 12px;
+    display: block;
+    font-weight: 800;
+    background: #c20034;
+    color: #fff;
+    width: 70px;
+    height: 18px;
+    border-radius: 10px;
+    padding: 1px 0 0 7px;
+    position: absolute;
+    margin-top: 5px;
+}
+.cardType06 .card-wrap .desc {
+    font-size: 18px;
+    display: block;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.cardType06 .card-wrap .word01 {
+    font-size: 16px;
+    font-weight: 400;
+    background: #05D686;
+    color: #fff;
+    padding: 8px 13px 8px 13px;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+.cardType06 .card-wrap .word02 {
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #DBDBDB;
+    padding: 8px 13px 8px 13px;
+    border-radius: 3px;
+}
+.cardType06 .card-wrap .card01 {
+    margin-right: 20px;
+}
+.cardType06 .card-wrap .card02 {
+    margin-right: 20px;
+}
+
+/* content */
+#content {
+    height: 17vw;
+    background: #f7f7f7;
+    border-top: 1px solid rgba(0,0,0,.1);
+    position: relative;
+}
+#content .inner {
+    position: absolute;
+    left: 35%;
+    margin-top: 60px;
+    text-align: center;
+}
+#content h3 {
+    font-size: 32px;
+}
+#content p {
+    margin-top: 12px;
+    font-size: 18px;
+    color: rgba(0,0,0,.5);
+}
+#content span {
+    display: inline-block;
+    margin-top: 21px;
+    padding: 16px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #fff;
+    border-radius: 25px;
+    background-color: #2284f5;
+}
+
+/* footer */
+footer {
+    height: 7vw;
+    background: #191919;
+}
+footer .inner {
+    color: #666;
+}
+footer .group01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 50px;
+}
+footer .logo-wrap {
+    position: absolute;
+    left: 0;
+}
+footer .logo-wrap a {
+    font-family: 'Nanum Gothic';
+    font-weight: 700;
+    display: flex;
+    color: #666;
+}
+footer .logo-wrap a .logo01 {
+    padding: 10px 5px 0 0;
+    font-size: 14px;
+}
+footer .logo-wrap a .logo02 {
+    font-size: 26px;
+}
+footer .icon-wrap {
+    position: absolute;
+    right: 0;
+}
+footer .icon-wrap a {
+    padding-right: 25px;
+}
+footer .icon-wrap a:last-child {
+    padding-right: 0;
+}
+footer .icon-wrap a img {
+    width: 21px;
+    height: 18px;
+}
+footer .group02 {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    font-size: 13px;
+    font-weight: 800;
+}
+footer .info01 {
+    position: absolute;
+    left: 0;
+}
+footer .info03 {
+    position: absolute;
+    right: 0;
+}
+footer span {
+    padding: 0 11px 0 5px;
+}
+footer span:last-child {
+    padding: 0 0 0 5px;
+}
+footer .info_line {
+    border-right: 1px solid rgb(51, 51, 51);
+}
