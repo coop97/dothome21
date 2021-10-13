@@ -65,10 +65,11 @@ header .menu-group .main-menu li:last-child {
 .content .info {
     float: left;
     width: 470px;
-    height: 140px;
+    height: 210px;
     border: 1px solid #D6D6D6;
     position: relative;
     padding: 34px;
+    box-sizing: border-box;
 }
 .content .info .title {
     margin-bottom: 40px;
@@ -83,7 +84,7 @@ header .menu-group .main-menu li:last-child {
 }
 .content .info .title > div {
     position: absolute;
-    right: 0;
+    right: 30px;
 }
 .content .info .title > div span {
     float: left;
@@ -107,7 +108,7 @@ header .menu-group .main-menu li:last-child {
 }
 .content .info .row .date {
     position: absolute;
-    right: 0;
+    right: 30px;
     font-size: 12px;
     color: #5E5E5E;
 }

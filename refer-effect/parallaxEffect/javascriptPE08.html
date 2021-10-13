@@ -371,6 +371,16 @@
         }
     </script>
     <script>
+        //버튼 클릭시 이동
+        document.querySelectorAll(".paraNav ul li a").forEach(li => {
+            li.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                })
+            })
+        });
+        
         const scrollReveal = function(){
             const reveal = document.querySelectorAll(".reveal");
 
@@ -387,9 +397,19 @@
                         }, revealData)
                     }
                 }
+                //메뉴
+                document.querySelectorAll(".content-item").forEach((item, index) => {
+                    if(scrollTop >= item.offsetTop-2){
+                        document.querySelectorAll(".paraNav ul li").forEach(li => {
+                            li.classList.remove("active");
+                        });
+                        document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+                    }
+                });
+                //출력
+                document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
             });
         }
-
         window.addEventListener("scroll", scrollReveal);
     </script>
 </body>

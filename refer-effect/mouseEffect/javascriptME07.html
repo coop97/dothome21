@@ -9,81 +9,125 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <style>
-        .moveWrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%; height: 100vh;
-        }
-        .moveImage {
-            position: relative;
-        }
-        .moveImage .mImg {
-            width: 50vw;
-            height: 60vh;
-            overflow: hidden;
-            position: relative;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-        }
-        .moveImage:hover .mImg {
-            transform: scale(1.025);
-        }
-        .moveImage .mImg img {
-            width: 100%;
+        .textWrap {
             position: absolute;
-            left: -5%; top: -5%; 
-            width: 110%;
-            height: 110%;
-            object-fit: cover;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+            left: 50%; top: 50%;
+            transform: translate(-50%, -20%);
+            color: #fff;
+            font-size: 3vw;
+            line-height: 1.5;
+            font-family: 'NEXONLv1Gothic';
         }
-        .moveImage .mText {
+        .textWrap .line {
+            width: 100%;
+            display: flex;
+        }
+        .textWrap .line .left {
+            width: 50vw;
+            color: rgb(251, 255, 32);
+            overflow: hidden;
+            transform: skew(0deg, -15deg);
+        }
+        .textWrap .line .left .spanWrap {
+            width: 100vw;
+            text-align: center;
+        }
+        .textWrap .line .right {
+            width: 50vw;
+            overflow: hidden;
+            transform: skew(0deg, 15deg);
+        }
+        .textWrap .line .right .spanWrap {
+            width: 100vw;
+            text-align: center;
+            transform: translateX(-50vw);
+        }
+        .textWrap span {
+            display: inline-block;
+        }
+        .imgWrap {
             position: absolute;
             left: 50%; top: 50%;
             transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 1.1vw;
-            white-space: nowrap;
-            color: #fff;
-            font-family: 'NEXONLv1Gothic';
-            background: rgba(0,0,0,.4);
-            padding: 1vw;
-            line-height: 1.6;
+            z-index: -1;
+            width: 50%;
         }
-        .cursor {
-            position: absolute;
-            width: 20px; height: 20px;
-            background: #fff;
-            border-radius: 50%;
-            z-index: 10000;
-            user-select: none;
-            pointer-events: none;
+        .imgWrap img {
+            width: 100%;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body class="bg bg8 blue">
+<body class="bg bg4 blue">
 
     <!-- contents -->
     <main>
         <div class="cursor"></div>
 
-        <div class="moveWrap">
-            <article class="moveImage">
-                <div class="mImg"><img src="../assets/img/bg4.jpg" alt="이미지"></div>
-                <div class="mText">
-                    <p>If you want the present to be different from the past, study the past</p>
-                    <p>현재가 과거와 다르길 바란다면 과거를 공부하라</p>
+        <div class="contents">
+            <div class="moveImage">
+                <div class="textWrap">
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <span class="spanSlow">Paradise is</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <span class="spanSlow">Paradise is</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <span class="spanFast">where I am</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <span class="spanFast">where I am</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <span class="spanSlow">내가 있는 곳이</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <span class="spanSlow">내가 있는 곳이</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <span class="spanFast">낙원이라</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <span class="spanFast">낙원이라</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </article>
+                <div class="imgWrap">
+                    <img src="../assets/img/bg0.jpg" alt="이미지">
+                </div>
+            </div>
         </div>
     </main>
     <!-- //contents -->
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">javascript Mouse Effect05</a></h1>
-        <p>마우스 이펙트 - 이미지 확대</p>
+        <h1><a href="index.html">javascript Mouse Effect07</a></h1>
+        <p>마우스 이펙트 - 텍스트 효과</p>
     </div>
     
     <div class="info right">
@@ -92,9 +136,9 @@
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
-            <li class="active"><a href="javascriptME05.html">5</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
             <li><a href="javascriptME06.html">6</a></li>
-            <li><a href="javascriptME07.html">7</a></li>
+            <li class="active"><a href="javascriptME07.html">7</a></li>
             <li><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
@@ -113,8 +157,6 @@
         <ul>
             <li>pageX : <span class="pageX">0</span></li>
             <li>pageY : <span class="pageY">0</span></li>
-            <li>standardX : <span class="standardX">0</span></li>
-            <li>standardY : <span class="standardY">0</span></li>
         </ul>
     </div>
 
@@ -183,52 +225,21 @@
     <!-- //modal -->
     <script>
         function mouseMove(e){
-            let pageX = 0,
-                pageY = 0,
-                standardX = 0,
-                standardY = 0;
+            let positionSlow = (e.pageX - window.innerWidth/2) * 0.1;
+            let positionFast = (e.pageX - window.innerWidth/2) * 0.2;
 
-            gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
+            gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});
+            gsap.to(".spanFast", {duration: 0.4, x: -positionFast});
 
             //마우스값
             pageX = e.pageX;
             pageY = e.pageY;
 
-            //1. 좌표값을 가운데로 정렬
-            standardX = window.innerWidth/2 - pageX;
-            standardY = window.innerHeight/2 - pageY;
-
-            //2. img x축 -> 마우스 값/20 y축 -> 마우스 값/20
-            const move = document.querySelector(".mImg img");
-            move.style.transform = "translate(" + standardX/20 + "px," +standardY/20 + "px)";
-
             //출력
             document.querySelector(".pageX").textContent = pageX;
             document.querySelector(".pageY").textContent = pageY;
-            document.querySelector(".standardX").textContent = standardX;
-            document.querySelector(".standardY").textContent = standardY;
         }
-        document.addEventListener("mousemove", mouseMove);
-
-        // $(".moveImage").mousemove(function(e){
-        //     gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
-            
-        //     let pageX = e.pageX;
-        //     let pageY = e.pageY;
-
-        //     //1. 좌표값을 가운데로 정렬
-        //     let standardX = $(window).width()/2 - pageX;
-        //     let standardY = $(window).height()/2 - pageY;
-
-        //     //2. img x축 -> 마우스 값/20 y축 -> 마우스 값/20
-        //     $(".mImg img").attr({"style": "translate(" + standardX/20 + "px," +standardY/20 + "px)"});
-
-        //     //출력
-        //     $(".pageX").text(pageX);
-        //     $(".pageY").text(pageY);
-        //     $(".standardX").text(standardX);
-        //     $(".standardY").text(standardY);
-        // });
+        window.addEventListener("mousemove", mouseMove);
     </script>
 </body>
 </html>

@@ -9,81 +9,62 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <style>
-        .moveWrap {
+        .cursor {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: url(../assets/img/bg6.jpg) center center;
+            background-attachment: fixed;       /* 이거 때문에 뒤에 이미지가 커서를 통해 보이는 것처럼 보임, 이미지는 고정시키는 것 */
+            background-size: cover;
+            border: 5px solid #fff;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .contents {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%; height: 100vh;
-        }
-        .moveImage {
-            position: relative;
-        }
-        .moveImage .mImg {
-            width: 50vw;
-            height: 60vh;
-            overflow: hidden;
-            position: relative;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-        }
-        .moveImage:hover .mImg {
-            transform: scale(1.025);
-        }
-        .moveImage .mImg img {
             width: 100%;
-            position: absolute;
-            left: -5%; top: -5%; 
-            width: 110%;
-            height: 110%;
-            object-fit: cover;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
         }
-        .moveImage .mText {
-            position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 1.1vw;
-            white-space: nowrap;
+        .contents p {
+            max-width: 70vw;
+            font-size: 3vw;
+            text-align: justify;
             color: #fff;
-            font-family: 'NEXONLv1Gothic';
-            background: rgba(0,0,0,.4);
-            padding: 1vw;
-            line-height: 1.6;
         }
-        .cursor {
-            position: absolute;
-            width: 20px; height: 20px;
-            background: #fff;
-            border-radius: 50%;
-            z-index: 10000;
-            user-select: none;
-            pointer-events: none;
+        .contents p:first-child {
+            font-size: 2vw;
+            line-height: 2;
+        }
+        .contents p em {
+            color: rgb(242, 255, 121);
+            border-bottom: 2px dashed rgb(242, 255, 121);
+            font-style: normal;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body class="bg bg8 blue">
+<body class="bg bg6 blue">
 
     <!-- contents -->
     <main>
         <div class="cursor"></div>
 
-        <div class="moveWrap">
-            <article class="moveImage">
-                <div class="mImg"><img src="../assets/img/bg4.jpg" alt="이미지"></div>
-                <div class="mText">
-                    <p>If you want the present to be different from the past, study the past</p>
-                    <p>현재가 과거와 다르길 바란다면 과거를 공부하라</p>
-                </div>
-            </article>
+        <div class="contents">
+            <p>A good plan, violently executed now, is better than a perfect plan next week</p>
+            <p>지금 적극적으로 실행되는 <em>괜찮은 계획</em>이 다음 주의 <em>완벽한 계획</em>보다 낫다</p>
         </div>
     </main>
     <!-- //contents -->
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">javascript Mouse Effect05</a></h1>
-        <p>마우스 이펙트 - 이미지 확대</p>
+        <h1><a href="index.html">javascript Mouse Effect06</a></h1>
+        <p>마우스 이펙트 - 조명효과</p>
     </div>
     
     <div class="info right">
@@ -92,8 +73,8 @@
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
-            <li class="active"><a href="javascriptME05.html">5</a></li>
-            <li><a href="javascriptME06.html">6</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+            <li class="active"><a href="javascriptME06.html">6</a></li>
             <li><a href="javascriptME07.html">7</a></li>
             <li><a href="javascriptME08.html">8</a></li>
         </ul>
@@ -113,8 +94,6 @@
         <ul>
             <li>pageX : <span class="pageX">0</span></li>
             <li>pageY : <span class="pageY">0</span></li>
-            <li>standardX : <span class="standardX">0</span></li>
-            <li>standardY : <span class="standardY">0</span></li>
         </ul>
     </div>
 
@@ -182,53 +161,40 @@
     </script>
     <!-- //modal -->
     <script>
-        function mouseMove(e){
-            let pageX = 0,
-                pageY = 0,
-                standardX = 0,
-                standardY = 0;
+        //커서를 원 가운데로
+        // const width = document.querySelector(".cursor").clientWidth/2;
+        // const height = document.querySelector(".cursor").clientHeight/2;
 
-            gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
+        //마우스 움직이기
+        // window.addEventListener("mousemove", function(e){
+        //     gsap.to(".cursor", {duration: 0.5, left: e.pageX -width, top: e.pageY -height});
+
+        //     //마우스값
+        //     pageX = e.pageX;
+        //     pageY = e.pageY;
+
+        //     //출력
+        //     document.querySelector(".pageX").textContent = pageX;
+        //     document.querySelector(".pageY").textContent = pageY;
+        // });
+        
+        const cursor = document.querySelector(".cursor");
+        // const width = cursor.clientWidth/2;
+        // const height = cursor.clientHeight/2;
+        const circle = cursor.getBoundingClientRect();
+
+        function moveCircle(e){
+            gsap.to(cursor, {duration: 0.5, left: e.pageX -circle.width/2, top: e.pageY -circle.height/2});
 
             //마우스값
             pageX = e.pageX;
             pageY = e.pageY;
 
-            //1. 좌표값을 가운데로 정렬
-            standardX = window.innerWidth/2 - pageX;
-            standardY = window.innerHeight/2 - pageY;
-
-            //2. img x축 -> 마우스 값/20 y축 -> 마우스 값/20
-            const move = document.querySelector(".mImg img");
-            move.style.transform = "translate(" + standardX/20 + "px," +standardY/20 + "px)";
-
             //출력
             document.querySelector(".pageX").textContent = pageX;
             document.querySelector(".pageY").textContent = pageY;
-            document.querySelector(".standardX").textContent = standardX;
-            document.querySelector(".standardY").textContent = standardY;
         }
-        document.addEventListener("mousemove", mouseMove);
-
-        // $(".moveImage").mousemove(function(e){
-        //     gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
-            
-        //     let pageX = e.pageX;
-        //     let pageY = e.pageY;
-
-        //     //1. 좌표값을 가운데로 정렬
-        //     let standardX = $(window).width()/2 - pageX;
-        //     let standardY = $(window).height()/2 - pageY;
-
-        //     //2. img x축 -> 마우스 값/20 y축 -> 마우스 값/20
-        //     $(".mImg img").attr({"style": "translate(" + standardX/20 + "px," +standardY/20 + "px)"});
-
-        //     //출력
-        //     $(".pageX").text(pageX);
-        //     $(".pageY").text(pageY);
-        //     $(".standardX").text(standardX);
-        //     $(".standardY").text(standardY);
-        // });
+        window.addEventListener("mousemove", moveCircle);
     </script>
 </body>
 </html>
