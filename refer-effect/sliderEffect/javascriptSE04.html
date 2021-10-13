@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        /* slider */
+        .slider-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slider-img img {
+            width: 100%;
+        }
+        .slider-img {
+            width: 600px;
+            height: 360px;
+            overflow: hidden;   
+        }
+        .slider-inner {
+            position: relative;
+            width: 600px;
+            height: 2160px;
+            overflow: hidden;
+        }
+        .slider-inner:last-child {
+            margin-left: 10px;
+        }
+        .slider-inner .slider {
+            float: left;
+            width: 600px;
+            height: 360px;
+            position: relative;
+        }
+        .slider-inner .slider::before {
+            position: absolute;
+            left: 5px; top: 5px;
+            background: rgba(0,0,0,.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+            font-family: "NEXONLv1Gothic";
+        }
+        .slider-inner .slider:nth-child(1) {z-index: 5;}
+        .slider-inner .slider:nth-child(2) {z-index: 4;}
+        .slider-inner .slider:nth-child(3) {z-index: 3;}
+        .slider-inner .slider:nth-child(4) {z-index: 2;}
+        .slider-inner .slider:nth-child(5) {z-index: 1;}
+        .slider-inner .slider::before {content: attr(data-name);}
+    </style>
+</head>
+<body class="bg bg6 brown">
+
+    <!-- contents -->
+    <main>
+        <div class="slider-wrap">
+            <div class="slider-img slider-img1">
+                <div class="slider-inner slider-inner1">
+                    <div class="slider slider1" data-name="이미지1"><img src="../assets/img/bg0.jpg" alt="이미지1"></div>
+                    <div class="slider slider1" data-name="이미지2"><img src="../assets/img/bg1.jpg" alt="이미지2"></div>
+                    <div class="slider slider1" data-name="이미지3"><img src="../assets/img/bg2.jpg" alt="이미지3"></div>
+                    <div class="slider slider1" data-name="이미지4"><img src="../assets/img/bg3.jpg" alt="이미지4"></div>
+                    <div class="slider slider1" data-name="이미지5"><img src="../assets/img/bg4.jpg" alt="이미지5"></div>
+                </div>
+            </div>
+            <div class="slider-img slider-img2">
+                <div class="slider-inner slider-inner2">
+                    <div class="slider slider2" data-name="이미지1"><img src="../assets/img/bg0.jpg" alt="이미지1"></div>
+                    <div class="slider slider2" data-name="이미지2"><img src="../assets/img/bg1.jpg" alt="이미지2"></div>
+                    <div class="slider slider2" data-name="이미지3"><img src="../assets/img/bg2.jpg" alt="이미지3"></div>
+                    <div class="slider slider2" data-name="이미지4"><img src="../assets/img/bg3.jpg" alt="이미지4"></div>
+                    <div class="slider slider2" data-name="이미지5"><img src="../assets/img/bg4.jpg" alt="이미지5"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">javascript Slider Effect04</a></h1>
+        <p>이미지 슬라이드 - 위로 움직이기</p>
+    </div>
+    
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptSE01.html">1</a></li>
+            <li><a href="javascriptSE02.html">2</a></li>
+            <li><a href="javascriptSE03.html">3</a></li>
+            <li class="active"><a href="javascriptSE04.html">4</a></li>
+            <li><a href="javascriptSE05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jquerySE01.html">1</a></li>
+            <li><a href="jquerySE02.html">2</a></li>
+            <li><a href="jquerySE03.html">3</a></li>
+            <li><a href="jquerySE04.html">4</a></li>
+            <li><a href="jquerySE05.html">5</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button>소스 보기</button>
+    </div>
+    <!-- //info -->
+    
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JQUERY</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html">
+</code></pre>
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">
+</code></pre>
+                        </div>
+                        <div class="jquery">
+<pre><code class="language-javascript">
+</code></pre>
+                        </div>
+                    </div>
+                                    
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        const viewBtn = $(".code-view .view-title li");                                                               
+        const viewCont = $(".code-view .view-cont > div");     
+        
+        viewBtn.click(function(){
+            let target = $(this);
+            viewBtn.removeClass("active");
+            target.addClass("active");
+
+            let index = target.index();
+            viewCont.css("display","none");
+            viewCont.eq(index).css("display","block");
+        });
+    </script>
+    <!-- //modal -->
+    <script>
+        //내가 한 것
+        //sample01
+        const sliderImg1 = document.querySelector(".slider-img1")
+        const sliderInner1 = document.querySelector(".slider-inner1")
+        const slider1 = document.querySelectorAll(".slider1")
+
+        let currentIndex1 = 0;
+        let sliderHeight1 = document.querySelector(".slider1").offsetHeight;
+        let sliderCount1 = slider1.length;
+        let sliderInterval1 = 2000;
+
+        sliderInner1.style.transition = "all 0.6s";     //여기 따로 넣어야 첫 번째 이미지에서 두 번째 이미지로 넘어갈 때도 애니메이션이 적용됨
+        sliderInner1.style.top = "0px";
+
+        setInterval(() => {
+            currentIndex1 < sliderCount1-1 ? currentIndex1++ : currentIndex1 = 0;
+
+            let sliderPosition1 = currentIndex1 * -sliderHeight1 + "px";
+            sliderInner1.style.top = sliderPosition1;
+            sliderInner1.style.transition = "all 0.6s";
+
+        }, sliderInterval1);
+
+        //sample02
+        const sliderImg2 = document.querySelector(".slider-img2")
+        const sliderInner2 = document.querySelector(".slider-inner2")
+        const slider2 = document.querySelectorAll(".slider2")
+
+        let currentIndex2 = 0;
+        let sliderHeight2 = document.querySelector(".slider2").offsetHeight;
+        let sliderCount2 = slider2.length;
+        let sliderInterval2 = 2000;
+        let sliderClone2 = sliderInner2.firstElementChild.cloneNode(true);
+        sliderInner2.appendChild(sliderClone2)
+        
+        setInterval(() => {
+            currentIndex2++;     //0 1 2 3 4 5 6 7 8 9
+            sliderInner2.style.transition = "all 0.6s";
+            sliderInner2.style.transform = "translateY("+ -sliderHeight2 * currentIndex2 +"px)";
+
+            if(currentIndex2 == sliderCount2){
+                setTimeout(() => {
+                    sliderInner2.style.transition = "0s";
+                    sliderInner2.style.transform = "translateY(0)";
+                }, 300);
+                currentIndex2 = 0;
+            }
+        }, sliderInterval2);
+
+        //선생님이 한 것(안 움직임)
+        //sample01
+        // const sliderImg1 = document.querySelector(".slider-img1")
+        // const sliderInner1 = document.querySelector(".slider-inner1")
+        // const slider1 = document.querySelector(".slider1")
+
+        // let currentIndex1 = 0;
+        // let sliderHeight1 = slider1.offsetHeight;
+
+        // sliderInner1.style.transition = "all 0.3s";
+        // sliderInner1.style.top = "0px";
+
+        // setInterval(() => {
+        //     currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+        //     let sliderPosition1 = currentIndex1 * -sliderHeight1 + "px";
+
+        //     sliderInner1.style.transition = "all 0.3s";
+        //     sliderInner1.style.top = -sliderPosition1;
+        // }, 3000);
+
+        //sample02(안 움직임..)
+        // const sliderImg2 = document.querySelector(".slider-img2")
+        // const sliderInner2 = document.querySelector(".slider-inner2")
+        // const slider2 = document.querySelector(".slider2")
+        // let sliderClone = sliderInner.firstElementChild.cloneNode(true);
+        // sliderInner.appendChild(sliderClone)
+
+        // let currentIndex2 = 0;
+        // let sliderHeight2 = slider2.offsetHeight;
+        // let sliderCount = document.querySelectorAll(".slider2").length;
+
+        // setInterval(() => {
+        //     currentIndex2++;
+        //     sliderInner2.style.transition = "all 0.3s";
+        //     sliderInner2.style.transform = "translateY("+ -sliderHeight2 * currentIndex2 +"px)";
+
+        //     if(currentIndex2 = sliderCount){
+        //         setTimeout(() => {
+        //             sliderInner2.style.transition = "0";
+        //             sliderInner2.style.transform = "translateY(0)";
+        //         }, 300);
+        //         currentIndex2 = 0;
+        //     }
+        // }, 2000);
+    </script>
+</body>
+</html>

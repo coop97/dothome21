@@ -29,7 +29,7 @@
         }
         .slider-inner {
             position: relative;
-            width: 4000px;
+            width: 4800px;
             height: 480px;
             overflow: hidden;
         }
@@ -160,11 +160,27 @@
         const sliderWrap = document.querySelector(".slider-wrap")
         const sliderImg = document.querySelector(".slider-img")
         const sliderInner = document.querySelector(".slider-inner")
-        const slider = document.querySelector(".slider")
+        const slider = document.querySelectorAll(".slider")
 
         let currentIndex = 0;
-        let sliderWidth = slider.clientWidth;
-        alert(sliderWidth)
+        let sliderWidth = document.querySelector(".slider").offsetWidth;
+        let sliderCount = slider.length;    //마지막 이미지
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);
+        sliderInner.appendChild(sliderClone)
+        
+        setInterval(() => {
+            currentIndex++;     //0 1 2 3 4 5 6 7 8 9
+            sliderInner.style.transition = "all 1s";
+            sliderInner.style.transform = "translate("+ -sliderWidth * currentIndex +"px)";
+
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    sliderInner.style.transition = "0s";
+                    sliderInner.style.transform = "translatex(0)";
+                }, 300);
+                currentIndex = 0;
+            }
+        }, 3000);
     </script>
 </body>
 </html>
