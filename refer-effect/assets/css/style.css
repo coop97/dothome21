@@ -226,18 +226,18 @@ img {
 }
 
 #main.mouse {
-  background: -webkit-gradient(linear, left top, left bottom, from(#feada6), to(#f5efef));
-  background: linear-gradient(to bottom, #feada6 0%, #f5efef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f59d95), to(#f7c5c5));
+  background: linear-gradient(to bottom, #f59d95 0%, #f7c5c5 100%);
 }
 
 #main.parallax {
-  background: -webkit-gradient(linear, left top, left bottom, from(#93a5cf), to(#e4efe9));
-  background: linear-gradient(to bottom, #93a5cf 0%, #e4efe9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#829edf), to(#b5c3e4));
+  background: linear-gradient(to bottom, #829edf 0%, #b5c3e4 100%);
 }
 
 #main.slider {
-  background: -webkit-gradient(linear, left top, left bottom, from(#abecd6), to(#fbed96));
-  background: linear-gradient(to bottom, #abecd6 0%, #fbed96 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#faffad), to(#6ce480));
+  background: linear-gradient(to bottom, #faffad 0%, #6ce480 100%);
 }
 
 #contents h1 {
