@@ -1,0 +1,246 @@
+* {
+    margin: 0 auto;
+}
+.container {
+    width: 1000px;
+}
+
+/* 초기화 */
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none
+}
+
+/* header */
+header {
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+header .inner {}
+header .menu_group {
+    height: 90px;
+}
+header .menu_group img {
+    width: 100px;
+    float: left;
+    padding-top: 28px;
+}
+header .main_menu {
+    align-items: center;
+    height: 100%;
+    float: right;
+}
+header .main_menu li {
+    line-height: 90px;
+    display: inline-block;
+    margin-right: 40px;
+}
+header .main_menu li:last-child {
+    margin-right: 0;
+}
+header .main_menu li a {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* slider */
+#banner {
+    height: 480px;
+}
+.slider_wrap {
+    float: left;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 90px;
+}
+.slider_img {
+    position: relative;
+    width: 1000px;
+}
+.slider_img img {
+    width: 100%;
+}
+.slider {
+    position: absolute;
+    left: 0; top: 0;
+    transition: all 0.3s;
+}
+.slider:nth-child(1) {z-index: 5;}
+.slider:nth-child(2) {z-index: 4;}
+.slider:nth-child(3) {z-index: 3;}
+
+/* banner_bottom */
+#banner_bottom {
+    margin-top: 30px;
+    height: 160px;
+}
+.banner_wrap {}
+.banner01 {
+    float: left;
+    background: #F2F2F2;
+    padding: 20px 30px;
+}
+.banner01_left {
+    float: left;
+    margin-right: 84px;
+    position: relative;
+}
+.banner01_left h3 {
+    margin-bottom: 4px;
+}
+.banner01_left p {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.banner01_left .banner01_bottom {
+
+}
+.banner01_left .banner01_bottom img {
+    width: 16px;
+    position: absolute;
+    bottom: -1px;
+}
+.banner01_left .banner01_bottom em {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.banner01 .banner01_right {
+    float: right;
+    width: 70px;
+    margin-top: 15px;
+}
+
+.banner02 {
+    float: right;
+    background: #F2F2F2;
+    padding: 20px 30px;
+}
+.banner02_left {
+    float: left;
+    margin-right: 84px;
+    position: relative;
+}
+.banner02_left h3 {
+    margin-bottom: 4px;
+}
+.banner02_left p {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.banner02_left .banner02_bottom {}
+.banner02_left .banner02_bottom img {
+    width: 18px;
+    position: absolute;
+    bottom: 0;
+}
+.banner02_left .banner02_bottom em {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+}
+.banner02_left .banner02_bottom em span {
+    font-size: 10px;
+    color: #606060;
+}
+.banner02 .banner02_right {
+    float: right;
+    width: 70px;
+    margin-top: 15px;
+}
+
+/* cardType */
+#cardType {
+    height: 480px;
+}
+.cardType01 {}
+.cardType01 h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+.cardType01 h2 span {
+    color: #949494;
+}
+.card_wrap {
+    
+}
+.card {
+    float: left;
+    margin-right: 35px;
+}
+.card:last-child {
+    margin-right: 0;
+}
+.card img {
+    width: 310px;
+    margin-bottom: 10px;
+}
+.card_bottom {}
+.card_cont {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+.card_cont h4 {
+    margin-bottom: 8px;
+}
+.card_cont em {
+    font-style: normal;
+}
+.card_cont em span {
+    font-size: 12px;
+    color: #606060;
+}
+.card_bottom img {
+    width: 30px;
+    float: right;
+    margin-top: 8px;
+}
+
+footer {
+    width: 100%;
+    background: #202020;
+    height: 130px;
+    padding: 34px 0;
+}
+.footer_wrap {
+    
+}
+.footer_wrap img {
+    float: left;
+    width: 180px;
+}
+.footer_cont {
+    float: right;
+}
+.footer_cont em {
+    font-weight: bold;
+    font-style: normal;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.footer_cont em span {
+    color: rgba(255,255,255,0.1);
+    margin: 0 26px;
+}
+.footer_cont p {
+    font-size: 12px;
+    color: #808080;
+    margin-bottom: 10px;
+}

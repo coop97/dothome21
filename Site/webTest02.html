@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/webTest02.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="inner">
+                <div class="menu_group">
+                    <a href="#">
+                        <img src="img/web02_logo01.jpg" alt="로고 이미지">
+                    </a>
+                    <ul class="main_menu">
+                        <li><a href="#">COOKIT소개</a></li>
+                        <li><a href="#">COOKIT메뉴</a></li>
+                        <li><a href="#">리뷰</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">MY쿡킷</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <section id="banner">
+        <div class="container">
+            <div class="slider_wrap">
+                <div class="slider_img">
+                    <div class="slider"><img src="img/web02_slider.jpg" alt="이미지1"></div>
+                    <div class="slider"><img src="img/web02_slider.jpg" alt="이미지2"></div>
+                    <div class="slider"><img src="img/web02_slider.jpg" alt="이미지3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner -->
+
+    <section id="banner_bottom">
+        <div class="container">
+            <div class="banner_wrap">
+                <div class="banner01">
+                    <div class="banner01_left">
+                        <h3>우리집도 COOKIT 배송이 되나요?</h3>
+                        <p>배송이 가능한지 알려드려요.</p>
+                        <div class="banner01_bottom">
+                            <img src="img/web02_icon01.jpg" alt="아이콘 이미지">
+                            <em>배송지 검색</em>
+                        </div>
+                    </div>
+                    <img class="banner01_right" src="img/web02_banner01.jpg" alt="배너 이미지">
+                </div>
+                <div class="banner02">
+                    <div class="banner02_left">
+                        <h3>7월 30일(화)에 받을 수 있어요</h3>
+                        <p>오전 7시까지 주문하시면 다음날 배송됩니다.</p>
+                        <div class="banner02_bottom">
+                            <img src="img/web02_icon02.jpg" alt="아이콘 이미지">
+                            <em>63:28:32 <span>남은시간</span></em>
+                        </div>
+                    </div>
+                    <img class="banner02_right" src="img/web02_banner02.jpg" alt="배너 이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cardType">
+        <div class="container">
+            <div class="cardType01">
+                <h2>실시간 베스트 | <span>생생한 리뷰</span></h2>
+                <div class="card_wrap">
+                    <div class="card">
+                        <img src="img/web02_card01.jpg" alt="카드 이미지1">
+                        <div class="card_bottom">
+                            <div class="card_cont">
+                                <h4>평양식 어복쟁반</h4>
+                                <em>33,800원 <span>/3인분</span></em>
+                            </div>
+                            <img src="img/web02_cart.jpg" alt="카트 이미지">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/web02_card02.jpg" alt="카드 이미지1">
+                        <div class="card_bottom">
+                            <div class="card_cont">
+                                <h4>새우쭈꾸미삼겹살</h4>
+                                <em>29,800원 <span>/3인분</span></em>
+                            </div>
+                            <img src="img/web02_cart.jpg" alt="카트 이미지">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/web02_card03.jpg" alt="카드 이미지1">
+                        <div class="card_bottom">
+                            <div class="card_cont">
+                                <h4>방풍나물 아귀찜</h4>
+                                <em>32,800원 <span>/3인분</span></em>
+                            </div>
+                            <img src="img/web02_cart.jpg" alt="카트 이미지">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer_wrap">
+                <img src="img/web02_logo02.jpg" alt="로고 이미지">
+                <div class="footer_cont">
+                    <em>이용약관<span>|</span>개인정보처리 방침<span>|</span>법적고지<span>|</span>사업자정보 확인</em>
+                    <p>씨제이제일제당(주)  |  대표이사 : 신현재</p>
+                    <p>주소 : 서울 중구 동호로 330 CJ제일제당 센터 (우)04560  |  사업자등록번호 : 104-86-09535</p>
+                    <p>통신판매업신고 중구 제 07767호  |  개인정보보호책임자 : 류화정</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const sliderWrap = document.querySelector(".slider_wrap");
+        const sliderImg = document.querySelector(".slider_img");
+        const slider = document.querySelectorAll(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % sliderCount;
+
+            slider[currentIndex].style.opacity = "0";
+            slider[nextIndex].style.opacity = "1";
+
+            currentIndex = nextIndex;
+        }, 2000);
+    </script>
+</body>
+</html>
