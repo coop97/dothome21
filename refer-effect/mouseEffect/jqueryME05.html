@@ -144,15 +144,92 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;div class="cursor"&gt;&lt;/div&gt;
+
+&lt;div class="moveWrap"&gt;
+    &lt;article class="moveImage"&gt;
+        &lt;div class="mImg"&gt;&lt;img src="../assets/img/bg7.jpg" alt="이미지"&gt;&lt;/div&gt;
+        &lt;div class="mText"&gt;
+            &lt;p&gt;Try not to become a man of success but rather try to become a man of value&lt;/p&gt;
+            &lt;p&gt;성공한 사람이 아니라 가치있는 사람이 되기 위해 힘쓰라&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/article&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.moveWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100vh;
+}
+.moveImage {
+    position: relative;
+}
+.moveImage .mImg {
+    width: 50vw;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.moveImage:hover .mImg {
+    transform: scale(1.025);
+}
+.moveImage .mImg img {
+    width: 100%;
+    position: absolute;
+    left: -5%; top: -5%; 
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.moveImage .mText {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.1vw;
+    white-space: nowrap;
+    color: #fff;
+    font-family: 'NEXONLv1Gothic';
+    background: rgba(0,0,0,.4);
+    padding: 1vw;
+    line-height: 1.6;
+}
+.cursor {
+    position: absolute;
+    width: 20px; height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+    user-select: none;
+    pointer-events: none;
+}
 </code></pre>
                         </div>
                         <div class="jquery">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">$(".moveImage").mousemove(function(e){
+    gsap.to(".cursor", {duration: .2, left: e.pageX -10, top: e.pageY -10});
+
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+    //1. 좌표값을 가운데로 정렬
+    let standardX = $(window).width()/2 - pageX;
+    let standardY = $(window).height()/2 - pageY;
+
+    //2. img x축 -> 마우스 값/20 y축 -> 마우스 값/20
+    $(".mImg img").attr({"style": "transform: translate(" + standardX/20 + "px," +standardY/20 + "px)"});
+
+    //출력
+    $(".pageX").text(pageX);
+    $(".pageY").text(pageY);
+    $(".standardX").text(standardX);
+    $(".standardY").text(standardY);
+});
 </code></pre>
                         </div>
                     </div>

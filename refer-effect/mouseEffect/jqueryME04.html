@@ -160,15 +160,124 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;div class="cursor"&gt;&lt;/div&gt;
+
+&lt;div class="moveWrap"&gt;
+    &lt;article class="moveImage"&gt;
+        &lt;div class="mImg"&gt;&lt;img src="../assets/img/bg1.jpg" alt="이미지"&gt;&lt;/div&gt;
+        &lt;div class="mText"&gt;
+            &lt;p&gt;Sincerity is the way of Heaven&lt;/p&gt;
+            &lt;p&gt;지성을 다하는 것이 곧 천도다&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/article&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.moveWrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+.moveImage {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: all 0.2s;
+}
+.moveImage .mImg {
+    width: 50vw;
+    position: relative;
+}
+.moveImage .mImg::before {
+    content: '';
+    position: absolute;
+    left: 5%; bottom: -3%;
+    width: 90%; height: 40px;
+    background: url(../assets/img/bg1.jpg) no-repeat;
+    background-size: 100% 30px;
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.9;
+}
+.moveImage .mImg img {
+    width: 100%;
+    border-radius: 5px;
+}
+.moveImage .mText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 150px);
+    font-family: 'NEXONLv1Gothic';
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,.3);
+    padding: 2vw;
+    font-size: 1vw;
+    line-height: 1.6;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+.cursor {
+    position: absolute;
+    width: 10px; height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+    user-select: none;
+    pointer-events: none;
+}
 </code></pre>
                         </div>
                         <div class="jquery">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">$(window).mousemove(function(e){
+    let pageX = e.pageX;
+    let pageY = e.pageY;
+
+    //기준점 가운데로 변경
+    let standardX = $(window).width()/2 - pageX;
+    let standardY = $(window).height()/2 - pageY;
+
+    //최댓값은 100, 최솟값은 -100 설정
+    let maxX = Math.max(-100, Math.min(100, standardX));
+    let maxY = Math.max(-100, Math.min(100, standardY));
+
+    //각도를 줄이는 설정
+    let angleX = maxX * 0.12;
+    let angleY = maxY * 0.12;
+
+    //부드럽게 설정
+    let softX = 0;
+    let softY = 0;
+
+    softX += (angleX - softX) * 0.7;
+    softY += (angleY - softY) * 0.7;
+
+    //이미지
+    $(".moveImage").css({"transform": "translate(-50%, -50%) perspective(600px) rotateX("+ softY +"deg) rotateY("+ -softX +"deg)"});
+
+    //커서
+    gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+
+    //출력
+    $(".pageX").text(pageX);
+    $(".pageY").text(pageY);
+    $(".standardX").text(standardX);
+    $(".standardY").text(standardY);
+    $(".maxX").text(maxX);
+    $(".maxY").text(maxY);
+    $(".angleX").text(parseInt(angleX));
+    $(".angleY").text(parseInt(angleY));
+});
 </code></pre>
                         </div>
                     </div>

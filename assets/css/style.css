@@ -336,6 +336,10 @@
 	height: 100%;
 }
 
+.image-wrap.figma {
+	background: rgb(255, 227, 255);
+}
+
 .image-wrap img {
 	width: 55%;
     padding-top: 70px;

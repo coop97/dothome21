@@ -181,20 +181,138 @@
                         <ul>
                             <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">JQUERY</a></li>
+                            <li><a href="#">JAVASCRIPT</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;div class="cursor"&gt;&lt;/div&gt;
+
+&lt;div class="contents"&gt;
+    &lt;div class="moveImage"&gt;
+        &lt;div class="textWrap"&gt;
+            &lt;div class="line"&gt;
+                &lt;div class="left"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanSlow"&gt;Paradise is&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanSlow"&gt;Paradise is&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="line"&gt;
+                &lt;div class="left"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanFast"&gt;where I am&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanFast"&gt;where I am&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="line"&gt;
+                &lt;div class="left"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanSlow"&gt;내가 있는 곳이&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanSlow"&gt;내가 있는 곳이&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="line"&gt;
+                &lt;div class="left"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanFast"&gt;낙원이라&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="right"&gt;
+                    &lt;div class="spanWrap"&gt;
+                        &lt;span class="spanFast"&gt;낙원이라&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="imgWrap"&gt;
+            &lt;img src="../assets/img/bg0.jpg" alt="이미지"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.textWrap {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -20%);
+    color: #fff;
+    font-size: 3vw;
+    line-height: 1.5;
+    font-family: 'NEXONLv1Gothic';
+}
+.textWrap .line {
+    width: 100%;
+    display: flex;
+}
+.textWrap .line .left {
+    width: 50vw;
+    color: rgb(251, 255, 32);
+    overflow: hidden;
+    transform: skew(0deg, -15deg);
+}
+.textWrap .line .left .spanWrap {
+    width: 100vw;
+    text-align: center;
+}
+.textWrap .line .right {
+    width: 50vw;
+    overflow: hidden;
+    transform: skew(0deg, 15deg);
+}
+.textWrap .line .right .spanWrap {
+    width: 100vw;
+    text-align: center;
+    transform: translateX(-50vw);
+}
+.textWrap span {
+    display: inline-block;
+}
+.imgWrap {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 50%;
+}
+.imgWrap img {
+    width: 100%;
+}
 </code></pre>
                         </div>
-                        <div class="jquery">
-<pre><code class="language-javascript">
+                        <div class="javascript">
+<pre><code class="language-javascript">function mouseMove(e){
+    let positionSlow = (e.pageX - window.innerWidth/2) * 0.1;
+    let positionFast = (e.pageX - window.innerWidth/2) * 0.2;
+
+    gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});
+    gsap.to(".spanFast", {duration: 0.4, x: -positionFast});
+
+    //마우스값
+    pageX = e.pageX;
+    pageY = e.pageY;
+
+    //출력
+    document.querySelector(".pageX").textContent = pageX;
+    document.querySelector(".pageY").textContent = pageY;
+}
+window.addEventListener("mousemove", mouseMove);
 </code></pre>
                         </div>
                     </div>

@@ -118,20 +118,74 @@
                         <ul>
                             <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">JQUERY</a></li>
+                            <li><a href="#">JAVASCRIPT</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;div class="cursor"&gt;&lt;/div&gt;
+
+&lt;div class="contents"&gt;
+    &lt;p&gt;A good plan, violently executed now, is better than a perfect plan next week&lt;/p&gt;
+    &lt;p&gt;지금 적극적으로 실행되는 &lt;em&gt;괜찮은 계획&lt;/em&gt;이 다음 주의 &lt;em&gt;완벽한 계획&lt;/em&gt;보다 낫다&lt;/p&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.cursor {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url(../assets/img/bg6.jpg) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 5px solid #fff;
+    overflow: hidden;
+    z-index: -1;
+}
+.contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+.contents p {
+    max-width: 70vw;
+    font-size: 3vw;
+    text-align: justify;
+    color: #fff;
+}
+.contents p:first-child {
+    font-size: 2vw;
+    line-height: 2;
+}
+.contents p em {
+    color: rgb(242, 255, 121);
+    border-bottom: 2px dashed rgb(242, 255, 121);
+    font-style: normal;
+}
 </code></pre>
                         </div>
-                        <div class="jquery">
-<pre><code class="language-javascript">
+                        <div class="javascript">
+<pre><code class="language-javascript">const cursor = document.querySelector(".cursor");
+const circle = cursor.getBoundingClientRect();
+
+function moveCircle(e){
+    gsap.to(cursor, {duration: 0.5, left: e.pageX -circle.width/2, top: e.pageY -circle.height/2});
+
+    //마우스값
+    pageX = e.pageX;
+    pageY = e.pageY;
+
+    //출력
+    document.querySelector(".pageX").textContent = pageX;
+    document.querySelector(".pageY").textContent = pageY;
+}
+window.addEventListener("mousemove", moveCircle);
 </code></pre>
                         </div>
                     </div>
