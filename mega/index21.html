@@ -10,8 +10,8 @@
     <title>메가박스 사이트 코딩하기</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/reset18.css">
-    <link rel="stylesheet" href="assets/css/style18.css">
+    <link rel="stylesheet" href="assets/css/reset21.css">
+    <link rel="stylesheet" href="assets/css/style21.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
 
@@ -46,6 +46,14 @@
     <![endif]-->
 </head>
 <body>
+    <!-- 스킵 메뉴 -->
+    <div id="skip">
+        <a rel="bookmark" href="#movie">최신 영화 소식</a>
+        <a rel="bookmark" href="#event">새로운 이벤트</a>
+        <a rel="bookmark" href="#new">새로운 영화</a>
+    </div>
+    <!-- //스킵 메뉴 -->
+
     <header id="header">
         <div class="container">
             <div class="row">
@@ -732,7 +740,7 @@
                 <div class="new">
                     <h2>새로운 영화</h2>
                     <div class="new_left">
-                        <div class="play">
+                        <div class="play" id="showTrailer" data-youtube="F1239ZePXfM">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
                                 <circle class="st0" cx="60" cy="60.4" r="56"/>
@@ -820,53 +828,53 @@
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong> <em>2019.05.26</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong> <em>2019.05.27</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong> <em>2019.05.27</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong> <em>2019.05.28</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a href="#">영화관 공지</a>
-                                    <ul style="display: none;">
+                                    <ul>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">안양</strong> <em>2019.05.26</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">인덕원</strong> <em>2019.05.27</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">서울</strong> <em>2019.05.28</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">안산</strong> <em>2019.05.28</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                     </ul></li>
@@ -1331,73 +1339,66 @@
             </div>
         </div>
     </section>
+    <!-- //help -->
+
+    <footer id="footer">
+        <div id="footer_sns">
+            <div class="container">
+                <div class="footer_sns">
+                    <ul>
+                        <li class="icon s1"><a href="#"><span class="ir_pm">트위터</span></a></li>
+                        <li class="icon s2"><a href="#"><span class="ir_pm">페이스북</span></a></li>
+                        <li class="icon s3"><a href="#"><span class="ir_pm">인스타그램</span></a></li>
+                        <li class="icon s4"><a href="#"><span class="ir_pm">구글 플레이</span></a></li>
+                        <li class="icon s5"><a href="#"><span class="ir_pm">아이폰 앱스토어</span></a></li>
+                    </ul>
+                    <div class="tel">
+                        <a href="#">ARS <em>1544-0070</em></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer_info">
+            <div class="container">
+                <div class="row">
+                    <div class="footer_info">
+                        <h2><img src="assets/img/logo_footer.png" alt="megabox"></h2>
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">채용정보</a></li>
+                            <li><a href="#">제휴/광고/부대사업 문의</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">윤리경영</a></li>
+                        </ul>
+                        <address>
+                            <p>서울특별시 강남구 도산대로 156, 2층 메가박스중앙(주) (논현동, 중앙엠앤비사옥)<br><span class="bar2">대표자명 김진선</span> 개인정보보호 책임자 경영지원실 실장 박영진<br><span class="bar2">사업자등록번호 211-86-59478</span> 통신판매업신고번호 제 833호</p>
+                            <p>Copyright 2014 by MegaboxJoongAng Inc. All right reserved</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- 트레일러 -->
+    <aside id="blackout" class="overlay">
+        <div id="trailermodal" class="modal">
+            <div id="trailer"></div><!--YouTube 플레이어로 대체되는 부분-->>
+        </div>
+        <button id="hideTrailer" class="modal_close">닫기</button>
+    </aside>
+    <!-- //트레일러 -->
 
     <!-- 자바스크립트 라이브러리 -->
     <script src="assets/js/jquery.min_1.12.4.js"></script>
     <script src="assets/js/modernizr-custom.js"></script>
     <script src="assets/js/ie-checker.js"></script>
     <script src="assets/js/swiper.min.js"></script>
-    <script>
-        //배너 이미지 슬라이드
-        var swiper = new Swiper('.swiper-container',{
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-            },
-            autoplay: {
-                delay: 5000,
-            },
-        });
-
-        //영화차트 이미지 슬라이드
-        var swiper = new Swiper('.swiper-container2',{
-            slidesPerView: 4,
-            spaceBetween: 24,
-            // mousewheel: {
-            //     invert: true,
-            // },
-            keyboard: {
-                enabled: true,
-                onlyInViewport: false,
-            },
-            autoplay: {
-                delay: 6000,
-            },
-            breakpoints: {
-                600: {
-                    slidesPerView: 1.4,
-                    spaceBetween: 24
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 24
-                },
-                960: {
-                    slidesPerView: 3,
-                    spaceBetween: 24
-                }
-            }
-        });
-
-        //영화차트 탭 메뉴
-        var movBtn = $(".movie_title > ul > li");
-        var movCont = $(".movie_chart > div");
-
-        movCont.hide().eq(0).show();
-
-        movBtn.click(function(e){
-            e.preventDefault();
-            var target = $(this);
-            var index = target.index();
-            movBtn.removeClass("active");
-            target.addClass("active");
-            movCont.css("display", "none");
-            movCont.eq(index).css("display", "block")
-        });
-    </script>
+    <script src="assets/js/iframe_api.js"></script>
+    <script src="assets/js/movie.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>
