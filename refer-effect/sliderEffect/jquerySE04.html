@@ -213,7 +213,7 @@ let currentIndex1 = 0;
 let sliderHeight1 = slider1.height();
 
 setInterval(function(){
-    currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+    currentIndex1 &lt; 4 ? currentIndex1++ : currentIndex1 = 0;
 
     let sliderPosition = currentIndex1 * -sliderHeight1;
     sliderInner1.animate({top: sliderPosition}, 600, "easeOutExpo");
@@ -301,7 +301,7 @@ setInterval(function(){
             currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
 
             let sliderPosition = currentIndex1 * -sliderHeight1;
-            sliderInner1.animate({top: sliderPosition}, 600, "easeOutExpo");
+            sliderInner1.animate({top: sliderPosition}, 900, "easeOutExpo");
         }, 3000);
 
         //sample02
@@ -313,7 +313,7 @@ setInterval(function(){
         let sliderHeight2 = slider2.height();
 
         setInterval(function(){
-            sliderInner2.animate({top: -sliderHeight2}, 600, "easeOutExpo", function(){
+            sliderInner2.animate({top: -sliderHeight2}, 900, "easeOutExpo", function(){
                 $(".slider2:first-child").appendTo(sliderInner2);
                 sliderInner2.css("top", "");
             });
