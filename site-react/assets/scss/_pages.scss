@@ -16,4 +16,110 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    br {
+        display: none;
+    }
+}
+
+//#mainCont02
+#mainCont02 {
+    background-color: #B1B8A7;
+    height: 100vh;
+    color: #fff;
+    font-family: $font-sub02;
+    font-size: 7vw;
+    line-height: .91;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .main__cont02 {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .cont02__wrap {
+            margin-right: 6vw;
+
+            .cont01 {
+                font-size: 5vw;
+                margin-bottom: 2vw;
+            }
+            .cont02 {
+                font-family: $font-main02;
+                color: #393D34;
+                font-weight: 700;
+                margin-bottom: 2vw;
+            }
+            .cont03 {
+                font-size: 1.5vw;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        img {
+            width: 30vw;
+            height: 32vw;
+            z-index: 100;
+        }
+    }
+
+    .back02 {
+        width: 25%;
+        background: #1F1D22;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+@media(max-width: 800px){
+    #mainCont {
+        font-size: 15vw;
+    }
+}
+
+@media(max-width: 1100px){
+    #mainCont02 {
+        font-size: 8.2vw;
+
+        .main__cont02 {
+
+            .cont02__wrap {
+                margin-right: 6.5vw;
+            }
+
+            img {
+                width: 34vw;
+                height: 36vw;
+                z-index: 100;
+            }
+        }
+    }
+}
+
+@media(max-width: 800px){
+    #mainCont02 {
+        font-size: 12vw;
+
+        .main__cont02 {
+
+            .cont02__wrap {
+                margin-right: 0;    
+            }
+
+            img {
+                display: none;
+            }
+        }
+
+        .back02 {
+            display: none;
+        }
+    }
 }

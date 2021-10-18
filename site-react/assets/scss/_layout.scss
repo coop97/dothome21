@@ -12,14 +12,15 @@
     position: fixed;
     left: 0; top: 0;
     width: 100%;
-    background: #000;
+    background: #B1B8A7;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-family: $font-sub;
-    border-bottom: 1px solid #2e2e30;
-    border-top: 1px solid #2e2e30;
+    border-bottom: 1px solid #CECECE;
+    border-top: 1px solid #CECECE;
+    z-index: 100;
 
     .header__port {
         flex: 0 0 30%;
@@ -36,7 +37,7 @@
 
         a {
             font-size: 30px;
-            font-family: $font-logo;
+            font-family: $font-main02;
             font-weight: bold;
             display: block;
             padding: 7px 7px 9px;
@@ -93,19 +94,33 @@
         .header__ham {display: block;}
     }
 }
+@media(max-width: 800px){
+    #header {
+        .header__logo {
+            a {
+                font-size: 22px;
+            }
+        }
+        .header__ham {
+            top: 12px;
+            left: 10px;
+            transform: scale(0.8);
+        }
+    }
+}
 
 //#footer
 #footer {
     position: fixed;
     left: 0; bottom: 0;
     width: 100%;
-    background: #000;
+    background: #1F1D22;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-family: $font-sub;
-    border-top: 1px solid #2e2e30;
+    // border-top: 1px solid #2e2e30;
 
     div {
         padding: 22px;
@@ -148,5 +163,12 @@
         div:nth-child(1){flex: 0 0 100%;}
         div:nth-child(2){display: none;}
         div:nth-child(3){display: none;}
+    }
+}
+@media(max-width: 800px){
+    #footer {
+        div {
+            padding: 14px;
+        }
     }
 }
