@@ -96,6 +96,9 @@
 }
 @media(max-width: 800px){
     #header {
+        background: none;
+        border-bottom: none;
+
         .header__logo {
             a {
                 font-size: 22px;

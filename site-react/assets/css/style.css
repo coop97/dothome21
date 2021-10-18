@@ -968,6 +968,10 @@ table {
 }
 
 @media (max-width: 800px) {
+  #header {
+    background: none;
+    border-bottom: none;
+  }
   #header .header__logo a {
     font-size: 22px;
   }
@@ -1164,24 +1168,45 @@ table {
 
 @media (max-width: 1100px) {
   #mainCont02 {
-    font-size: 8.2vw;
+    font-size: 9vw;
   }
   #mainCont02 .main__cont02 .cont02__wrap {
-    margin-right: 6.5vw;
+    margin-right: 5.5vw;
+  }
+  #mainCont02 .main__cont02 .cont02__wrap .cont03 {
+    font-size: 2vw;
   }
   #mainCont02 .main__cont02 img {
-    width: 34vw;
-    height: 36vw;
+    width: 36vw;
+    height: 38vw;
     z-index: 100;
   }
 }
 
 @media (max-width: 800px) {
   #mainCont02 {
-    font-size: 12vw;
+    font-size: 13vw;
+    background: url(../img/main02.jpg) no-repeat;
+    background-size: cover;
+  }
+  #mainCont02::before {
+    content: "";
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
   }
   #mainCont02 .main__cont02 .cont02__wrap {
     margin-right: 0;
+  }
+  #mainCont02 .main__cont02 .cont02__wrap .cont02 {
+    color: #c1d6a5;
+  }
+  #mainCont02 .main__cont02 .cont02__wrap .cont03 {
+    font-size: 2.5vw;
   }
   #mainCont02 .main__cont02 img {
     display: none;
