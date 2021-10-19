@@ -313,7 +313,6 @@ sliderBtn.find(".next").click(function(){
         let sliderCount = slider.length;
 
         sliderInner.css({marginLeft: -sliderWidth});
-        $(".slider:last-child").prependTo(sliderInner);
 
         function movePrev(){
             sliderInner.animate({left: sliderWidth}, 400, function(){

@@ -21,7 +21,6 @@
             font-family: ‘NEXONLv1Gothic’;
             cursor: none;
             position: relative;
-            z-index: 10;
         }
         .mouseCont p {
             font-size: 2.5vw;
@@ -143,7 +142,7 @@
     <!-- info -->
     <div class="info">
         <h1><a href="index.html">javascript Mouse Effect08</a></h1>
-        <p>마우스 이펙트 - 박스 회전</p>
+        <p>마우스 이펙트 - 원 확대</p>
     </div>
     
     <div class="info right">
@@ -202,15 +201,167 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;div class="cursor"&gt;&lt;/div&gt;
+
+&lt;article class="mouseCont"&gt;
+    &lt;p&gt;&lt;em&gt;A single day&lt;/em&gt; is enough to make us a little larger&lt;/p&gt;
+    &lt;h2&gt;우리를 조금 크게 만드는데 걸리는 시간은 단 &lt;em&gt;하루&lt;/em&gt;면 충분하다&lt;/h2&gt;
+&lt;/article&gt;
+&lt;div class="box-wrap"&gt;
+    &lt;div class="box-item two"&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+        &lt;div class="item"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div class="css">
-<pre><code class="language-css">
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: ‘NEXONLv1Gothic’;
+    cursor: none;
+    position: relative;
+    z-index: 10;
+}
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
+}
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    font-weight: 400;
+}
+.mouseCont em {
+    font-style: normal;
+    border-bottom: 0.2vw dashed rgb(241, 255, 41);
+    color: rgb(241, 255, 41);
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: rgb(255, 133, 117);
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s;
+    mix-blend-mode: difference;
+}
+.cursor.active {
+    transform: scale(20);
+}
+.info.left.list li.active {
+    text-decoration: underline;
+    color: rgb(221, 111, 111);
+}
+.box-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100vh;
+}
+.box-item {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(4, 50px);
+    grid-gap: 30px;
+}
+.box-item .item {
+    background-color: rgba(255,255,255,.3);
+}
+.box-item.two .item {
+    border-radius: 50%;
+    transform: scale(0.2);
+}
 </code></pre>
                         </div>
                         <div class="jquery">
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">document.addEventListener("mousemove", (e) => {
+    const item = document.querySelectorAll(".item");
+
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    item.forEach((item) => {
+        //1. 박스 모양 회전
+        // const itemX = item.offsetLeft + 20;
+        // const itemY = item.offsetTop + 20;
+        // const diffX = mouseX - itemX;
+        // const diffY = mouseY - itemY;
+        // const radians = Math.atan2(diffY, diffX);
+        // const angle = radians * 180 / Math.PI;
+
+        // item.style.transform = "rotate("+angle+"deg)";
+
+        //2. 원 모양 확대
+        const itemX = item.offsetLeft - mouseX;
+        const itemY = item.offsetTop - mouseY;
+        const dist = Math.sqrt(itemX * itemX + itemY * itemY);
+        const score = Math.exp(dist * -0.003);
+
+        item.style.transform = `scale(${score})`;
+    });
+
+    //커서
+    const cursor = document.querySelector(".cursor");
+    gsap.to(cursor, {duration: 0.3, left: mouseX - 10, top: mouseY - 10});
+
+    //출력
+    document.querySelector(".pageX").textContent = e.pageX;
+    document.querySelector(".pageY").textContent = e.pageY;
+});
 </code></pre>
                         </div>
                     </div>
