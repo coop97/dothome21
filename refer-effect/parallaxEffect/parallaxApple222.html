@@ -102,7 +102,6 @@
             
         }
         #section3 {
-            /* background: blue; */
             height: 16000px;
             z-index: 3000;
         }
@@ -224,199 +223,6 @@
             font-size: 2vw;
             text-align: center;
         }
-
-
-        /* 애니메이션(박스) */
-        .box {
-            position: absolute;
-                width: 49px;
-                height: 49px;
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-            }
-            .box::before {
-                content: "";
-                width: 49px;
-                height: 5px;
-                background: #000;
-                position: absolute;
-                top: 58px;
-                left: 0;
-                border-radius: 50%;
-                opacity: 0.1;
-                animation: shadow 0.58s linear infinite;
-            }
-            .box::after {
-                content: "";
-                background: #FDD245;
-                width: 49px;
-                height: 49px;
-                position: absolute;
-                left: 0;
-                top: 0;
-                border-radius: 3px;
-                animation: load 0.58s linear infinite;
-            }
-
-            @keyframes shadow {
-                0% {
-                    transform: scale(1, 1);
-                }
-                50% {
-                    transform: scale(1.2, 1);
-                }
-                100% {
-                    transform: scale(1, 1);
-                }
-            }
-            @keyframes load {
-                17% {
-                    border-bottom-right-radius: 3px;
-                }
-                25% {
-                    transform: translatey(9px) rotate(22.5deg);
-                }
-                50% {
-                    transform: translatey(18px) scale(1, 0.9) rotate(45deg);
-                    border-bottom-right-radius: 39px;
-                }
-                75% {
-                    transform: translatey(9px) rotate(67.5deg);
-                }
-                100% {
-                    transform: translatey(0px) rotate(90deg);
-                }
-            }
-
-            /* 애니메이션(벨) */
-            *,
-            *::after,
-            *::before{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            .container {
-                display: inline-block;
-                width: 30vw;
-            }
-            .notification{
-                transform-origin: top center;
-                animation: bellring 2s ease infinite;
-            }
-
-            .ball{
-                transform-origin: top center;
-                animation: ballring 2s ease infinite;
-                animation-delay: 0.1s;
-            }
-
-            @keyframes bellring {
-                0% { transform: rotate(0); }
-                10% { transform: rotate(20deg); }
-                20% { transform: rotate(-20deg); }
-                30% { transform: rotate(15deg); }
-                40% { transform: rotate(-15deg); }
-                50% { transform: rotate(10deg); }
-                60% { transform: rotate(-10deg); }
-                70% { transform: rotate(5deg); }
-                80% { transform: rotate(-5deg); }
-                100% { transform: rotate(0); }
-            }
-
-            @keyframes ballring {
-                0% { transform: rotate(0); }
-                10% { transform: rotate(-5deg); }
-                20% { transform: rotate(5deg); }
-                30% { transform: rotate(-4deg); }
-                40% { transform: rotate(4deg); }
-                50% { transform: rotate(-2deg); }
-                60% { transform: rotate(2deg); }
-                70% { transform: rotate(-1deg); }
-                80% { transform: rotate(1deg); }
-                100% { transform: rotate(0); }
-            }
-
-            /* 애니메이션(네온) */
-            h1 {
-                position: absolute;
-                font-size: calc(20px + 18vh);
-                line-height: calc(20px + 20vh);
-                text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-                    color: #fff6a9;
-                font-family: "Sacramento", cursive;
-                text-align: center;
-                animation: blink 12s infinite;
-                -webkit-animation: blink 12s infinite;
-            }
-
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-            }
-
-            @-webkit-keyframes blink {
-                20%,
-                24%,
-                55% {
-                    color: #111;
-                    text-shadow: none;
-                }
-                0%,
-                19%,
-                21%,
-                23%,
-                25%,
-                54%,
-                56%,
-                100% {
-                text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-                    color: #fff6a9;
-                }
-            }
-
-            @keyframes blink {
-                20%,
-                24%,
-                55% {
-                    color: #111;
-                    text-shadow: none;
-                }
-                0%,
-                19%,
-                21%,
-                23%,
-                25%,
-                54%,
-                56%,
-                100% {
-                text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-                    color: #fff6a9;
-                }
-            }
-
-            /* 애니메이션(눈) */
-            #snowflakeContainer {
-                position: absolute;
-                left: -50%;
-                top: 0px;
-            }
-            .snowflake {
-                padding-left: 15px;
-                font-family: Times, Georgia, serif;
-                font-size: 14em;
-                line-height: 24px;
-                position: fixed;
-                color: #FFFFFF;
-                user-select: none;
-                z-index: 1000;
-            }
     </style>
 </head>
 <body>
@@ -590,8 +396,8 @@
         </style>
         <section id="section3">
             <div class="s3Text1 fixed"
-                data-39001="opacity: 1;"
-                data-39700="opacity: 0;"
+                data-40001="opacity: 1;"
+                data-40200="opacity: 0;"
             >
                 <span class="s1"
                     data-26000="transform: translate(-60vw, 0vw); font-size: 12vw; font-weight: 100;"
@@ -633,22 +439,22 @@
             </div>
             <div class="s3Text2 fixed">
                 <iframe class="i1" src="../mouseEffect/javascriptME01.html" alt="mouse"
-                    data-31000="transform: translate3d(-80%, -50%, -10000px); opacity:0;"
-                    data-32000="transform: translate3d(-80%, -50%, 0px); opacity:1;"
-                    data-37000="transform: translate3d(-80%, -50%, 0px); opacity:1;"
-                    data-39000="transform: translate3d(-80%, -50%, 0px); opacity:0;"
+                    data-33000="transform: translate3d(-80%, -50%, -10000px); opacity:0;"
+                    data-34000="transform: translate3d(-80%, -50%, 0px); opacity:1;"
+                    data-39000="transform: translate3d(-80%, -50%, 0px); opacity:1;"
+                    data-40000="transform: translate3d(-80%, -50%, 0px); opacity:0;"
                 ></iframe>
                 <iframe class="i2" src="../sliderEffect/javascriptSE01.html" alt="mouse"
-                    data-32000="transform: translate3d(-50%, -80%, -10000px); opacity:0;"
-                    data-33000="transform: translate3d(-50%, -80%, 0px); opacity:1;"
-                    data-36500="transform: translate3d(-50%, -80%, 0px); opacity:1;"
-                    data-37500="transform: translate3d(-50%, -80%, 100px); opacity:0;"
+                    data-34000="transform: translate3d(-50%, -80%, -10000px); opacity:0;"
+                    data-35000="transform: translate3d(-50%, -80%, 0px); opacity:1;"
+                    data-38500="transform: translate3d(-50%, -80%, 0px); opacity:1;"
+                    data-39500="transform: translate3d(-50%, -80%, 100px); opacity:0;"
                 ></iframe>
                 <iframe class="i3" src="../parallaxEffect/javascriptPE01.html" alt="mouse"
-                    data-34000="transform: translate3d(-40%, -40%, -10000px); opacity:0;"
-                    data-35000="transform: translate3d(-30%, -30%, 0px); opacity:1;"
-                    data-36000="transform: translate3d(-30%, -30%, 0px); opacity:1;"
-                    data-37000="transform: translate3d(-30%, -30%, 1000px); opacity:0;"
+                    data-36000="transform: translate3d(-40%, -40%, -10000px); opacity:0;"
+                    data-37000="transform: translate3d(-30%, -30%, 0px); opacity:1;"
+                    data-38000="transform: translate3d(-30%, -30%, 0px); opacity:1;"
+                    data-39000="transform: translate3d(-30%, -30%, 1000px); opacity:0;"
                 ></iframe>
             </div>
         </section>
@@ -678,124 +484,47 @@
             }
             .s4Text1 .circle6 {
                 left: 10%; top: 10%;
-                color: rgb(38, 43, 100)
             }
         </style>
         <section id="section4">
             <div class="s4Text1"
-                data-38999="display:none"
-                data-39000="display:block;"
-                data-39800="display:block;"
+                data-39999="display:none"
+                data-40000="display:block;"
+                data-43000="display:block;"
+                data-43001="display:none;"
             >
                 <div class="circle1 fixed"
-                    data-39000="width: 0vw; height: 0vw;"
-                    data-39200="width: 50vw; height: 50vw;"
-                    data-39800="width: 200vw; height: 200vw; opacity: 1;"
+                    data-40000="width: 0vw; height: 0vw;"
+                    data-42000="width: 100vw; height: 100vw;"
+                    data-44000="width: 200vw; height: 200vw;"
                 ></div>
                 <div class="circle2 fixed"
-                    data-39500="width: 0vw; height: 0vw;"
-                    data-39600="width: 50vw; height: 50vw;"
-                    data-39800="width: 200vw; height: 200vw; opacity: 1;"
+                    data-40500="width: 0vw; height: 0vw;"
+                    data-42000="width: 100vw; height: 100vw;"
+                    data-44000="width: 200vw; height: 200vw;"
                 ></div>
                 <div class="circle3 fixed"
-                    data-39100="width: 0vw; height: 0vw;"
-                    data-39300="width: 50vw; height: 50vw;"
-                    data-39800="width: 200vw; height: 200vw; opacity: 1;"
+                    data-40100="width: 0vw; height: 0vw;"
+                    data-42000="width: 100vw; height: 100vw;"
+                    data-44000="width: 200vw; height: 200vw;"
                 ></div>
                 <div class="circle4 fixed"
-                    data-39150="width: 0vw; height: 0vw;"
-                    data-39350="width: 50vw; height: 50vw;"
-                    data-39800="width: 200vw; height: 200vw; opacity: 1;"
+                    data-40150="width: 0vw; height: 0vw;"
+                    data-42000="width: 100vw; height: 100vw;"
+                    data-44000="width: 200vw; height: 200vw;"
                 ></div>
                 <div class="circle5 fixed"
-                    data-39200="width: 0vw; height: 0vw;"
-                    data-39300="width: 50vw; height: 50vw;"
-                    data-39800="width: 200vw; height: 200vw; opacity: 1;"
+                    data-40200="width: 0vw; height: 0vw;"
+                    data-42000="width: 100vw; height: 100vw;"
+                    data-44000="width: 200vw; height: 200vw;"
                 ></div>
                 <div class="circle6 fixed"
-                    data-39250="width: 0vw; height: 0vw;"
-                    data-39350="width: 50vw; height: 50vw;"
-                    data-39800="width: 200vw; height: 200vw; opacity: 1;"
+                    data-40250="width: 0vw; height: 0vw;"
+                    data-42000="width: 100vw; height: 100vw;"
+                    data-44000="width: 200vw; height: 200vw;"
                 ></div>
             </div>
-
-            <style>
-                .s4Text2 {}
-                .s4Text2 .title {
-                    text-align: center;
-                    z-index: 9999;
-                }
-                .s4Text2 .title span {
-                    font-size: 10vw;
-                    color: #fff;
-                }
-                .s4Text2 .title01 {
-                    display: block;
-                }
-                .s4Text2 .title02 {
-                    display: block;
-                }
-                .s4Text2 .ani01 {
-                    width: 50vw;
-                    height: 50vw;
-                }
-            </style>
-            <div class="s4Text2 fixed"
-                data-40799="display:none"
-                data-40800="display:block;"
-            >
-                <div class="title"
-                    data-40800="opacity: 0;"
-                    data-40850="opacity: 1;"
-                    data-41500="transform: scale(1);"
-                    data-41800="transform: scale(0.7);"
-                >
-                    <span class="title01"
-                        data-40850="transform: translate(-7vw, 0vw); opacity:0;"
-                        data-41500="transform: translate(0vw, 0vw); opacity:1;"
-                    >CodePen</span>
-                    <span class="title02"
-                        data-40850="transform: translate(7vw, 0vw); opacity:0;"
-                        data-41500="transform: translate(0vw, 0vw); opacity:1;"
-                    >Animation</span>
-
-                    <!-- 애니메이션(벨) -->
-                    <div class="container"
-                        data-41800="transform: translate(0, 0) scale(0);"
-                        data-43000="transform: translate(0, 0) scale(0.4);"
-                    ><svg class="notification"viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M39 8.99981C38.9986 10.0379 38.7663 11.0626 38.32 11.9998C37.8345 13.0256 37.1027 13.9154 36.19 14.5898H27.81C26.8972 13.9154 26.1655 13.0256 25.68 11.9998C25.2282 11.0511 24.9959 10.013 25.0001 8.96225C25.0043 7.91153 25.2449 6.87524 25.7043 5.93022C26.1636 4.98521 26.8297 4.15572 27.6534 3.50327C28.477 2.85083 29.4369 2.39216 30.462 2.1613C31.487 1.93043 32.5509 1.93328 33.5747 2.16965C34.5985 2.40601 35.5559 2.86982 36.376 3.52667C37.1961 4.18353 37.8578 5.01658 38.3121 5.96405C38.7663 6.91151 39.0014 7.94908 39 8.99981Z" fill="#CCDBFD"/>
-                            <path d="M38.3201 12.0002C37.8345 13.026 37.1028 13.9157 36.1901 14.5902H27.8101C26.8973 13.9157 26.1656 13.026 25.6801 12.0002C26.2488 10.8058 27.1443 9.7971 28.2629 9.09085C29.3814 8.38461 30.6772 8.00977 32.0001 8.00977C33.3229 8.00977 34.6187 8.38461 35.7372 9.09085C36.8558 9.7971 37.7513 10.8058 38.3201 12.0002V12.0002Z" fill="#E2EAFC"/>
-                            <!-- class = "ball"  for adding animation in the ball of notification bell-->
-                            <path class="ball" d="M43.3099 54C42.7224 55.6911 41.7581 57.2264 40.4899 58.49C39.0563 59.9235 37.2827 60.9704 35.3349 61.533C33.3871 62.0956 31.3285 62.1555 29.3513 61.7071C27.3741 61.2587 25.5427 60.3167 24.0281 58.969C22.5135 57.6212 21.365 55.9117 20.6899 54H43.3099Z" fill="#FFD6A5"/>
-                            <path class="ball" d="M40.9999 54L40.5299 54.49C39.3751 55.6486 37.9956 56.5589 36.4761 57.1648C34.9567 57.7708 33.3294 58.0598 31.6942 58.0139C30.059 57.968 28.4504 57.5882 26.9673 56.898C25.4843 56.2077 24.158 55.2215 23.0699 54H40.9999Z" fill="#FDFFB6"/>
-                            <path d="M62 54H2L6.85 50.12C10.0171 47.5859 12.5737 44.3719 14.3306 40.7161C16.0876 37.0603 16.9999 33.0561 17 29C17 25.0218 18.5804 21.2064 21.3934 18.3934C24.2064 15.5804 28.0218 14 32 14C35.9782 14 39.7936 15.5804 42.6066 18.3934C45.4196 21.2064 47 25.0218 47 29C46.9965 33.0567 47.9072 37.0621 49.6644 40.7185C51.4217 44.3749 53.9802 47.5883 57.15 50.12L62 54Z" fill="#AC9EFF"/>
-                            <path d="M62 53.9998H21.14C25.558 49.0448 27.9996 42.6383 28 35.9998C28 32.0215 29.5804 28.2062 32.3934 25.3932C35.2065 22.5801 39.0218 20.9998 43 20.9998C43.5852 20.9959 44.1699 21.0327 44.75 21.1098C46.2256 23.4765 47.0053 26.2108 47 28.9998C46.9965 33.0565 47.9072 37.0619 49.6645 40.7183C51.4217 44.3747 53.9802 47.5881 57.15 50.1198L62 53.9998Z" fill="#C1D3FE"/></svg>
-                    </div>
-                </div>
-
-                <!-- 애니메이션(상자) -->
-                <div class="box"
-                    data-43500="transform: translate(-35vw, 50vw) scale(5.5);"
-                    data-46500="transform: translate(-35vw, 0vw) scale(5.5);"
-                    data-48500="transform: translate(-35vw, -50vw) scale(5.5);"
-                ></div>
-
-               <!-- 애니메이션(네온) -->
-               <h1
-                    data-48500="transform: translate(32vw, 60vw) scale(0.7);"
-                    data-48700="transform: translate(32vw, 0vw) scale(0.7);"
-                    data-53700="transform: translate(32vw, -80vw) scale(0.7);"
-               >Dare to dream</h1>
-
-               <!-- 애니메이션(눈) -->
-                <div id="snowflakeContainer"
-                    data-41500="opacity:0;"
-                    data-41800="opacity:1;"
-                >
-                    <p class="snowflake">*</p>
-                </div>
-            </div>
+            <div class="s4Text2">Animation</div>
         </section>
         <!-- //section4 -->
         <section id="section5">
@@ -808,7 +537,6 @@
         </section>
         <!-- //section7 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
         <script>
             var s = skrollr.init();
             window.addEventListener("scroll", () => {
@@ -816,106 +544,6 @@
                 document.querySelector(".scroll").innerHTML = scrollTop;
             });
             let imgWidth = document.querySelector(".img1").clientWidth;
-
-            // 눈
-            var requestAnimationFrame = window.requestAnimationFrame ||
-            window.mozRequestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.msRequestAnimationFrame;
-
-            var transforms = ["transform",
-                            "msTransform",
-                            "webkitTransform",
-                            "mozTransform",
-                            "oTransform"];
-            var transformProperty = getSupportedPropertyName(transforms);
-            var snowflakes = [];
-            var browserWidth;
-            var browserHeight;
-            var numberOfSnowflakes = 50;
-            var resetPosition = false;
-            function setup() {
-                window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
-                window.addEventListener("resize", setResetFlag, false);
-            }
-            setup();
-            function getSupportedPropertyName(properties) {
-                for (var i = 0; i < properties.length; i++) {
-                    if (typeof document.body.style[properties[i]] != "undefined") {
-                        return properties[i];
-                    }
-                }
-                return null;
-            }
-            function Snowflake(element, speed, xPos, yPos) {
-                this.element = element;
-                this.speed = speed;
-                this.xPos = xPos;
-                this.yPos = yPos;
-                this.counter = 0;
-                this.sign = Math.random() < 0.5 ? 1 : -1;
-
-                this.element.style.opacity = .1 + Math.random();
-                this.element.style.fontSize = 14 + Math.random() * 50 + "px";
-            }
-            Snowflake.prototype.update = function () {
-
-                this.counter += this.speed / 5000;
-                this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
-                this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
-                setTranslate3DTransform(this.element, Math.round(this.xPos), Math.round(this.yPos));
-                if (this.yPos > browserHeight) {
-                    this.yPos = -50;
-                }
-            }
-            function setTranslate3DTransform(element, xPosition, yPosition) {
-                var val = "translate3d(" + xPosition + "px, " + yPosition + "px" + ", 0)";
-                element.style[transformProperty] = val;
-            }
-            function generateSnowflakes() {
-                var originalSnowflake = document.querySelector(".snowflake");
-                var snowflakeContainer = originalSnowflake.parentNode;
-                browserWidth = document.documentElement.clientWidth;
-                browserHeight = document.documentElement.clientHeight;
-                for (var i = 0; i < numberOfSnowflakes; i++) {
-                    var snowflakeClone = originalSnowflake.cloneNode(true);
-                    snowflakeContainer.appendChild(snowflakeClone);
-                    var initialXPos = getPosition(50, browserWidth);
-                    var initialYPos = getPosition(50, browserHeight);
-                    var speed = 5+Math.random()*40;
-                    var snowflakeObject = new Snowflake(snowflakeClone,
-                                                        speed,
-                                                        initialXPos,
-                                                        initialYPos);
-                    snowflakes.push(snowflakeObject);
-                }
-            snowflakeContainer.removeChild(originalSnowflake);
-                moveSnowflakes();
-            }
-            function moveSnowflakes() {
-                for (var i = 0; i < snowflakes.length; i++) {
-                    var snowflake = snowflakes[i];
-                    snowflake.update();
-                }
-                if (resetPosition) {
-                    browserWidth = document.documentElement.clientWidth;
-                    browserHeight = document.documentElement.clientHeight;
-                    for (var i = 0; i < snowflakes.length; i++) {
-                        var snowflake = snowflakes[i];
-
-                        snowflake.xPos = getPosition(50, browserWidth);
-                        snowflake.yPos = getPosition(50, browserHeight);
-                    }
-                    resetPosition = false;
-                }
-                requestAnimationFrame(moveSnowflakes);
-            }
-            function getPosition(offset, size) {
-                return Math.round(-1*offset + Math.random() * (size+2*offset));
-            }
-            function setResetFlag(e) {
-                resetPosition = true;
-            }
         </script>
 </body>
 </html>
