@@ -1,0 +1,266 @@
+* {
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.container {
+    width: 1000px;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+ul {
+    list-style: none;
+}
+li {
+    list-style: none;
+}
+
+
+.wrap {
+    display: flex;
+}
+aside {
+    width: 30%;
+}
+.logo img {
+    width: 120px;
+}
+.menu {}
+.asideMenu ul{
+    padding-top: 30px;
+}
+.asideMenu ul li{
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 900;
+    padding: 10px 0 10px 15px;
+}
+.asideMenu ul .active{
+    color: #056BF1;
+}
+.asideMenu ul li ul{
+    display: none;
+    color: black;
+    padding: 20px 0;
+}
+.asideMenu ul li ul li{
+    font-size: 17px;
+    font-weight: 900;
+    border-bottom: 1px solid rgb(214, 214, 214);
+
+}
+
+
+
+article {
+    width: 70%;
+}
+/* slider */
+.slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider-img {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;   
+}
+.slider-inner {
+    position: relative;
+    width: 100%;
+    height: 1440px;
+    overflow: hidden;
+}
+.slider-inner .slider {
+    float: left;
+    width: 100%;
+    height: 360px;
+    position: relative;
+}
+.slider-inner .slider:nth-child(1) {z-index: 5;}
+.slider-inner .slider:nth-child(2) {z-index: 4;}
+.slider-inner .slider:nth-child(3) {z-index: 3;}
+
+.cont01 {
+    margin-top: 20px;
+}
+.often:last-child {
+    display: none;
+}
+.cont01 h3 {
+    font-size: 26px;
+    text-align: center;
+    display: block;
+}
+.cont01 h3 span {
+    padding: 0 10px;
+}
+.cont01 h3 .often_title::after {
+    content: '';
+    padding-right: 20px;
+    border-right: 3px solid #000;
+}
+.often_wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1vw;
+
+    /* display: none; */
+}
+.often_wrap > div {}
+.often_wrap > div img {
+    width: 100px;
+    display: block;
+    margin-bottom: 8px;
+}
+.often_wrap > div span {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+}
+
+
+.cont02 {
+    background: #F7F7F7;
+    padding: 20px;
+    margin-top: 40px;
+}
+.help {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1vw;
+    justify-content: center
+}
+.info {
+    width: 180px;
+    background: #fff;
+    padding: 20px 14px 30px 14px;
+    position: relative;
+}
+.info::before {
+    content: '';
+    background: url(../img/gover_plus.jpg) no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+.info h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.info img {
+    width: 90px;
+    display: block;
+    margin-bottom: 16px;
+}
+.info span {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.data {
+    width: 180px;
+    background: #fff;
+    padding: 20px 14px 30px 14px;
+    position: relative;
+}
+.data::before {
+    content: '';
+    background: url(../img/gover_plus.jpg) no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+.data h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.data img {
+    width: 90px;
+    display: block;
+    margin-bottom: 16px;
+}
+.data span {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.faq {
+    width: 180px;
+    background: #fff;
+    padding: 20px 14px 30px 14px;
+    position: relative;
+}
+.faq::before {
+    content: '';
+    background: url(../img/gover_plus.jpg) no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+.faq h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.faq img {
+    width: 90px;
+    display: block;
+    margin-bottom: 16px;
+}
+.faq span {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+footer {
+    width: 100%;
+    background: #EDF2F8;
+    margin-top: 20px;
+    height: 100px;
+    padding-bottom: 20px;
+}
+.foot {
+    display: flex;
+}
+.foot .logo02 {
+    height: 80px;
+}
+.foot .content {
+    line-height: 1;
+}
+.foot .content span {
+    font-size: 14px;
+    display: block;
+}
+.foot .SNS {
+    height: 50px;
+}

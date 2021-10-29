@@ -234,7 +234,38 @@ console.log(solution(10, 50, 85));
             </dl>
         </div>
         <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">let arr = [5, 3, 7, 11, 2, 15, 17]
+
+function solution2(num){
+    let answer;
+    let min = 5;
+
+    for(let i=0; i&lt;arr.length; i++){
+        if(arr[i] &lt; min ){
+            min = arr[i];
+        }
+    }
+    answer = min;
+    return answer;
+}
+console.log(solution2(arr));
+
+//방법2
+function solution3(){
+    let answer = Math.min(5, 3, 7, 11, 2, 15, 17);
+
+    return answer;
+}
+console.log(solution3());
+
+//방법3
+function solution4(arr3){
+    let answer = Math.min(...arr3);
+
+    return answer;
+}
+let arr3 = [5, 3, 7, 11, 2, 15, 17];
+console.log(solution4(arr3));
 </pre></code>
         </div>
     </div>
