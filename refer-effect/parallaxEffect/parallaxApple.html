@@ -99,7 +99,6 @@
         #section2 {
             height: 19000px;
             z-index: 2000;
-            
         }
         #section3 {
             /* background: blue; */
@@ -111,7 +110,11 @@
             height: 17000px;
             z-index: 3000;
         }
-        #section5 {}
+        #section5 {
+            /* background: blue; */
+            height: 10000px;
+            z-index: 4000;
+        }
         #section6 {}
         #section7 {}
         /* //contents */
@@ -364,7 +367,9 @@
             @-webkit-keyframes blink {
                 20%,
                 24%,
-                55% {
+                55%,
+                65%,
+                80% {
                     color: #111;
                     text-shadow: none;
                 }
@@ -375,6 +380,10 @@
                 25%,
                 54%,
                 56%,
+                64%,
+                66%,
+                79%,
+                81%,
                 100% {
                 text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
                     color: #fff6a9;
@@ -384,7 +393,9 @@
             @keyframes blink {
                 20%,
                 24%,
-                55% {
+                55%,
+                65%,
+                80% {
                     color: #111;
                     text-shadow: none;
                 }
@@ -395,6 +406,10 @@
                 25%,
                 54%,
                 56%,
+                64%,
+                66%,
+                79%,
+                81%,
                 100% {
                 text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
                     color: #fff6a9;
@@ -685,7 +700,6 @@
             <div class="s4Text1"
                 data-38999="display:none"
                 data-39000="display:block;"
-                data-39800="display:block;"
             >
                 <div class="circle1 fixed"
                     data-39000="width: 0vw; height: 0vw;"
@@ -743,6 +757,7 @@
             <div class="s4Text2 fixed"
                 data-40799="display:none"
                 data-40800="display:block;"
+                data-56200="display:none;"
             >
                 <div class="title"
                     data-40800="opacity: 0;"
@@ -798,7 +813,86 @@
             </div>
         </section>
         <!-- //section4 -->
-        <section id="section5">
+        <style>
+            .s5Text1 .white {
+                width: 200vw;
+                height: 250vh;
+                background: #fff;
+            }
+            .s5Text2 .contact {
+                text-align: center;
+            } 
+            .s5Text2 .info {
+                font-size: 4vw;
+            }
+        </style>
+        <section id="section5"
+            data-54200="display:none"
+            data-54201="display:block"
+        >
+            <div class="s5Text1 fixed">
+                <div class="white"
+                    data-54100="transform: translate(0vw, 100vw)"
+                    data-54200="transform: translate(0vw, 90vw)"
+                    data-54800="transform: translate(0vw, 70vw)"
+                    data-55200="transform: translate(0vw, 40vw)"
+                    data-56200="transform: translate(0vw, 30vw)"
+                    data-57200="transform: translate(0vw, 0vw)"
+                ></div>
+            </div>
+            <div class="s5Text2 fixed"
+                data-=""
+            >
+                <div class="contact"
+                    data-55600="transform: translate(0vw, -7vw);"
+                >
+                    <span
+                        data-55700="font-size:0vw;"
+                        data-56000="font-size:10vw;"
+                    >C</span>
+                    <span
+                        data-56100="font-size:0vw;"
+                        data-56400="font-size:10vw;"
+                    >o</span>
+                    <span
+                        data-56500="font-size:0vw;"
+                        data-56800="font-size:10vw;"
+                    >n</span>
+                    <span
+                        data-56900="font-size:0vw;"
+                        data-57200="font-size:10vw;"
+                    >t</span>
+                    <span
+                        data-57300="font-size:0vw;"
+                        data-57600="font-size:10vw;"
+                    >a</span>
+                    <span
+                        data-57700="font-size:0vw;"
+                        data-58000="font-size:10vw;"
+                    >c</span>
+                    <span
+                        data-58100="font-size:0vw;"
+                        data-58400="font-size:10vw;"
+                    >t</span>
+                </div>
+                <div class="info">
+                    <div
+                        data-58700="transform: translate(0vw, 0vw); opacity:0;"
+                        data-59200="transform: translate(0vw, -2vw); opacity:1;"
+                    >Kim EunChae
+                    </div>
+                    <div
+                        data-59400="transform: translate(0vw, 2vw); opacity:0;"
+                        data-59900="transform: translate(0vw, 0vw); opacity:1;"
+                    >+82 010 8561 3192
+                    </div>
+                    <div
+                        data-59600="transform: translate(0vw, 4vw); opacity:0;"
+                        data-61000="transform: translate(0vw, 2vw); opacity:1;"
+                    >cookcoop97@gmail.com
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- //section5 -->
         <section id="section6">
@@ -807,6 +901,7 @@
         <section id="section7">
         </section>
         <!-- //section7 -->
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
         <script>
