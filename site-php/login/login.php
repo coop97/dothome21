@@ -38,11 +38,11 @@
                             <div class="member-box">
                                 <div>
                                     <label for="youEmail">이메일</label>
-                                    <input type="email" name="youEmail" id="youEmail" class="input_write" placeholder="Sample@naver.com" autocmplete="off" autofocus required>
+                                    <input type="email" name="youEmail" id="youEmail" class="input_write" placeholder="Sample@naver.com" autocomplete="off" autofocus required>
                                 </div>
                                 <div>
                                     <label for="youPass">비밀번호</label>
-                                    <input type="password" name="youPass" id="youPass" class="input_write" maxlength="20" placeholder="비밀번호를 적어주세요!" autocmplete="off" required>
+                                    <input type="password" name="youPass" id="youPass" class="input_write" maxlength="20" placeholder="비밀번호를 적어주세요!" autocomplete="off" required>
                                 </div>
                             </div>
                         </fieldset>

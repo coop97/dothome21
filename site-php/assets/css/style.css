@@ -35,7 +35,7 @@
 }
 .flow-article {
     width: 100%;
-    background: #f7f6ff;
+    background: #fdf5fa;
     padding: 100px 0;
 }
 
@@ -205,7 +205,6 @@
 .content-article .cardType {
     margin: 100px 0;
     background-color: #fff;
-    box-shadow: 0 0 50px rgba(0,0,0,0.1);
 }
 .content-article .cardType01 {
     font-family: 'Nanum Gothic', sans-serif;

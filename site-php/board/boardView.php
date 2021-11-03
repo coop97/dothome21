@@ -57,7 +57,7 @@
                                                 
                                                 echo "<tr><th>제목</th><td class='left'>".$info['boardTitle']."</td></tr>";
                                                 echo "<tr><th>글쓴이</th><td class='left'>".$info['youName']."</td></tr>";
-                                                echo "<tr><th>등록일</th><td class='left'>".$info['regTime']."</td></tr>";
+                                                echo "<tr><th>등록일</th><td class='left'>".date('Y-m-d', $info['regTime'])."</td></tr>";
                                                 echo "<tr><th>조회수</th><td class='left'>".$info['boardView']."</td></tr>";
                                                 echo "<tr><th class='height'>내용</th><td class='height left'>".$info['boardContent']."</td></tr>";
                                             }

@@ -52,27 +52,27 @@
                             <div class="member-box">
                                 <div>
                                     <label for="youEmail">이메일</label>
-                                    <input type="email" name="youEmail" id="youEmail" class="input_write" placeholder="Sample@naver.com" autocmplete="off" autofocus required>
+                                    <input type="email" name="youEmail" id="youEmail" class="input_write" placeholder="Sample@naver.com" autocomplete="off" autofocus required>
                                 </div>
                                 <div>
                                     <label for="youPass">비밀번호</label>
-                                    <input type="password" name="youPass" id="youPass" class="input_write" maxlength="20" placeholder="비밀번호를 적어주세요!" autocmplete="off" required>
+                                    <input type="password" name="youPass" id="youPass" class="input_write" maxlength="20" placeholder="비밀번호를 적어주세요!" autocomplete="off" required>
                                 </div>
                                 <div>
                                     <label for="youPassC">비밀번호 확인</label>
-                                    <input type="password" name="youPassC" id="youPassC" class="input_write" maxlength="20" placeholder="다시 한 번 비밀번호를 적어주세요!" autocmplete="off" required>
+                                    <input type="password" name="youPassC" id="youPassC" class="input_write" maxlength="20" placeholder="다시 한 번 비밀번호를 적어주세요!" autocomplete="off" required>
                                 </div>
                                 <div>
                                     <label for="youName">이름</label>
-                                    <input type="text" name="youName" id="youName" class="input_write" maxlength="5" placeholder="이름을 적어주세요!" autocmplete="off" required>
+                                    <input type="text" name="youName" id="youName" class="input_write" maxlength="5" placeholder="이름을 적어주세요!" autocomplete="off" required>
                                 </div>
                                 <div>
                                     <label for="youBirth">생년월일</label>
-                                    <input type="text" name="youBirth" id="youBirth" class="input_write" placeholder="YYYY-MM-DD" autocmplete="off" required>
+                                    <input type="text" name="youBirth" id="youBirth" class="input_write" placeholder="YYYY-MM-DD" autocomplete="off" required>
                                 </div>
                                 <div>
                                     <label for="youPhone">핸드폰 번호</label>
-                                    <input type="text" name="youPhone" id="youPhone" class="input_write" placeholder="000-0000-0000" autocmplete="off" required>
+                                    <input type="text" name="youPhone" id="youPhone" class="input_write" placeholder="000-0000-0000" autocomplete="off" required>
                                 </div>
                             </div>
                         </fieldset>
