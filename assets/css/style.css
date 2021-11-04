@@ -213,7 +213,6 @@
 ================================================== */
 
 #contents_tit {
-	background-color: #fff;
 	text-align: center; 
 	height: 90px;
 }
@@ -222,7 +221,7 @@
 	font-family: 'Gaegu', cursive; font-size: 40px;
 }
 #contents_tit p a {
-	color:#398ee1; 
+	color:#4c70e6; 
 }
 
 
@@ -336,7 +335,7 @@
 }
 
 .image-wrap.figma {
-	background: #c8e4fa;
+	background: #d2e9fc;
 }
 
 .image-wrap img {
