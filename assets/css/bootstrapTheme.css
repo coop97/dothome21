@@ -212,7 +212,7 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #3fbf79;
+  color: #36240d;
   text-decoration: none;
 }
 a:hover,
@@ -3671,6 +3671,7 @@ input[type="submit"].btn.btn-mini {
   padding-left: 20px;
   padding-right: 20px;
   *zoom: 1;
+  background: #c2e0fd;
 }
 .navbar-inner:before,
 .navbar-inner:after {
@@ -3696,7 +3697,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
     font-size: 33px;
-  color: #000;
+  color: #fff;
     font-family: Abel;;
 }
 .navbar .brand:hover,

@@ -1,4 +1,4 @@
-body {background:#1E59C8}
+body {background:#e1ebfd}
 
 
 
@@ -6,7 +6,7 @@ body {background:#1E59C8}
 
 /* Header Navigation */
 #top-nav{
-	border-bottom: 1px solid #e1e6dd;
+	/* border-bottom: 1px solid #e1e6dd; */
 	background: #FFF;
 	-webkit-transform: translateZ(0)
 
@@ -24,7 +24,7 @@ body {background:#1E59C8}
 	margin: 0px;
 	font-weight: 400;
     font-size: 20px;
-    color: #222;
+    color: #fff;
     font-family: Abel;
 	-webkit-transition: background-color 200ms ease;
 	-moz-transition: background-color 200ms ease;
@@ -52,7 +52,7 @@ body {background:#1E59C8}
 /* Header  */
 
 #header{
-	background:#c5e47c center 57px;
+	background:#c2e0fd center 57px;
 	padding: 10px 0 10px 0px;
 }
 #header.sub {
@@ -134,7 +134,7 @@ pre.pre-show{
 
 .header_icon {text-align: center;}
 .header_icon li {display: inline; margin: 0 2px;}
-.header_icon li a {position: relative; background-color: #8fbe20; width: 60px; height: 60px; border-radius: 50%; display: inline-block; font-size: 28px; color: #fff; line-height: 60px; transition: box-shadow 0.3s ease;}
+.header_icon li a {position: relative; background-color: #6fb2f3; width: 60px; height: 60px; border-radius: 50%; display: inline-block; font-size: 28px; color: #fff; line-height: 60px; transition: box-shadow 0.3s ease;}
 .header_icon li a span {
     position: absolute; left: 50%; top: -40px; transform: translateX(-50%);
     font-size: 12px; line-height: 1.6; background: #77b5e6; padding: 3px 9px;
@@ -174,8 +174,9 @@ padding: 8px 12px;
 #footer{
 	margin-top: 80px;
 	padding: 20px;
-	background: #c99755;
-	text-align: center
+	background: #e1ebfd;
+	text-align: center;
+	color: #fff;
 }
 .twitter-share-button{
 	top: 4px;
