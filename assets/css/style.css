@@ -222,7 +222,7 @@
 	font-family: 'Gaegu', cursive; font-size: 40px;
 }
 #contents_tit p a {
-	color:#2c94c4; 
+	color:#398ee1; 
 }
 
 
@@ -279,9 +279,9 @@
 }
 
 .gridly .webstandard a {
-	color: #fff;
+	color: rgb(77, 120, 236);
 	display: block;
-	border-bottom: 3px solid #a5d5fa;
+	border-bottom: 3px solid #ffffff;
 	margin-right: 20px;
 } 
 .gridly .html5 a {
@@ -336,7 +336,7 @@
 }
 
 .image-wrap.figma {
-	background: #effad7;
+	background: #c8e4fa;
 }
 
 .image-wrap img {
@@ -1943,7 +1943,7 @@
 
 
 .donutImg {text-align: center; }
-.donutImg h5 {color: #4b6b00; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
+.donutImg h5 {color: #010372; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
 .donutImg p {color: #565656; font-size: 18px; }
 .donutImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
