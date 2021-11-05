@@ -324,6 +324,34 @@
             border-radius: 100px;
             cursor: pointer;
         }
+        .question_result {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: #ccc;
+            padding: 30px;
+            display: none;
+        }
+        .question_result.show {
+            display: block;
+        }
+        .resultWrap {
+            position: absolute;
+            left: 50%; top: 50%;
+            width: 70%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+        }
+        .resultWrap .score {
+            font-size: 20px;
+            padding: 20px 0;
+        }
+        .resultWrap button {
+            font-family: 'DungGeunMo';
+            font-size: 16px;
+            padding: 12px 20px;
+            border: 1px solid #000;
+        }
 
         @media (max-width: 1200px) {
             .ham {
@@ -411,12 +439,24 @@
                 <div class="question_answer_count">
                     <!-- <span>1</span> / <span>5</span> -->
                 </div>
+                <div class="question_answer_ex"></div>
                 <button class="question_answer_next">다음 문제</button>
                 <!-- <div class="question_answer_view"></div>
                 <div class="question_answer_ex"></div> -->
             </h4>
         </div>
         <div class="question_start active"><span>start</span></div>
+        <div class="question_result">
+            <div class="resultWrap">
+                <div>퀴즈가 끝났습니다!</div>
+                <div class="score">
+                    <!-- 축하합니다. 당신은 <span></span> 문제 중에 <span></span> 개를 맞추었습니다. -->
+                </div>
+                <div class="buttons">
+                    <button class="question_restart">다시 도전하기</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -469,11 +509,16 @@
         const questionLength = quizWrap.querySelector(".question_answer_count");
         const questionTimer = quizWrap.querySelector(".question_timer_sec");
         const questionTimerLine = quizWrap.querySelector(".question_timer_line");
+        const questionResult = quizWrap.querySelector(".question_result");
+        const questionResultScore = quizWrap.querySelector(".question_result .score");
+        const questionRestart = quizWrap.querySelector(".question_restart");
+        const questionAnswerEx = quizWrap.querySelector(".question_answer_ex");
 
         let quizCount = 0;
         let quizNum = 1;
         let counter;
         let counterLine;
+        let userScore = 0;
 
         //시작 버튼 클릭
         questionStartBtn.onclick = () => {     //addEventListener대신 사용 가능
@@ -484,13 +529,27 @@
             startTimerLine(0);
         }
 
+        //다시 시작 버튼 클릭
+        questionRestart.onclick = () => {
+            questionResult.classList.remove("show");
+            quizCount = 0;
+            quizNum = 1;
+            userScore = 0;
+
+            showQuestion(quizCount);
+            questionCount(quizNum);
+            startTimer(15);
+            startTimerLine(0);
+            questionAnswerEx.innerHTML = '';
+        }
+
         //문제 출력하기
         function showQuestion(index){
             let questionsTag = `<span class="num">${quizInfo[index].quizNum}</span><span class="ask">${quizInfo[index].quizQuestion}</span>`;
             let choiceTag = `
                 <label for="select1">
                     <input class="select" type="radio" name="select" id="select1" value="1">
-                    <span class="choice">${quizInfo[index].quizChoice[0]}</span>
+                    <span class="choice">${quizInfo[index].quizChoice[0]}<i></i></span>
                 </label>
                 <label for="select2">
                     <input class="select" type="radio" name="select" id="select2" value="2">
@@ -524,36 +583,105 @@
             let userAnswer = answer.textContent.trim();
             let currentAnswer = quizInfo[quizCount].quizAnswer.trim();
             let allChoices = questionSelects.children.length;
+            let iconYes = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+            let iconNo = '<i class="fa fa-times-circle" aria-hidden="true"></i>';
 
             if(userAnswer == currentAnswer){
                 console.log("정답입니다.");
                 //맞으면 correct클래스 추가
                 answer.parentNode.classList.add("correct");
+                answer.insertAdjacentHTML("beforeend", iconYes);
+                userScore++;
             } else {
                 console.log("틀렸습니다.")
                 //틀리면 incorrect클래스 추가
                 answer.parentNode.classList.add("incorrect");
+                answer.insertAdjacentHTML("beforeend", iconNo);
 
                 //틀렸을 때 정답 알려주기
                 for(let i=0; i<allChoices; i++){
                     if(questionSelects.children[i].querySelector(".choice").textContent == currentAnswer){
                         questionSelects.children[i].classList.add("correct");
+                        questionSelects.children[i].querySelector(".choice").insertAdjacentHTML("beforeend", iconYes);
                     }
                 }
+                questionAnswerEx.innerHTML = quizInfo[quizCount].quizEx;
             }
+
+
+            //사용자가 클릭한 답
+            //console.log(answer);
+            //사용자가 클릭한 답 == quizAnswer;
+            // const questionAnswerSelects = document.querySelectorAll(".question_answer_selects");
+            // let userAnswer = answer.textContent.trim();
+            // let currentAnswer = quizInfo[quizCount].quizAnswer.trim();
+            // let allChoices = questionSelects.children.length;
+            // let iconYes = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+            // let iconNo = '<i class="fa fa-times-circle" aria-hidden="true"></i>';
+
+            // quizInfo.forEach((currentQuestion, questionNumber) => {
+            //     const selectContainer = questionAnswerSelects[questionNumber];
+            //     const selectChecked = `input[name=select${questionNumber}]:checked`;
+            //     const selectResult = (selectContainer.querySelector(selectChecked) || {}).value;
+
+            //     if(userAnswer == currentAnswer){
+            //         console.log("정답입니다.");
+            //         //맞으면 correct클래스 추가
+            //         answer.parentNode.classList.add("correct");
+            //         answer.insertAdjacentHTML("beroreend", iconYes);
+            //         userScore++;
+            //     } else {
+            //         console.log("틀렸습니다.")
+            //         //틀리면 incorrect클래스 추가
+            //         answer.parentNode.classList.add("incorrect");
+            //         answer.insertAdjacentHTML("beroreend", iconNo);
+            //         const p = document.createElement("p");
+            //         selectContainer.appendChild(p).innerHTML = currentQuestion.quizEx;
+
+            //         //틀렸을 때 정답 알려주기
+            //         for(let i=0; i<allChoices; i++){
+            //             if(questionSelects.children[i].querySelector(".choice").textContent == currentAnswer){
+            //                 questionSelects.children[i].classList.add("correct");
+            //                 questionSelects.children[i].querySelector(".choice").insertAdjacentHTML("beroreend", iconYes);
+            //             }
+            //         }
+            //     }
+            // });
+
+
+
+
 
             //모든 문제 클래스 추가 disabled
             for(let i=0; i<allChoices; i++){
                 questionSelects.children[i].classList.add("disabled");
             }
+
+            //시간 정지 * 버튼 표시
+            clearInterval(counter);
+            clearInterval(counterLine);
+            questionNext.classList.add("show");
         }
 
         //다음 문제 클릭시
         questionNext.onclick = () => {
-            quizCount++;
-            quizNum++;
-            showQuestion(quizCount);
-            questionCount(quizNum);
+            questionAnswerEx.innerHTML = '';
+            if(quizCount < quizInfo.length - 1){
+                quizCount++;
+                quizNum++;
+                showQuestion(quizCount);
+                questionCount(quizNum);
+
+                questionNext.classList.remove("show");
+                clearInterval(counter);
+                clearInterval(counterLine);
+                startTimer(15);
+                startTimerLine(0);
+            }else {
+                clearInterval(counter);
+                clearInterval(counterLine);
+                showResult();
+            }
         }
 
         //문제 카운팅
@@ -607,6 +735,21 @@
             }, 10);
             
         }
+
+        //결과 보여주기
+        function showResult(){
+            questionResult.classList.add("show");
+            
+            const scoreTag = `축하합니다. 당신은 <span>${quizInfo.length}</span> 문제 중에 <span>${userScore}</span> 개를 맞추었습니다.`
+            questionResultScore.innerHTML = scoreTag;
+            userScore
+        }
+
+
+        //메뉴
+        document.querySelector(".ham").addEventListener("click", function(){
+            document.querySelector("nav").classList.toggle("show");
+        });
     </script>
 </body>
 </html>
