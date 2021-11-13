@@ -710,6 +710,14 @@ img {
   }
 }
 
+.mouseCont p {
+  font-family: "NEXONLv1Gothic";
+}
+
+.mouseCont h2 {
+  font-family: "NEXONLv1Gothic";
+}
+
 .parallax {
   background: #9E9E4D;
   color: #fff;
@@ -800,6 +808,7 @@ img {
 }
 
 .paraCont {
+  font-family: "NEXONLv1Gothic";
   width: 100%;
   overflow: hidden;
 }

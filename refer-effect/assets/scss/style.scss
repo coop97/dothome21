@@ -585,6 +585,16 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
     }
 }
 
+//mouse
+.mouseCont {
+    p {
+        font-family: $font-NEXON1;
+    }
+
+    h2 {
+        font-family: $font-NEXON1;
+    }
+}
 
 // parallax
 .parallax {
@@ -671,6 +681,7 @@ $text-gradient6: linear-gradient(to bottom, #40d1a1 40%, #064b34);
     }
 }
 .paraCont {
+    font-family: $font-NEXON1;
     width: 100%;
     overflow: hidden;
     .content-item {
