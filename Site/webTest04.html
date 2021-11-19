@@ -68,7 +68,7 @@
     <!-- //header -->
 
     <!--sliderType01-->
-    <section class="sliderType">
+    <!-- <section class="sliderType">
         <div class="sliderType01">
             <div class="swiper">
                 <div class="swiper-wrapper">
@@ -79,6 +79,28 @@
 
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section> -->
+    <section class="sliderType">
+        <div class="slider-wrap">
+            <div class="slider-img">
+                <div class="slider-inner">
+                    <div class="slider" data-name="이미지1"><img src="img/kita01.jpg" alt="이미지1"></div>
+                    <div class="slider" data-name="이미지2"><img src="img/kita01.jpg" alt="이미지2"></div>
+                    <div class="slider" data-name="이미지3"><img src="img/kita01.jpg" alt="이미지3"></div>
+                </div>
+            </div>
+            <div class="slider-btn">
+                <a href="#" class="prev">prev</a>
+                <a href="#" class="next">next</a>
+            </div>
+            <div class="slider-dot">
+                <!-- <a href="#" class="dot active">1</a>
+                <a href="#" class="dot">2</a>
+                <a href="#" class="dot">3</a>
+                <a href="#" class="dot">4</a>
+                <a href="#" class="dot">5</a> -->
             </div>
         </div>
     </section>
@@ -286,11 +308,11 @@
         //헤더 탭
         const asideMenu = $(".menu");
         const asideTitle = $(".menu ul .tit");
-        const asideMenuCont = $(".main-menu ul .tit ul");
+        const asideMenuCont = $(".main-menu .tit ul");
 
         asideTitle.click(function(){
             let target = $(this);
-            asideTitle.removeClass("active")
+            asideTitle.removeClass("active");
             target.addClass("active");
 
             asideMenuCont.css("display","none");
@@ -299,13 +321,48 @@
         })
 
         //슬라이드
-        const swiper = new Swiper('.swiper', {
-            direction: 'horizontal',
+        // const swiper = new Swiper('.swiper', {
+        //     direction: 'horizontal',
 
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+        //     navigation: {
+        //         nextEl: '.swiper-button-next',
+        //         prevEl: '.swiper-button-prev',
+        //     },
+        // });
+        const sliderInner = $(".slider-inner");
+        const slider = $(".slider");
+        const sliderBtn = $(".slider-btn");
+
+        let sliderCount = slider.length;
+        let sliderWidth = slider.width();
+        console.log(sliderWidth)
+        let sliderTotalWidth = sliderWidth * sliderCount;
+        let currentIndex = 0;
+        let dotIndex = "";
+
+        //이미지 기본 셋팅
+        sliderInner.css({width: sliderTotalWidth});
+
+        //이미지 움직이기
+        function gotoSlider(num){
+            sliderInner.animate({left: -sliderWidth * num}, 500, "easeInQuart");
+            currentIndex = num;
+            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+        }
+
+        //버튼 클릭하기
+        //sliderBtn.click(function(){});
+        sliderBtn.on("click", "a", function(e){    //on 안에 click 이벤트가 있으며, 여러 개의 이벤트를 설정할 수 있음
+            e.preventDefault();
+            let nextIndex = (currentIndex + 1) % sliderCount;
+            let prevIndex = (currentIndex - 1) % sliderCount;
+            if(currentIndex == 0) prevIndex = sliderCount - 1;
+
+            if($(this).hasClass("prev")){
+                gotoSlider(prevIndex);
+            } else {
+                gotoSlider(nextIndex);
+            }
         });
 
 

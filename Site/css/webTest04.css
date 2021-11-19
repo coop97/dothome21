@@ -91,7 +91,7 @@ header .main-menu li {
 }
 
 /* swiper */
-.sliderType {
+/* .sliderType {
     margin-top: 90px;
 }
 
@@ -156,6 +156,65 @@ header .main-menu li {
 .swiper-button-next::after,
 .swiper-button-prev::after {
     color: #fff;
+} */
+
+/* slider */
+.sliderType {
+    margin-top: 90px;
+}
+
+.slider-wrap {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+
+}
+
+.slider-img {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.slider-img img {
+    width: 100%;
+}
+
+.slider-inner {
+    position: relative;
+    /* width: 4000px; */
+    overflow: hidden;
+}
+
+.slider-inner .slider {
+    float: left;
+    width: 100vw;
+    position: relative;
+}
+
+.slider-btn a {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    text-align: center;
+    line-height: 50px;
+    display: block;
+    color: #fff;
+    background: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.slider-btn .prev {
+    left: 26px;
+}
+
+.slider-btn .next {
+    right: 40px;
 }
 
 /* section02 */
