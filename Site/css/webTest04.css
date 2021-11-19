@@ -79,7 +79,7 @@ header .main-menu li {
 }
 
 .menu ul li ul {
-    background: #333;
+    background: #777;
     color: #fff;
     display: none;
 }
