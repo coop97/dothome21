@@ -1,7 +1,7 @@
 @charset "utr-8";
 
 body {
-    background: #92BCDA;
+    background: #2e5774;
 }
 
 /* 스킵 메뉴 */
@@ -13,13 +13,20 @@ body {
 /* 레이아웃 */
 #header {width: 100%; height: 4.6vw; border-bottom: 0.4vw solid #fff; background: rgba(175,175,175,0.4); backdrop-filter: blur(3px) saturate(80%); position: fixed; top: 0; z-index: 1000; font-size: 1.2vw; font-weight: 700; text-transform: uppercase;}
 #about_top {height: 33vw; background: #92BCDA; padding-top: 14vw;}
-#about_bottom {height: 63vw; background: #92BCDA;}
+#about_bottom {position: relative; height: 110vw; background: #92BCDA; width: 100%; padding-top: 6vw; overflow: hidden;}
+#skill {height: 80vw; background: #fff;}
+#project_top {height: 40vw; background: #EDBC4F; padding: 14vw 0 8vw 0;}
+#project_bottom {position: relative; height: 50vw; background: #EDBC4F; padding-top: 6vw; overflow: hidden;}
+
+/* 제목 영역 */
+.title {line-height: 0.82;}
+.title h1 {font-size: 16.8vw;}
 
 /* 가운데 영역 */
 .container {width: 88%; margin: 0 auto;}
 
 /* 로우 영역 */
-.row {border-top: 1px solid #fff; padding: 3vw 0;}
+.row {border: 0.1px solid #fff; background: #fff;}
 
 /* 컨텐츠 전체 영역 */
 .ex_wrap {position: relative; height: 170px;}
@@ -29,7 +36,7 @@ body {
 .num {font-family: 'GmarketSans'; font-size: 70px; font-weight: 700; letter-spacing: -5px; padding-right: 20px;}
 
 /* 이름 영역 */
-.name h3 {font-size: 58px; font-weight: 300; position: absolute; bottom: 46px; left: 145px;}
+.name h3 {font-size: 58px; font-weight: 300; text-transform: lowercase; position: absolute; bottom: 46px; left: 145px;}
 
 /* 컨텐츠 영역 */
 .content_wrap {width: 1100px; position: absolute; right: 0; bottom: -50px;}
@@ -55,6 +62,48 @@ body {
 .header .nav ul li a {display: block; padding: 19px 0 19px 10px;}
 
 /* about 영역 */
-/* .about_top .container {background: #000;} */
-.about_top .title {line-height: 0.82;}
-.about_top .title h1 {font-size: 16.8vw; font-weight: 400; text-transform: uppercase;}
+.about_bottom .lens_wrap {}
+.about_bottom .lens {position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%); width: 82vw;}
+.about_bottom .lens img {}
+.about_bottom .figure_wrap {display: grid; grid-template-columns: repeat(5, 1fr); grid-gap: 5vw; position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%);}
+.about_bottom .figure {width: 22vw;}
+.about_bottom .heptagon_wrap {}
+.about_bottom .heptagon01 {width: 15vw; position: absolute; left: 20%; top: 77%; transform: translate(-50%, -50%);}
+.about_bottom .heptagon01 img {}
+.about_bottom .heptagon02 {width: 25vw; position: absolute; right: -7%; top: 82%; transform: translate(-50%, -50%);}
+.about_bottom .heptagon02 img {}
+
+/* skill 영역 */
+#skill .banner {position: relative; height: 32vw; background-image: linear-gradient(to right, #E2C0CA, #DCA3B4, #BCA9CD);}
+#skill .banner h1 {font-size: 24vw; line-height: 50.1vw;}
+#skill .stick_wrap {}
+#skill .stick {height: 6vw;}
+#skill .stick:nth-child(1){background: #A598CF; width: 94%;}
+#skill .stick:nth-child(2){background: #B8A4D2; width: 98%;}
+#skill .stick:nth-child(3){background: #C3A7C7; width: 78%;}
+#skill .stick:nth-child(4){background: #DAA5B7; width: 82%;}
+#skill .stick:nth-child(5){background: #EDAEC1; width: 94%;}
+#skill .stick:nth-child(6){background: #FAB8C9; width: 58%;}
+#skill .stick:nth-child(7){background: #FCC4D3; width: 70%;}
+#skill .stick:nth-child(8){background: #F9D3DD; width: 80%;}
+#skill .stick h3 {font-size: 3.5vw; line-height: 6vw; margin-left: 1.2vw;}
+
+/* project 영역 */
+.project_top .title {position: relative;}
+.project_top .title::after {content: 'SCROLL'; display: inline-block; width: 18vw; height: 18vw; border-radius: 50%; background: #D1AC58; font-size: 1.6vw; text-align: center; line-height: 18vw; position: absolute; top: 12%; right: 22%;}
+
+.project_bottom .total_wrap {position: absolute; left: 50%; top: 56%; transform: translate(-50%, -50%);}
+.project_bottom .total_wrap h5 {font-size: 1.3vw; letter-spacing: 0.8vw; text-align: center;}
+.project_bottom .total_wrap .slider-wrap {}
+.project_bottom .total_wrap .slider-img {position: absolute; left: 50%; top: 510%; transform: translate(-50%, -50%);}
+.project_bottom .total_wrap .slider-inner {display: grid; grid-template-columns: repeat(6, 1fr); grid-gap: 1.1vw;}
+.project_bottom .total_wrap .slider {width: 20vw; height: 11vw; background: #000; font-family: 'GmarketSans'; font-size: 6vw; font-weight: 700; text-align: center; line-height: 11vw;}
+.project_bottom .total_wrap .slider:nth-child(1) {background: #BE9C4F; opacity: 0.4;}
+.project_bottom .total_wrap .slider:nth-child(2) {background: #BE9C4F; opacity: 0.5;}
+.project_bottom .total_wrap .slider:nth-child(3) {background: #BE9C4F; opacity: 0.6;}
+.project_bottom .total_wrap .slider:nth-child(4) {background: #BE9C4F; opacity: 0.7;}
+.project_bottom .total_wrap .slider:nth-child(5) {background: #BE9C4F; opacity: 0.8;}
+.project_bottom .total_wrap .slider:nth-child(6) {background: #BE9C4F; opacity: 0.9;}
+.project_bottom .total_wrap .slider-btn {display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 1vw; text-align: center; font-size: 1.3vw; position: absolute; left: 50%; top: 1200%; transform: translate(-50%, -50%);}
+.project_bottom .total_wrap .slider-btn h5 {}
+.project_bottom .total_wrap .slider-btn a {font-size: 4vw;}
