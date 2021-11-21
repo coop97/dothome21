@@ -11,12 +11,20 @@ body {
 #skip a:focus {top: 0;}
 
 /* 레이아웃 */
+.front {position: relative;}
+
 #header {width: 100%; height: 4.6vw; border-bottom: 0.4vw solid #fff; background: rgba(175,175,175,0.4); backdrop-filter: blur(3px) saturate(80%); position: fixed; top: 0; z-index: 1000; font-size: 1.2vw; font-weight: 700; text-transform: uppercase;}
 #about_top {height: 33vw; background: #92BCDA; padding-top: 14vw;}
-#about_bottom {position: relative; height: 110vw; background: #92BCDA; width: 100%; padding-top: 6vw; overflow: hidden;}
+#about_bottom {height: 110vw; background: #92BCDA; width: 100%; padding-top: 6vw; overflow: hidden;}
 #skill {height: 80vw; background: #fff;}
 #project_top {height: 40vw; background: #EDBC4F; padding: 14vw 0 8vw 0;}
-#project_bottom {position: relative; height: 50vw; background: #EDBC4F; padding-top: 6vw; overflow: hidden;}
+#project_bottom {height: 56vw; background: #EDBC4F; padding-top: 6vw; overflow: hidden;}
+#site {}
+#script_top {height: 33vw; background: #EBD9D4; padding-top: 14vw;}
+#script_bottom {height: 20vw; background: #EBD9D4; padding-top: 6vw;}
+
+#animation_top {height: 74vw; background: #3B71AE;}
+#animation_bottom {height: 23vw; background: #3B71AE; padding-top: 6vw;}
 
 /* 제목 영역 */
 .title {line-height: 0.82;}
@@ -26,7 +34,8 @@ body {
 .container {width: 88%; margin: 0 auto;}
 
 /* 로우 영역 */
-.row {border: 0.1px solid #fff; background: #fff;}
+.row {position: relative; border: 0.1px solid #fff; background: #fff;}
+.row.brown {border: 0.1px solid #523228; background: #523228;}
 
 /* 컨텐츠 전체 영역 */
 .ex_wrap {position: relative; height: 170px;}
@@ -40,7 +49,7 @@ body {
 
 /* 컨텐츠 영역 */
 .content_wrap {width: 1100px; position: absolute; right: 0; bottom: -50px;}
-.content {font-family: 'NEXONLv1Gothic'; font-size: 18px; font-weight: 300; display: flex; letter-spacing: 1.4px; line-height: 1.4;}
+.content {font-family: 'NEXONLv1Gothic'; font-size: 18px; font-weight: 400; display: flex; letter-spacing: 1.4px; line-height: 1.4;}
 .content01 {width: 100%; padding-right: 30px;}
 .content02 {width: 100%;}
 
@@ -107,3 +116,139 @@ body {
 .project_bottom .total_wrap .slider-btn {display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 1vw; text-align: center; font-size: 1.3vw; position: absolute; left: 50%; top: 1200%; transform: translate(-50%, -50%);}
 .project_bottom .total_wrap .slider-btn h5 {}
 .project_bottom .total_wrap .slider-btn a {font-size: 4vw;}
+
+/* site 영역 */
+.site_wrap {}
+.site {position: relative; height: 100vh;}
+.site .bg {background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; height: 100vh;}
+.site .bg_color {width: 100%; height: 100vh; opacity: 0.36; position: absolute; top: 0; left: 0;}
+.site .btn {width: 15vw; height: 15vw; border-radius: 50%; font-size: 1.6vw; font-weight: 300; text-transform: uppercase; line-height: 1;}
+.site .box_wrap {width: 40vw; height: 36vw; display: flex;}
+.site .box {position: relative; width: 32vw; height: 24vw; margin: auto;}
+.site .box h3 {font-size: 5.6vw; font-family: 'GmarketSans'; font-weight: 700;}
+.site .box p {padding-left: 3vw; margin-top: 0.8vw; font-size: 1.05vw; font-family: 'NEXONLv1Gothic'; font-weight: 300; line-height: 1.4;}
+.site .box .key_wrap {padding-left: 3vw; position: absolute; bottom: 0;}
+.site .box .key {}
+.site .box .key span {display: inline-block; font-size: 1.2vw; font-weight: 300; text-transform: uppercase; letter-spacing: 1.4px; border: 1px solid #fff; padding: 0.5vw 1.2vw; margin: 0.5vw 0.2vw 0 0;}
+.site .heading_wrap {line-height: 1;}
+.site .heading_wrap h4 {font-size: 4vw; text-transform: lowercase;}
+.site .heading_wrap h2 {font-size: 11vw;}
+
+.site .btn.left {position: absolute; right: 13%; top: 4%;}
+.site .box_wrap.left {position: absolute; left: 0; bottom: 0;}
+.site .heading_wrap.left {position: absolute; bottom: 0; left: 0; margin-left: 37vw;}
+
+.site .btn.right {position: absolute; left: 13%; top: 4%;}
+.site .box_wrap.right {position: absolute; right: 0; bottom: 0;}
+.site .heading_wrap.right {position: absolute; bottom: 0; right: 0; margin-right: 37vw;}
+
+.site .bg.mega {background-image: url(../img/mega.svg);}
+.site .bg_color.mega {background: #A59CBE;}
+.site .btn.left.mega {background: rgba(183,177,206,0.7)}
+.site .box_wrap.left.mega {background: #B7B1CE;}
+
+.site .bg.apple {background-image: url(../img/apple.svg);}
+.site .bg_color.apple {background: #CAACCD;}
+.site .btn.right.apple {background: rgba(189,167,191,0.7)}
+.site .box_wrap.right.apple {background: #BDA7BF;}
+
+.site .bg.php {background-image: url(../img/php.svg);}
+.site .bg_color.php {background: #BF9BA6;}
+.site .btn.left.php {background: rgba(206,169,180,0.7)}
+.site .box_wrap.left.php {background: #CEA9B4;}
+
+.site .bg.share {background-image: url(../img/share.svg);}
+.site .bg_color.share {background: #A5BFCD;}
+.site .btn.right.share {background: rgba(128,168,191,0.7)}
+.site .box_wrap.right.share {background: #80A8BF;}
+
+.site .bg.react {background-image: url(../img/react.svg);}
+.site .bg_color.react {background: #C2E4C2;}
+.site .btn.left.react {background: rgba(141,173,141,0.7)}
+.site .box_wrap.left.react {background: #8DAD8D;}
+
+.site .bg.dothome {background-image: url(../img/dothome.svg);}
+.site .bg_color.dothome {background: #9FA8C9;}
+.site .btn.right.dothome {background: rgba(147,157,193,0.7)}
+.site .box_wrap.right.dothome {background: #939DC1;}
+
+/* script 영역 */
+.script_top {position: relative;}
+.script_top h1 {color: #523228;}
+.script_top .juggling_wrap {}
+.script_top .juggling01 {width: 6.4vw; height: 6.4vw; border: 3px solid #523228; border-radius: 50%; position: absolute; top: 16%; right: 21%;}
+.script_top .juggling02 {width: 6.4vw; height: 6.4vw; border: 3px solid #523228; background: #523228; border-radius: 50%; position: absolute; top: 16%; right: 16%;}
+
+.script_bottom h2 {color: #523228;}
+.script_bottom h3 {color: #523228;}
+.script_bottom .content {color: #523228;}
+
+
+
+
+/* 가로 모드 */
+.content__item {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#header {z-index: 9999;}
+.row {z-index: 9988;}
+#about_top {z-index: 9000;}
+#about_bottom { z-index: 8900;}
+#skill {z-index: 8800;}
+#project_top {z-index: 8600;}
+#project_bottom {z-index: 8400;}
+#site {z-index: 8200;}
+#script_top {z-index: 8100;}
+#script_bottom {z-index: 8000;}
+#section3 {background: #333; z-index: 7000; height: 6000px;}
+#animation_top {z-index: 7100;}
+#animation_bottom {z-index: 7200;}
+
+.sce3 {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 1000;
+    width: 600vw;
+    height: 100vh;
+    background: rgba(229,93,93);
+    overflow: hidden;
+}
+.sce3 > div {
+    float: left;
+    width: 70vw;
+    height: 100vh;
+    background: rgba(71,61,61);
+}
+.sce3 > div:nth-child(1){
+    background: rgba(71,61,61,0.9);
+}
+.sce3 > div:nth-child(2){
+    background: rgba(71,61,61,0.8);
+}
+.sce3 > div:nth-child(3){
+    background: rgba(71,61,61,0.7);
+}
+.sce3 > div:nth-child(4){
+    background: rgba(71,61,61,0.6);
+}
+.sce3 > div:nth-child(5){
+    background: rgba(71,61,61,0.5);
+}
+.sce3 > div:nth-child(6){
+    background: rgba(71,61,61,0.4);
+}
+
+
+/* animation 영역 */
+.animation_top {}
+.animation_top .title_wrap {padding-top: 31vw;}
+.animation_top .title {position: relative;}
+.animation_top .title h1 {text-align: center;}
+.animation_top .planet01 {width: 42vw; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.animation_top .planet02 {width: 23vw; position: absolute; top: 7%; right: 4%;}
+.animation_top .planet03 {width: 19vw; position: absolute; bottom: 11%; left: 4%;}
+.animation_top .planet04 {width: 12vw; position: absolute; bottom: 5%; left: 26%;}
+
