@@ -25,7 +25,11 @@ body {
 
 #animation_top {height: 74vw; background: #3B71AE;}
 #animation_bottom {height: 28vw; background: #3B71AE; padding-top: 6vw; overflow: hidden;}
-#animation_list {height: 470vw; background: #3B71AE;}
+#animation_list {height: 290vw; background: #3B71AE;}
+
+#cont_top {height: 26vw; background: #F9EFF2;}
+#cont_md {height: 41vw; background: #F9EFF2;}
+#cont_bt {height: 20vw; background: #F9EFF2;}
 
 /* 제목 영역 */
 .title {line-height: 0.82;}
@@ -37,6 +41,7 @@ body {
 /* 로우 영역 */
 .row {position: relative; border: 0.1px solid #fff; background: #fff;}
 .row.brown {border: 0.1px solid #523228; background: #523228;}
+.row.pink {border: 0.1px solid #C97892; background: #C97892;}
 
 /* 컨텐츠 전체 영역 */
 .ex_wrap {position: relative; height: 170px;}
@@ -272,7 +277,39 @@ body {
 .list_wrap .ball01 .ball02 {width: 52vw; height: 52vw; border: 3px solid #fff; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #5C90CC;}
 .list_wrap .catalog h3 {font-size: 11vw; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; position: absolute; left: 50%; bottom: -22%; transform: translate(-50%, -50%);}
 
+.area {}
+
+.list_wrap .summer {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+
 .list_wrap .watch {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
 .list_wrap .spin {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
-.list_wrap .peeek_wrap {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+
+/* contact 영역 */
+.cont_top {}
+.cont_top .title {display: flex; justify-content: space-between;}
+.cont_top .title h1 {color: #C97892;}
+.cont_top .title .arrow {}
+.cont_top .title .arrow img {}
+
+.cont_md {padding: 9vw 0 9vw 0;}
+.cont_md .contact_wrap {}
+.cont_md .cont_img {width: 40vw; height: 41vw; float: left;}
+.cont_md .cont_img img {}
+.cont_md .mail_wrap {float: right;}
+.cont_md .mail_wrap .name {border: 1px solid #C97892; height: 15%;}
+.cont_md .mail_wrap .name h5 {color: #C97892; font-size: 2vw;}
+.cont_md .mail_wrap .email {border: 1px solid #C97892; height: 15%;}
+.cont_md .mail_wrap .email h5 {color: #C97892; font-size: 2vw;}
+.cont_md .mail_wrap .message {border: 1px solid #C97892; height: 55%;}
+.cont_md .mail_wrap .message h5 {color: #C97892; font-size: 2vw;}
+.cont_md .mail_wrap .send {border: 1px solid #C97892; height: 15%;}
+.cont_md .mail_wrap .send h5 {color: #C97892; font-size: 2vw;}
+
+.cont_bt {}
+.cont_bt .info_wrap {}
+.cont_bt .info_wrap .info {}
+.cont_bt .info_wrap .info p {color: #C97892;}
+.cont_bt .info_wrap .info:nth-child(1) {}
+.cont_bt .info_wrap .info:nth-child(2) {}
+.cont_bt .info_wrap .info:nth-child(3) {}
