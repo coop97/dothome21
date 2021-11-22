@@ -24,7 +24,8 @@ body {
 #script_bottom {height: 20vw; background: #EBD9D4; padding-top: 6vw;}
 
 #animation_top {height: 74vw; background: #3B71AE;}
-#animation_bottom {height: 23vw; background: #3B71AE; padding-top: 6vw;}
+#animation_bottom {height: 28vw; background: #3B71AE; padding-top: 6vw; overflow: hidden;}
+#animation_list {height: 470vw; background: #3B71AE;}
 
 /* 제목 영역 */
 .title {line-height: 0.82;}
@@ -206,6 +207,7 @@ body {
 #section3 {background: #333; z-index: 7000; height: 6000px;}
 #animation_top {z-index: 7100;}
 #animation_bottom {z-index: 7200;}
+#animation_list {z-index: 7300;}
 
 .sce3 {
     position: fixed;
@@ -252,3 +254,25 @@ body {
 .animation_top .planet03 {width: 19vw; position: absolute; bottom: 11%; left: 4%;}
 .animation_top .planet04 {width: 12vw; position: absolute; bottom: 5%; left: 26%;}
 
+.ani_rows {position: absolute; bottom: 0;}
+.ani_row {margin: auto; border-top: 2px solid #fff; border-bottom: 2px solid #fff; padding: 1.3vw 0 1.3vw 0;}
+.ani_row .animation_coding {font-size: 2.2vw; text-transform: uppercase; display: grid; grid-template-columns: repeat(6, 1fr); grid-gap: 1vw;}
+.ani_row .animation_coding .word {width: 21vw; text-align: center;}
+
+.animation_list {}
+.animation_list .heading {}
+.animation_list .heading h3 {font-size: 7vw; line-height: 1; text-align: center; padding-top: 10vw;}
+.animation_list .heptagon03 {width: 20vw; margin: auto; padding-top: 5vw;}
+.animation_list .heptagon03 img {}
+
+.list_wrap {}
+.list_wrap .catalog {position: relative; padding-top: 18vw;}
+.list_wrap .ball_wrap {}
+.list_wrap .ball01 {position: relative; margin: auto; width: 54vw; height: 54vw; border: 3px solid #fff; border-radius: 50%;}
+.list_wrap .ball01 .ball02 {width: 52vw; height: 52vw; border: 3px solid #fff; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #5C90CC;}
+.list_wrap .catalog h3 {font-size: 11vw; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; position: absolute; left: 50%; bottom: -22%; transform: translate(-50%, -50%);}
+
+.list_wrap .watch {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+
+.list_wrap .spin {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.list_wrap .peeek_wrap {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
