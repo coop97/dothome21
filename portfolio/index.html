@@ -27,11 +27,11 @@
     <!-- //스킵 메뉴 -->
 
     <!-- header -->
-    <!-- <header id="header" class="front">
+    <header id="header" class="front head hide">
         <div class="inner">
             <div class="header">
                 <div class="header_logo">
-                    <a href="#">
+                    <a href="https://coop97.github.io/dothome21/portfolio/index.html">
                         <em>FRONTEND<br>
                             <span class="developer">DEVELOPER</span>
                         </em>
@@ -39,18 +39,18 @@
                 </div>
                 <div class="nav">
                     <ul class="clearfix">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">contact</a></li>
+                        <li><a href="#about_top">About</a></li>
+                        <li><a href="#project_top">Work</a></li>
+                        <li><a href="#cont_top">contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    </header> -->
+    </header>
     <!-- //header -->
 
     <!-- about -->
-    <section id="about_top" class="front">
+    <section id="about_top" class="front move">
         <h2 class="ir_so">about 페이지</h2>
         <div class="about_top">
             <div class="container">
@@ -155,7 +155,7 @@
     <!-- //skill -->
 
     <!-- project -->
-    <section id="project_top" class="front">
+    <section id="project_top" class="front move">
         <h2 class="ir_so">project 페이지</h2>
         <div class="project_top">
             <div class="container">
@@ -707,7 +707,7 @@
     <!-- //animation -->
 
     <!-- contact -->
-    <section id="cont_top" class="front">
+    <section id="cont_top" class="front move">
         <h2 class="ir_so">contact 페이지</h2>
         <div class="cont_top">
             <div class="container">
@@ -777,6 +777,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 
     <script>
+        //헤더 나타나고 사라짐
+        let nowScrollTop;
+        let lastScrollTop = 0;
+
+        $(window).scroll(function(){
+            nowScrollTop = true;
+
+            setInterval(() => {
+                if(nowScrollTop){
+                    nowScrollTop = false;
+                    hasScroll();
+                }
+            }, 1000);
+        });
+
+        function hasScroll(){
+            let scrollTop = $(this).scrollTop();
+
+            if(scrollTop > lastScrollTop){
+                $(".head").addClass("hide");
+            } else{
+                $(".head").removeClass("hide");
+            }
+
+            lastScrollTop = scrollTop;
+        }
+
+        //헤더 버튼 클릭 시 이동
+        $(".nav ul li").click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            let section = $(".move").eq(index);
+            let offset = section.offset().top;
+            $("html, body").animate({scrollTop:offset}, 1000, "easeInOutCirc");
+        });
+
+        // 가로모드
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
             let goLeft = scrollTop - $("#horizontal").offset().top
@@ -785,6 +823,8 @@
                 $(".horizontal").css("left", -goLeft);
             }
         });
+
+
     </script>
 </body>
 </html>
