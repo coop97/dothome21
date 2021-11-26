@@ -164,6 +164,10 @@ img {
   background-color: #F4C1A2;
 }
 
+.bg.brown.jq::before {
+  background-color: #9A79AF;
+}
+
 .bg0 {
   background-image: url(../img/bg0@0.jpg);
 }
@@ -718,11 +722,30 @@ img {
   font-family: "NEXONLv1Gothic";
 }
 
-.parallax {
+/* body 배경색 */
+.mouse.js {
+  background: #105099;
+}
+
+.mouse.jq {
+  background: #B1D699;
+}
+
+.parallax.js {
   background: #9E9E4D;
   color: #fff;
   font-family: ‘NEXONLv1Gothic’;
 }
+
+.parallax.jq {
+  background: #D3B771;
+}
+
+/* .slider.js {
+  background: #9E9E4D;
+  color: #fff;
+  font-family: ‘NEXONLv1Gothic’;
+} */
 
 .paraScroll {
   position: fixed;

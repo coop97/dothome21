@@ -722,12 +722,6 @@ body {
   font-family: "NEXONLv1Gothic";
 }
 
-.parallax {
-  background: #9E9E4D;
-  color: #fff;
-  font-family: ‘NEXONLv1Gothic’;
-}
-
 .paraScroll {
   position: fixed;
   left: 20px;
