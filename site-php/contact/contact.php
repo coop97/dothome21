@@ -50,7 +50,7 @@
 
             <article class="content-article">
                 <h3>문의하기</h3>
-                <p>스터디, 강의에 대한 궁금한 사항은 언제든지 문의주세요!</p>
+                <p>포트폴리오에 대한 궁금한 사항은 언제든지 문의주세요!</p>
                 <section class="section-contact">
                     <h4 class="ir_so">문의하기 컨텐츠 작성</h4>
                     <div class="contact">

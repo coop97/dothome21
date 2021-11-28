@@ -185,10 +185,10 @@ body {
 .site .btn.left.react {background: rgba(141,173,141,0.7)}
 .site .box_wrap.left.react {background: #8DAD8D;}
 
-.site .bg.dothome {background-image: url(../img/dothome.svg);}
-.site .bg_color.dothome {background: #9FA8C9;}
-.site .btn.right.dothome {background: rgba(147,157,193,0.7)}
-.site .box_wrap.right.dothome {background: #939DC1;}
+.site .bg.vue {background-image: url(../img/vue.svg);}
+.site .bg_color.vue {background: #E5D9C6;}
+.site .btn.right.vue {background: rgba(194,171,136,0.7)}
+.site .box_wrap.right.vue {background: #C2AB88;}
 
 /* script 영역 */
 .script_top {position: relative;}
