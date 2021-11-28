@@ -739,6 +739,8 @@ img {
 
 .parallax.jq {
   background: #D3B771;
+  color: #fff;
+  font-family: ‘NEXONLv1Gothic’;
 }
 
 /* .slider.js {
