@@ -767,8 +767,6 @@
     <div></div>
     <!-- //contact -->
 
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <!-- 슬라이드 -->
@@ -863,24 +861,22 @@
 
         //배경색 변경
         $(document).ready(function(){
+            $('.heptagon01').mouseover(function(){
+                $('#about_bottom').addClass('green').css({"transition": "all 300ms ease-out"});
+            });
 
-        $('.heptagon01').mouseover(function(){
-            $('#about_bottom').addClass('green').css({"transition": "all 300ms ease-out"});
-        });
+            $('.heptagon01').mouseout(function(){
+                $('#about_bottom').removeClass('green');
+            });
 
-        $('.heptagon01').mouseout(function(){
-            $('#about_bottom').removeClass('green');
-        });
+            $('.heptagon02').mouseover(function(){
+                $('#about_bottom').addClass('yellow').css({"transition": "all 300ms ease-out"});
+            });
 
-        $('.heptagon02').mouseover(function(){
-            $('#about_bottom').addClass('yellow').css({"transition": "all 300ms ease-out"});
-        });
-
-        $('.heptagon02').mouseout(function(){
-            $('#about_bottom').removeClass('yellow');
-        });
- 
-})
+            $('.heptagon02').mouseout(function(){
+                $('#about_bottom').removeClass('yellow');
+            });
+        })
     </script>
 </body>
 </html>
