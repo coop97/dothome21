@@ -17,6 +17,8 @@
 
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- 스킵 메뉴 -->
@@ -55,8 +57,8 @@
         <div class="about_top">
             <div class="container">
                 <div class="title">
-                    <div>PORTFOLIOS</div>
-                    <div class="pro">PROJECT</div>
+                    <div class="line01">PORTFOLIOS</div>
+                    <div class="line02">PROJECT</div>
                 </div>
             </div>
         </div>
@@ -69,15 +71,15 @@
         <div class="about_bottom">
             <div class="container">
                 <div class="exWrap">
-                    <div class="tit scroll"><span class="num">1.1</span>about me</div>
-                    <div class="desc">안녕하세요, 신입 프론트엔드 개발자 김은채입니다. 코딩의 중요도가 높아지면서 흥미를 가지고 있었지만 어학을 전공한 문과생이기 때문에 저와는 거리가 멀다고 생각했습니다. 하지만 운 좋게 코딩에 대해 배울 수 있는 기회가 생겼고, 프로그래밍 언어를 배우면서 언어를 다룬다는 공통점에 친근감을 느꼈습니다. 저는 한국외국어대학교에서 폴란드어를 전공하고 어학연수를</div>
-                    <div class="desc">통해 폴란드인과 소통했습니다. 사람과 대화하기 위해 언어를 배운 저에게 기계인 컴퓨터는 조금 낯선 대화 상대였습니다. 하지만 입력한 언어에 대해 시각적인 출력물로 답을 내놓는 컴퓨터를 통해 다른 사람과도 소통할 수 있었습니다. 컴퓨터 뿐만 아니라 사람과 소통한다는 점에서 저는 프론트엔드라는 직업에 대해 큰 매력을 느끼고, 배움의 목표로 삼게 되었습니다.</div>
+                    <div class="tit scroll" data-aos="fade-up"><span class="num">1.1</span>about me</div>
+                    <div class="desc" data-aos="fade-up">안녕하세요, 신입 프론트엔드 개발자 김은채입니다. 코딩의 중요도가 높아지면서 흥미를 가지고 있었지만 어학을 전공한 문과생이기 때문에 저와는 거리가 멀다고 생각했습니다. 하지만 운 좋게 코딩에 대해 배울 수 있는 기회가 생겼고, 프로그래밍 언어를 배우면서 언어를 다룬다는 공통점에 친근감을 느꼈습니다. 저는 한국외국어대학교에서 폴란드어를 전공하고 어학연수를</div>
+                    <div class="desc" data-aos="fade-up">통해 폴란드인과 소통했습니다. 사람과 대화하기 위해 언어를 배운 저에게 기계인 컴퓨터는 조금 낯선 대화 상대였습니다. 하지만 입력한 언어에 대해 시각적인 출력물로 답을 내놓는 컴퓨터를 통해 다른 사람과도 소통할 수 있었습니다. 컴퓨터 뿐만 아니라 사람과 소통한다는 점에서 저는 프론트엔드라는 직업에 대해 큰 매력을 느끼고, 배움의 목표로 삼게 되었습니다.</div>
                 </div>
 
                 <div class="lens_wrap">
-                    <div class="wrapper">
+                    <!-- <div class="wrapper">
                         <div class="slider">
-                            <div class="slider__item">
+                            <div class="slider__item" style="width: 20% !important;">
                                 <img src="assets/img/figure01.svg"
                                     alt="인물 이미지01">
                             </div>
@@ -98,7 +100,20 @@
                                     alt="인물 이미지05">
                             </div>
                         </div>
+                    </div> -->
+
+                    <div class="slider-wrap">
+                        <div class="slider-img">
+                            <div class="slider-inner">
+                                <div class="slider"><img src="assets/img/figure01.svg" alt="인물 이미지1"></div>
+                                <div class="slider"><img src="assets/img/figure02.svg" alt="인물 이미지2"></div>
+                                <div class="slider"><img src="assets/img/figure03.svg" alt="인물 이미지3"></div>
+                                <div class="slider"><img src="assets/img/figure04.svg" alt="인물 이미지4"></div>
+                                <div class="slider"><img src="assets/img/figure05.svg" alt="인물 이미지5"></div>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="lens">
                         <img src="assets/img/lens.svg" alt="렌즈 이미지">
                     </div>
@@ -189,7 +204,7 @@
                 </div>
                 <div class="total_wrap">
                     <h5>total site</h5>
-                    <div class="slider-wrap">
+                    <!-- <div class="slider-wrap">
                         <div class="slider-img">
                             <div class="slider-inner">
                                 <div class="slider" data-name="이미지1">1</div>
@@ -205,7 +220,7 @@
                             <h5 class="btn_title">project</h5>
                             <i class="fas fa-chevron-right next"></i>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -769,9 +784,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <!-- 슬라이드 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         //헤더 나타나고 사라짐
@@ -821,32 +835,6 @@
             }
         });
 
-        //이미지 슬라이드
-        $(document).ready(function() {
-            $(".slider").slick({
-                // arrows: true,
-                // dots: false,
-                slidesToShow: 3,
-                autoplay: true,
-                speed: 1800,
-                autoplaySpeed: 700,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 550,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        });
-
         //렌즈 회전
         $(function() {
             var rotate = function(logo, angle) {
@@ -862,21 +850,54 @@
         //배경색 변경
         $(document).ready(function(){
             $('.heptagon01').mouseover(function(){
-                $('#about_bottom').addClass('green').css({"transition": "all 300ms ease-out"});
+                $('#about_top, #about_bottom, .row').addClass('green').css({"transition": "all 300ms ease-out"});
             });
 
             $('.heptagon01').mouseout(function(){
-                $('#about_bottom').removeClass('green');
+                $('#about_top, #about_bottom, .row').removeClass('green');
             });
 
             $('.heptagon02').mouseover(function(){
-                $('#about_bottom').addClass('yellow').css({"transition": "all 300ms ease-out"});
+                $('#about_top, #about_bottom, .row').addClass('yellow').css({"transition": "all 300ms ease-out"});
             });
 
             $('.heptagon02').mouseout(function(){
-                $('#about_bottom').removeClass('yellow');
+                $('#about_top, #about_bottom, .row').removeClass('yellow');
             });
         })
+
+        //슬라이드
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const sliderInner = $(".slider-inner");
+        const slider = $(".slider");
+
+        let currentIndex = 0;
+        let sliderWidth = slider.width();
+
+        setInterval(function(){
+            sliderInner.animate({left: -sliderWidth}, 400, function(){
+                $(".slider:first-child").appendTo(sliderInner);     //첫 번째 사진을 맨뒤로 보내는 것
+                sliderInner.css("left", "");
+            });
+        }, 2000);
+
+        //제목 이질감
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+
+            $(".front").each(function(index){
+                let offset1 = (scrollTop - $(this).offset().top) * 0.1;
+                let offset2 = (scrollTop - $(this).offset().top) * 0.2;
+                let offset3 = (scrollTop - $(this).offset().top) * 0.9;
+
+                $(this).find(".line01").css({transform: "translateX("+offset2+"px)", "transition": "all 300ms ease-out"});
+                $(this).find(".line02").css({transform: "translateX("+-offset1+"px)", "transition": "all 300ms ease-out"});
+            });
+        });
+
+        //숫자, 설명 나타나기
+        AOS.init();
     </script>
 </body>
 </html>
