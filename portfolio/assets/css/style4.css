@@ -91,7 +91,7 @@ body {
 .header .nav ul li a {display: block; padding: 19px 0 19px 10px;} */
 .header {position: relative; display: flex; align-items: center; height: 100%;}
 .header .header_logo {padding-left: 0.7vw; line-height: 1;}
-.header .header_logo em .developer {font-weight: 300;}
+.header .header_logo em .logo_bt {font-weight: 300;}
 .header .nav {height: 4.6vw;}
 .header .nav ul {display: flex; align-items: center; height: 100%; position: absolute; right: 0;}
 .header .nav ul li {width: 6vw; text-align: center;}
@@ -177,7 +177,7 @@ body {
 
 /* skill 영역 */
 #skill .banner {position: relative; height: 32vw; background-image: linear-gradient(to right, #E2C0CA, #DCA3B4, #BCA9CD);}
-#skill .banner h1 {font-size: 24vw; line-height: 50.1vw;}
+#skill .banner .line01 {font-size: 24vw; line-height: 50.1vw; margin-left: 26vw;}
 #skill .stick_wrap {}
 #skill .stick {height: 6vw;}
 #skill .stick:nth-child(1){background: #A598CF; width: 94%;}
@@ -196,16 +196,16 @@ body {
 
 .project_bottom .total_wrap {position: absolute; left: 50%; top: 56%; transform: translate(-50%, -50%);}
 .project_bottom .total_wrap h5 {font-size: 1.3vw; letter-spacing: 0.8vw; text-align: center;}
-.project_bottom .total_wrap .slider-wrap {position: relative; height: 14vw; width: 66vw;}
-.project_bottom .total_wrap .slider-img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
-.project_bottom .total_wrap .slider-inner {display: grid; grid-template-columns: repeat(6, 1fr); grid-gap: 1.1vw;}
-.project_bottom .total_wrap .slider {width: 20vw; height: 11vw; background: #000; font-family: 'GmarketSans'; font-size: 6vw; font-weight: 700; text-align: center; line-height: 11vw;}
-.project_bottom .total_wrap .slider:nth-child(1) {background: rgba(190, 156, 79, 0.4);}
-.project_bottom .total_wrap .slider:nth-child(2) {background: rgba(190, 156, 79, 0.5);}
-.project_bottom .total_wrap .slider:nth-child(3) {background: rgba(190, 156, 79, 0.6);}
-.project_bottom .total_wrap .slider:nth-child(4) {background: rgba(190, 156, 79, 0.7);}
-.project_bottom .total_wrap .slider:nth-child(5) {background: rgba(190, 156, 79, 0.8);}
-.project_bottom .total_wrap .slider:nth-child(6) {background: rgba(190, 156, 79, 0.9);}
+.project_bottom .total_wrap .slider-wrap02 {position: relative; height: 14vw; width: 66vw;}
+.project_bottom .total_wrap .slider-img02 {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.project_bottom .total_wrap .slider-inner02 {display: grid; grid-template-columns: repeat(6, 1fr); grid-gap: 1.1vw;}
+.project_bottom .total_wrap .slider02 {width: 20vw; height: 11vw; background: #000; font-family: 'GmarketSans'; font-size: 6vw; font-weight: 700; text-align: center; line-height: 11vw;}
+.project_bottom .total_wrap .slider02:nth-child(1) {background: rgba(190, 156, 79, 0.4);}
+.project_bottom .total_wrap .slider02:nth-child(2) {background: rgba(190, 156, 79, 0.5);}
+.project_bottom .total_wrap .slider02:nth-child(3) {background: rgba(190, 156, 79, 0.6);}
+.project_bottom .total_wrap .slider02:nth-child(4) {background: rgba(190, 156, 79, 0.7);}
+.project_bottom .total_wrap .slider02:nth-child(5) {background: rgba(190, 156, 79, 0.8);}
+.project_bottom .total_wrap .slider02:nth-child(6) {background: rgba(190, 156, 79, 0.9);}
 .project_bottom .total_wrap .slider-btn {display: flex; text-align: center; font-size: 1.3vw;}
 .project_bottom .total_wrap .slider-btn .btn_title {position: absolute; left: 50%; bottom: -56%; transform: translate(-50%, -50%);}
 .project_bottom .total_wrap .slider-btn i {font-size: 4vw; cursor: pointer;}
@@ -277,10 +277,7 @@ body {
 .script_top .juggling01 {width: 6.4vw; height: 6.4vw; border: 3px solid #523228; border-radius: 50%; position: absolute; top: 16%; right: 21%;}
 .script_top .juggling02 {width: 6.4vw; height: 6.4vw; border: 3px solid #523228; background: #523228; border-radius: 50%; position: absolute; top: 16%; right: 16%;}
 
-.script_bottom h2 {color: #523228;}
-.script_bottom h3 {color: #523228;}
-.script_bottom .content {color: #523228;}
-
+.script_bottom .exWrap {color: #523228;}
 
 
 
@@ -419,6 +416,12 @@ body {
 .animation_top .planet03 {width: 19vw; position: absolute; bottom: 11%; left: 4%;}
 .animation_top .planet04 {width: 12vw; position: absolute; bottom: 5%; left: 26%;}
 .animation_top .planet img {width: 100%;}
+
+#animation_top.violet {background: #a675c5;}
+#animation_bottom.violet {background: #a675c5;}
+#animation_list.violet {background: #a675c5;}
+#animation_list.violet .list_wrap .ball01 .ball02 {background: #c69ddd;}
+#horizontal.violet {background: #a675c5;}
 
 .ani_rows {position: absolute; bottom: 0;}
 .ani_row {margin: auto; border-top: 2px solid #fff; border-bottom: 2px solid #fff; padding: 1.3vw 0 1.3vw 0;}
