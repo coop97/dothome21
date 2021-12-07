@@ -42,7 +42,7 @@ body {
 /* 로우 영역 */
 .row {position: relative; border: 0.1px solid #fff; background: #fff;}
 
-.row.green {border: 0.1px solid #444e3f; background: #444e3f;}
+.row.green {border: 0.1px solid #4e7fb8; background: #4e7fb8;}
 .row.yellow {border: 0.1px solid #5a5a46; background: #5a5a46;}
 
 .row.brown {border: 0.1px solid #523228; background: #523228;}
@@ -117,7 +117,7 @@ body {
 .lens .str_fill.green {fill: #4e7fb8;}
 #about_top.yellow {background: #fefdc5; color: #5a5a46;}
 #about_bottom.yellow {background: #fefdc5; color: #5a5a46;}
-.lens .small.yellow {fill: #fefdc5}
+.lens .small.yellow {fill: #fefdc5; stroke: #5a5a46;}
 .lens .stroke.yellow {stroke: #5a5a46;}
 .lens .str_fill.yellow {fill: #5a5a46;}
 
