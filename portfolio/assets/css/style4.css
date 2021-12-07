@@ -118,6 +118,8 @@ body {
 #about_top.yellow {background: #fefdc5; color: #5a5a46;}
 #about_bottom.yellow {background: #fefdc5; color: #5a5a46;}
 .lens .small.yellow {fill: #fefdc5}
+.lens .stroke.yellow {stroke: #5a5a46;}
+.lens .str_fill.yellow {fill: #5a5a46;}
 
 /* slider */
 .slider-wrap {
