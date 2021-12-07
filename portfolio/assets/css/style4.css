@@ -186,14 +186,14 @@ body {
 #skill .banner .line01 {font-size: 24vw; line-height: 50.1vw; margin-left: 26vw;}
 #skill .stick_wrap {}
 #skill .stick {height: 6vw;}
-#skill .stick:nth-child(1){background: #A598CF; width: 94%;}
+/* #skill .stick:nth-child(1){background: #A598CF; width: 94%;}
 #skill .stick:nth-child(2){background: #B8A4D2; width: 98%;}
 #skill .stick:nth-child(3){background: #C3A7C7; width: 78%;}
 #skill .stick:nth-child(4){background: #DAA5B7; width: 82%;}
 #skill .stick:nth-child(5){background: #EDAEC1; width: 94%;}
 #skill .stick:nth-child(6){background: #FAB8C9; width: 58%;}
 #skill .stick:nth-child(7){background: #FCC4D3; width: 70%;}
-#skill .stick:nth-child(8){background: #F9D3DD; width: 80%;}
+#skill .stick:nth-child(8){background: #F9D3DD; width: 80%;} */
 #skill .stick h3 {font-size: 3.5vw; line-height: 6vw; margin-left: 1.2vw;}
 
 .stick_wrap {
@@ -210,54 +210,62 @@ body {
 }
 .stick_one .stick {
     background-color: #A598CF;
+    width: 94%;
     -webkit-animation: show-stick_one 1.2s 0.1s forwards;
     -moz-animation: show-stick_one 1.2s 0.1s forwards;
     animation: show-stick_one 1.2s 0.1s forwards;
 }
 .stick_two .stick {
     background-color: #B8A4D2;
+    width: 98%;
     -webkit-animation: show-stick_two 1.2s 0.1s forwards;
     -moz-animation: show-stick_two 1.2s 0.1s forwards;
     animation: show-stick_two 1.2s 0.1s forwards;
 }
 .stick_three .stick {
     background-color: #C3A7C7;
+    width: 78%;
     -webkit-animation: show-stick_three 1.2s 0.1s forwards;
     -moz-animation: show-stick_three 1.2s 0.1s forwards;
     animation: show-stick_three 1.2s 0.1s forwards;
 }
 .stick_four .stick {
     background-color: #DAA5B7;
+    width: 82%;
     -webkit-animation: show-stick_four 1.2s 0.1s forwards;
     -moz-animation: show-stick_four 1.2s 0.1s forwards;
     animation: show-stick_four 1.2s 0.1s forwards;
 }
 .stick_five .stick {
     background-color: #EDAEC1;
+    width: 94%;
     -webkit-animation: show-stick_five 1.2s 0.1s forwards;
     -moz-animation: show-stick_five 1.2s 0.1s forwards;
     animation: show-stick_five 1.2s 0.1s forwards;
 }
 .stick_six .stick {
     background-color: #FAB8C9;
+    width: 58%;
     -webkit-animation: show-stick_six 1.2s 0.1s forwards;
     -moz-animation: show-stick_six 1.2s 0.1s forwards;
     animation: show-stick_six 1.2s 0.1s forwards;
 }
 .stick_seven .stick {
     background-color: #FCC4D3;
+    width: 70%;
     -webkit-animation: show-stick_seven 1.2s 0.1s forwards;
     -moz-animation: show-stick_seven 1.2s 0.1s forwards;
     animation: show-stick_seven 1.2s 0.1s forwards;
 }
 .stick_eight .stick {
     background-color: #F9D3DD;
+    width: 80%;
     -webkit-animation: show-stick_eight 1.2s 0.1s forwards;
     -moz-animation: show-stick_eight 1.2s 0.1s forwards;
     animation: show-stick_eight 1.2s 0.1s forwards;
 }
 
-@-webkit-keyframes show-stick_one {
+/* @-webkit-keyframes show-stick_one {
     0% {
         width: 0;
     }
@@ -265,7 +273,7 @@ body {
     100% {
         width: 94%;
     }
-}
+} */
 
 /* project 영역 */
 .project_top .title {position: relative;}

@@ -823,6 +823,9 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/pathToFile/jquery.keyframes.min.js"></script>
+
     <script>
         //헤더 나타나고 사라짐
         let nowScrollTop;
@@ -937,6 +940,28 @@
 
                 $(this).find(".line01").css({transform: "translateX("+offset2+"px)", "transition": "all 300ms ease-out"});
                 $(this).find(".line02").css({transform: "translateX("+-offset1+"px)", "transition": "all 300ms ease-out"});
+            });
+
+            var supportedFlag = $.keyframe.isSupported();
+
+            $.keyframe.define([{
+                name: 'stick_one',
+                '0%': {
+                    'width' : '0'
+                },
+                '100%': {
+                    'width' : '94%'
+                }
+            }]);
+
+            $('.stick_one .stick').playKeyframe({
+                name:'stick_one',
+                duration:"3s",
+                timingFunction:'ease',
+                iterationCount:'infinite',
+                direction:'normal',
+                fillMode:'forwards',
+                complete: increment
             });
         });
 
