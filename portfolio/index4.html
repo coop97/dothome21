@@ -942,27 +942,27 @@
                 $(this).find(".line02").css({transform: "translateX("+-offset1+"px)", "transition": "all 300ms ease-out"});
             });
 
-            var supportedFlag = $.keyframe.isSupported();
+            // var supportedFlag = $.keyframe.isSupported();
 
-            $.keyframe.define([{
-                name: 'stick_one',
-                '0%': {
-                    'width' : '0'
-                },
-                '100%': {
-                    'width' : '94%'
-                }
-            }]);
+            // $.keyframe.define([{
+            //     name: 'stick_one',
+            //     '0%': {
+            //         'width' : '0'
+            //     },
+            //     '100%': {
+            //         'width' : '94%'
+            //     }
+            // }]);
 
-            $('.stick_one .stick').playKeyframe({
-                name:'stick_one',
-                duration:"3s",
-                timingFunction:'ease',
-                iterationCount:'infinite',
-                direction:'normal',
-                fillMode:'forwards',
-                complete: increment
-            });
+            // $('.stick_one .stick').playKeyframe({
+            //     name:'stick_one',
+            //     duration:"3s",
+            //     timingFunction:'ease',
+            //     iterationCount:'infinite',
+            //     direction:'normal',
+            //     fillMode:'forwards',
+            //     complete: increment
+            // });
         });
 
         //숫자, 설명 나타나기
