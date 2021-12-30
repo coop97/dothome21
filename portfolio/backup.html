@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,7 +13,7 @@
     <!-- css -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style4.css">
+    <link rel="stylesheet" href="assets/css/backup.css">
     <link rel="stylesheet" href="assets/css/animation.css">
 
     <!-- fontawesome -->
@@ -173,43 +174,43 @@
             </div>
         </div>
         <div class="stick_wrap">
-            <div class="stick one">
-                <div class="bar">
+            <div class="stick_one">
+                <div class="stick">
                     <h3>html</h3>
                 </div>
             </div>
-            <div class="stick two">
-                <div class="bar">
+            <div class="stick_two">
+                <div class="stick">
                     <h3>css</h3>
                 </div>
             </div>
-            <div class="stick three">
-                <div class="bar">
+            <div class="stick_three">
+                <div class="stick">
                     <h3>javascript</h3>
                 </div>
             </div>
-            <div class="stick four">
-                <div class="bar">
+            <div class="stick_four">
+                <div class="stick">
                     <h3>jquery</h3>
                 </div>
             </div>
-            <div class="stick five">
-                <div class="bar">
+            <div class="stick_five">
+                <div class="stick">
                     <h3>scss</h3>
                 </div>
             </div>
-            <div class="stick six">
-                <div class="bar">
+            <div class="stick_six">
+                <div class="stick">
                     <h3>php</h3>
                 </div>
             </div>
-            <div class="stick seven">
-                <div class="bar">
+            <div class="stick_seven">
+                <div class="stick">
                     <h3>react</h3>
                 </div>
             </div>
-            <div class="stick eight">
-                <div class="bar">
+            <div class="stick_eight">
+                <div class="stick">
                     <h3>vue</h3>
                 </div>
             </div>
@@ -963,15 +964,6 @@
             //     fillMode:'forwards',
             //     complete: increment
             // });
-
-            $(".stick").each(function(){
-                if(scrollTop +$(window).height() >= $(this).offset().top){
-                    $(this).delay($(this).data("delay")).queue(function(){
-                        $(this).addClass("show");
-                    });
-                }
-            });
-            
         });
 
         //숫자, 설명 나타나기

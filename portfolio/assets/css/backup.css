@@ -194,137 +194,86 @@ body {
 #skill .stick:nth-child(6){background: #FAB8C9; width: 58%;}
 #skill .stick:nth-child(7){background: #FCC4D3; width: 70%;}
 #skill .stick:nth-child(8){background: #F9D3DD; width: 80%;} */
-#skill .bar h3 {font-size: 3.5vw; line-height: 6vw; margin-left: 1.2vw;}
+#skill .stick h3 {font-size: 3.5vw; line-height: 6vw; margin-left: 1.2vw;}
 
 .stick_wrap {
     float: left;
     margin-bottom: 8px;
     width: 100%;
 }
-.stick_wrap .bar {
+.stick_wrap .stick {
     height: 6vw;
     float: left;
     overflow: hidden;
     position: relative;
     width: 0;
 }
-
-/* .stick_one .bar {
+.stick_one .stick {
     background-color: #A598CF;
     width: 94%;
     -webkit-animation: show-stick_one 1.2s 0.1s forwards;
     -moz-animation: show-stick_one 1.2s 0.1s forwards;
     animation: show-stick_one 1.2s 0.1s forwards;
 }
-.stick_two .bar {
+.stick_two .stick {
     background-color: #B8A4D2;
     width: 98%;
     -webkit-animation: show-stick_two 1.2s 0.1s forwards;
     -moz-animation: show-stick_two 1.2s 0.1s forwards;
     animation: show-stick_two 1.2s 0.1s forwards;
 }
-.stick_three .bar {
+.stick_three .stick {
     background-color: #C3A7C7;
     width: 78%;
     -webkit-animation: show-stick_three 1.2s 0.1s forwards;
     -moz-animation: show-stick_three 1.2s 0.1s forwards;
     animation: show-stick_three 1.2s 0.1s forwards;
 }
-.stick_four .bar {
+.stick_four .stick {
     background-color: #DAA5B7;
     width: 82%;
     -webkit-animation: show-stick_four 1.2s 0.1s forwards;
     -moz-animation: show-stick_four 1.2s 0.1s forwards;
     animation: show-stick_four 1.2s 0.1s forwards;
 }
-.stick_five .bar {
+.stick_five .stick {
     background-color: #EDAEC1;
     width: 94%;
     -webkit-animation: show-stick_five 1.2s 0.1s forwards;
     -moz-animation: show-stick_five 1.2s 0.1s forwards;
     animation: show-stick_five 1.2s 0.1s forwards;
 }
-.stick_six .bar {
+.stick_six .stick {
     background-color: #FAB8C9;
     width: 58%;
     -webkit-animation: show-stick_six 1.2s 0.1s forwards;
     -moz-animation: show-stick_six 1.2s 0.1s forwards;
     animation: show-stick_six 1.2s 0.1s forwards;
 }
-.stick_seven .bar {
+.stick_seven .stick {
     background-color: #FCC4D3;
     width: 70%;
     -webkit-animation: show-stick_seven 1.2s 0.1s forwards;
     -moz-animation: show-stick_seven 1.2s 0.1s forwards;
     animation: show-stick_seven 1.2s 0.1s forwards;
 }
-.stick_eight .bar {
+.stick_eight .stick {
     background-color: #F9D3DD;
     width: 80%;
     -webkit-animation: show-stick_eight 1.2s 0.1s forwards;
     -moz-animation: show-stick_eight 1.2s 0.1s forwards;
     animation: show-stick_eight 1.2s 0.1s forwards;
+}
+
+/* @-webkit-keyframes show-stick_one {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 94%;
+    }
 } */
-.stick,
-.stick>div,
-.stick>span {
-    opacity: 0;
-    width: 0;
-}
-
-.stick.show,
-.stick.show>div,
-.stick.show>span {
-    animation: opacity 1000ms 200ms linear forwards;
-    width: 100%;
-}
-
-.stick {
-    /* height: 100%; */
-    z-index: 100;
-    /* background-color: rgb(179, 100, 100); */
-
-    background-color: #A598CF;
-    width: 94%;
-    height: 6vw;
-    float: left;
-    overflow: hidden;
-    position: relative;
-}
-
-.bar {
-    width: 94%;
-    height: 6vw;
-}
-
-/* .stick::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    z-index: 100;
-    background-color: #fff;
-} */
-
-.stick.show {
-    animation: reveal 1000ms cubic-bezier(0.77, 0, 0.18, 1);
-}
-
-@keyframes opacity {
-    0%   {opacity: 0;}
-    60%  {opacity: 0;}
-    70%  {opacity: 1;}
-    100% {opacity: 1;}
-}
-@keyframes stick {
-    0%   {width: 0;    left: 0;}
-    50%  {width: 100%; left: 0;}
-    80%  {width: 100%; left: 0;}
-    100% {width: 0;    left: 100%;}
-}
-
 
 /* project 영역 */
 .project_top .title {position: relative;}

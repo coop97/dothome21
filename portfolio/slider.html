@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+    <style>
+        body {background: #888;}
+        .total_wrap {position: absolute; left: 50%; top: 56%; transform: translate(-50%, -50%);}
+        .total_wrap h5 {font-size: 1.3vw; letter-spacing: 0.8vw; text-align: center;}
+        .total_wrap .slider-wrap02 {position: relative; height: 14vw; width: 100vw;}
+        .total_wrap .slider-img02 {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+        .total_wrap .slider-inner02 {display: grid; grid-template-columns: repeat(6, 1fr); grid-gap: 1.1vw;}
+        .total_wrap .slider02 {width: 20vw; height: 11vw; background: #000; font-family: 'GmarketSans'; font-size: 6vw; font-weight: 700; text-align: center; line-height: 11vw;}
+        .total_wrap .slider02:nth-child(1) {background: rgba(190, 156, 79, 0.4);}
+        .total_wrap .slider02:nth-child(2) {background: rgba(190, 156, 79, 0.5);}
+        .total_wrap .slider02:nth-child(3) {background: rgba(190, 156, 79, 0.6);}
+        .total_wrap .slider02:nth-child(4) {background: rgba(190, 156, 79, 0.7);}
+        .total_wrap .slider02:nth-child(5) {background: rgba(190, 156, 79, 0.8);}
+        .total_wrap .slider02:nth-child(6) {background: rgba(190, 156, 79, 0.9);}
+        .total_wrap .slider-btn {display: flex; text-align: center; font-size: 1.3vw;}
+        .total_wrap .slider-btn .btn_title {position: absolute; left: 50%; bottom: -56%; transform: translate(-50%, -50%);}
+        .total_wrap .slider-btn i {font-size: 4vw; cursor: pointer;}
+        .total_wrap .slider-btn .prev {position: absolute; left: 0; bottom: -72%; transform: translate(-50%, -50%);}
+        .total_wrap .slider-btn .next {position: absolute; right: 0; bottom: -72%; transform: translate(-50%, -50%);}
+
+        /* slider */
+        .slider-wrap02 {
+            align-items: center;
+            justify-content: center;
+        }
+        .slider-inner02 {
+            position: relative;
+        }
+
+        .slider-inner02 .slider02:nth-child(1) {z-index: 5;}
+        .slider-inner02 .slider02:nth-child(2) {z-index: 4;}
+        .slider-inner02 .slider02:nth-child(3) {z-index: 3;}
+        .slider-inner02 .slider02:nth-child(4) {z-index: 2;}
+        .slider-inner02 .slider02:nth-child(5) {z-index: 1;}
+
+    </style>
+</head>
+<body>
+    <div class="total_wrap">
+        <h5>total site</h5>
+        <div class="slider-wrap02">
+            <div class="slider-img02">
+                <div class="slider-inner02">
+                    <div class="slider02">1</div>
+                    <div class="slider02">2</div>
+                    <div class="slider02">3</div>
+                    <div class="slider02">4</div>
+                    <div class="slider02">5</div>
+                    <div class="slider02">6</div>
+                </div>
+            </div>
+            <div class="slider-btn">
+                <i class="fas fa-chevron-left prev"></i>
+                <h5 class="btn_title">project</h5>
+                <i class="fas fa-chevron-right next"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap02");
+        const sliderImg = $(".slider-img02");
+        const sliderInner = $(".slider-inner02");
+        const slider = $(".slider02");
+        const sliderBtn = $(".slider-btn");
+
+        let sliderWidth = slider.width();
+        let sliderCount = slider.length;
+
+        sliderInner.css({marginLeft: -sliderWidth});
+
+        function movePrev(){
+            sliderInner.animate({left: sliderWidth}, 400, function(){
+                $(".slider02:last-child").prependTo(sliderInner);
+                sliderInner.css("left","");
+            });
+        }
+        function moveNext(){
+            sliderInner.animate({left: -sliderWidth}, 400, function(){
+                $(".slider02:first-child").appendTo(sliderInner);
+                sliderInner.css("left","");
+            });
+        }
+
+        sliderBtn.find(".prev").click(function(){
+            movePrev();
+        });
+        sliderBtn.find(".next").click(function(){
+            moveNext();
+        });
+    </script>
+</body>
+</html>
