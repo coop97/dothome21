@@ -90,9 +90,34 @@ body {
 .header .header_logo {padding-left: 0.7vw; line-height: 1;}
 .header .header_logo em .logo_bt {font-weight: 300;}
 .header .nav {height: 4.6vw;}
-.header .nav ul {display: flex; align-items: center; height: 100%; position: absolute; right: 0;}
-.header .nav ul li {width: 6vw; text-align: center;}
+.header .nav ul {display: flex; align-items: center; height: 100%; position: absolute; right: 0; font-size: 1.5vw;}
+.header .nav ul li {width: 7vw; text-align: center;}
 .header .nav ul li a {display: block; padding: 19px 0 19px 10px;}
+
+@media (max-width: 800px) {
+    .head {
+        height: 6.4vw;
+        font-size: 2vw;
+    }
+
+    .header .nav {
+        height: 6.4vw;
+    }
+    
+    .header .nav ul {
+        font-size: 2vw;
+    }
+
+    .header .nav ul li {
+        width: 10vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .header .header_logo em br {
+        display: none;
+    }
+}
 
 /* about 영역 */
 .about_bottom .lens_wrap {position: relative; height: 80vw;}
@@ -325,6 +350,7 @@ body {
 .site .box_wrap {width: 40vw; height: 36vw; display: flex;}
 .site .box {position: relative; width: 32vw; height: 24vw; margin: auto;}
 .site .box h3 {font-size: 5.6vw; font-family: 'GmarketSans'; font-weight: 700;}
+.site .box h3 span {display: none;}
 .site .box p {padding-left: 3vw; margin-top: 0.8vw; font-size: 1.05vw; font-family: 'NEXONLv1Gothic'; font-weight: 300; line-height: 1.4;}
 .site .box .key_wrap {padding-left: 3vw; position: absolute; bottom: 0;}
 .site .box .key {}
@@ -333,11 +359,11 @@ body {
 .site .heading_wrap h4 {font-size: 4vw; text-transform: lowercase;}
 .site .heading_wrap h2 {font-size: 11vw;}
 
-.site .btn.left {position: absolute; right: 13%; top: 4%;}
+.site .btn.left {position: absolute; right: 13%; top: 6%;}
 .site .box_wrap.left {position: absolute; left: 0; bottom: -20vh;}
 .site .heading_wrap.left {position: absolute; bottom: 0; left: 0; margin-left: 37vw;}
 
-.site .btn.right {position: absolute; left: 13%; top: 4%;}
+.site .btn.right {position: absolute; left: 13%; top: 6%;}
 .site .box_wrap.right {position: absolute; right: 0; bottom: -20vh;}
 .site .heading_wrap.right {position: absolute; bottom: 0; right: 0; margin-right: 37vw;}
 
@@ -370,6 +396,143 @@ body {
 .site .bg_color.vue {background: #E5D9C6;}
 .site .btn.right.vue {background: rgba(194,171,136,0.7)}
 .site .box_wrap.right.vue {background: #C2AB88;}
+
+@media (max-width: 1000px) {
+    .site_wrap .site_bg {
+        height: 124vh;
+    }
+
+    .site .box {
+        height: 25.4vw;
+    }
+
+    .site .btn {
+        width: 19vw;
+        height: 19vw;
+        font-size: 2.2vw;
+    }
+
+    .site .btn.left {
+        right: 6%;
+        top: 10%;
+    }
+
+    .site .btn.right {
+        left: 6%;
+        top: 10%;
+    }
+
+    .site .box_wrap.left {
+        bottom: -12vh;
+    }
+
+    .site .box_wrap.right {
+        bottom: -12vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .site_wrap .site_bg {
+        height: 100vh;
+    }
+
+    .site .box h3 span {
+        display: inline-block;
+    }
+
+    .site .box_wrap {
+        width: 54vw;
+        height: 42vw;
+    }
+
+    .site .box {
+        width: 46vw;
+        height: 31vw;
+    }
+
+    .site .btn {
+        width: 23vw;
+        height: 23vw;
+    }
+
+    .site .btn.left {
+        right: 38%;
+        top: 28%;
+    }
+
+    .site .btn.right {
+        left: 38%;
+        top: 28%;
+    }
+
+    .site .heading_wrap {
+        display: none;
+    }
+
+    .site .box_wrap.left {
+        bottom: 0;
+    }
+
+    .site .box_wrap.right {
+        bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .site .box_wrap {
+        width: 60vw;
+        height: 48vw;
+    }
+
+    .site .box {
+        width: 52vw;
+        height: 37vw;
+    }
+
+    .site .btn {
+        width: 26vw;
+        height: 26vw;
+        font-size: 3vw;
+    }
+
+    .site .btn.left {
+        top: 31%;
+    }
+
+    .site .btn.right {
+        top: 31%;
+    }
+}
+
+@media (max-width: 500px) {
+    .site .btn {
+        width: 34vw;
+        height: 34vw;
+        font-size: 3.6vw;
+    }
+
+    .site .btn.left {
+        right: 34%;
+        top: 30%;
+    }
+
+    .site .btn.right {
+        left: 34%;
+        top: 30%;
+    }
+}
+
+@media (max-width: 450px) {
+    .site .box_wrap {
+        width: 76vw;
+        height: 64vw;
+    }
+
+    .site .box {
+        width: 68vw;
+        height: 53vw;
+    }
+}
 
 /* script 영역 */
 .script_top {position: relative;}
@@ -430,13 +593,13 @@ body {
 }
 .horizontal>div .top .name {
     position: absolute;
-    bottom: -24%; left: 0;
+    bottom: -12%; left: 0;
 }
-.horizontal>div .top .name h2 {
-    font-size: 20vw;
+.horizontal>div .top h2 {
+    font-size: 270px;
     overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
+    line-height: 270px;
 }
 .horizontal .top.one {
     background-image: linear-gradient(to right, #105099, #DCF0CF);

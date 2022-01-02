@@ -1952,3 +1952,9 @@ div {
         transform: translateZ(30px) translateX(0) rotateY(20deg);
     }
 }
+
+@media (max-width: 600px) {
+    .summerdream {
+        transform: scale(1);
+    }
+}
