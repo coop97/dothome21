@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+
+  <link rel="stylesheet" href="default.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- fontawesome -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"> -->
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>TO DO LIST</h1>
+      <div class="btn-wrap">
+        <button class="btn-green">추가</button>
+        <button class="btn-red">삭제</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="main">
+    <h2 class="ir_so">main 페이지</h2>
+    <div class="container">
+      <div class="box-wrap">
+        <div class="box">
+          <div class="box-top">
+            <h3 class="ir_so">tltle</h3>
+            <label for="search-box">검색하기</label>
+            <input type="text" name="title" id="title" placeholder="제목을 입력하세요">
+            <span class="date">2022년 03월 12일 토요일(자동생성)</span>
+            <!-- <em>할 일 <span>n</span>개 남음</em> -->
+          </div>
+          <div class="box-bottom">
+            <!-- <ul>
+              <li><span><img src="img/check.svg" alt="체크 아이콘"></span> <span>할 일을 적어봅시다.</span> <img src="img/trash.svg" alt="휴지통 아이콘"></li>
+                            <li><span></span> <span>할 일을 적어봅시다.</span></li>
+            </ul> -->
+            <div class="list-input">
+              <label for="search-box">검색하기</label>
+              <input type="text" name="title" id="title" placeholder="할 일을 입력 후, Enter를 누르세요">
+            </div>
+          </div>
+          <button class="plus"></button>
+        </div>
+
+        <div class="box">
+          <div class="box-top">
+            <h3 class="ir_so">tltle</h3>
+            <label for="search-box">검색하기</label>
+            <input type="text" name="title" id="title" placeholder="제목을 입력하세요">
+            <span class="date">2022년 03월 12일 토요일(자동생성)</span>
+            <!-- <em>할 일 <span>n</span>개 남음</em> -->
+          </div>
+          <div class="box-bottom">
+            <!-- <ul>
+              <li><span><img src="img/check.svg" alt="체크 아이콘"></span> <span>할 일을 적어봅시다.</span> <img src="img/trash.svg" alt="휴지통 아이콘"></li>
+                            <li><span></span> <span>할 일을 적어봅시다.</span></li>
+            </ul> -->
+            <div class="list-input">
+              <label for="search-box">검색하기</label>
+              <input type="text" name="title" id="title" placeholder="할 일을 입력 후, Enter를 누르세요">
+            </div>
+          </div>
+          <button class="plus"></button>
+        </div>
+
+        <div class="box">
+          <div class="box-top">
+            <h3 class="ir_so">tltle</h3>
+            <label for="search-box">검색하기</label>
+            <input type="text" name="title" id="title" placeholder="제목을 입력하세요">
+            <span class="date">2022년 03월 12일 토요일(자동생성)</span>
+            <em>할 일 <span>n</span>개 남음</em>
+          </div>
+          <div class="box-bottom">
+            <ul>
+              <li>
+                <div class="list-area">
+                  <div class="circle click"><img class="check" src="img/check.svg" alt="체크 아이콘"></div>
+                  <div class="content click">할 일을 적어봅시</div>
+                </div>
+                <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button>
+              </li>
+              <li>
+                <div class="list-area">
+                  <div class="circle click"><img class="check" src="img/check.svg" alt="체크 아이콘"></div>
+                  <div class="content click">할 일을 적어봅시아아ㅏ아아아아아</div>
+                </div>
+                <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button>
+              </li>
+              <li>
+                <div class="list-area">
+                  <div class="circle click"><img class="check" src="img/check.svg" alt="체크 아이콘"></div>
+                  <div class="content click">할 일을 적어봅시아아ㅏ아아아아아ㅏㅏㄷ아아아아아아아아아ㅏ아아아아아</div>
+                </div>
+                <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button>
+              </li>
+              <li>
+                <div class="list-area">
+                  <div class="circle click"><img class="check" src="img/check.svg" alt="체크 아이콘"></div>
+                  <div class="content click">할 일을 적어봅시아아ㅏ아아아아아</div>
+                </div>
+                <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button>
+              </li>
+            </ul>
+            <div class="list-input">
+              <label for="search-box">검색하기</label>
+              <input type="text" name="title" id="title" placeholder="할 일을 입력 후, Enter를 누르세요">
+            </div>
+          </div>
+          <button class="plus"></button>
+        </div>
+
+        <div class="box">
+          <div class="box-top">
+            <h3 class="ir_so">tltle</h3>
+            <label for="search-box">검색하기</label>
+            <input type="text" name="title" id="title" placeholder="제목을 입력하세요">
+            <span class="date">2022년 03월 12일 토요일(자동생성)</span>
+            <em>할 일 <span>n</span>개 남음</em>
+          </div>
+          <div class="box-bottom">
+            <ul class="show-bttom">
+              <li>
+                <div class="list-area">
+                  <div class="circle click"><img class="check" src="img/check.svg" alt="체크 아이콘"></div>
+                  <div class="content click">할 일을 적어봅시아아ㅏ아아아아아ㅏㅏㄷ아아아아아아아아아ㅏ아아아아아</div>
+                </div>
+                <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button>
+              </li>
+              <li>
+                <div class="list-area">
+                  <div class="circle click"><img class="check" src="img/check.svg" alt="체크 아이콘"></div>
+                  <div class="content click">할 일을 적어봅시아아ㅏ아아아아아ㅏㅏㄷ아아아아아아아아아ㅏ아아아아아</div>
+                </div>
+                <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button>
+              </li>
+              <li>
+                <div class="list-area">
+                  <div class="circle click"><img class="check" src="img/check.svg" alt="체크 아이콘"></div>
+                  <div class="content click">할 일을 적어봅시아아ㅏ아아아아아ㅏㅏㄷ아아아아아아아아아ㅏ아아아아아</div>
+                </div>
+                <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button>
+              </li>
+              <li>
+                <div class="list-area">
+                  <div class="circle click"><img class="check" src="img/check.svg" alt="체크 아이콘"></div>
+                  <div class="content click">할 일을 적어봅시아아ㅏ아아아아아ㅏㅏㄷ아아아아아아아아아ㅏ아아아아아</div>
+                </div>
+                <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button>
+              </li>
+            </ul>
+
+            <div class="list-input">
+              <label for="search-box">검색하기</label>
+              <input type="text" name="title" id="title" placeholder="할 일을 입력 후, Enter를 누르세요">
+            </div>
+          </div>
+          <button class="plus"></button>
+        </div>
+
+        <div class="box">
+          <div class="box-top">
+            <h3 class="ir_so">tltle</h3>
+            <label for="search-box">검색하기</label>
+            <input type="text" name="title" id="title" placeholder="제목을 입력하세요">
+            <span class="date">2022년 03월 12일 토요일(자동생성)</span>
+            <em>할 일 <span>n</span>개 남음</em>
+          </div>
+          <div class="box-bottom">
+            <ul>
+              <li>
+                <div class="list-area">
+                  <div class="circle">
+                    <!-- <img class="check" src="img/check.svg" alt="체크 아이콘"> -->
+                  </div>
+                  <div class="content">할 일을 적어봅시아아ㅏ아아아아아ㅏㅏㄷ아아아아아아아아아ㅏ아아아아아</div>
+                </div>
+                <!-- <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button> -->
+              </li>
+              <li>
+                <div class="list-area">
+                  <div class="circle click"><img class="check" src="img/check.svg" alt="체크 아이콘"></div>
+                  <div class="content click">할 일을 적어봅시아아ㅏ아아아아아ㅏㅏㄷ아아아아아아아아아ㅏ아아아아아</div>
+                </div>
+                <button class="trash-btn"><img class="trash" src="img/trash.svg" alt="휴지통 아이콘"></button>
+              </li>
+            </ul>
+            <div class="list-input">
+              <label for="search-box">검색하기</label>
+              <input type="text" name="title" id="title" placeholder="할 일을 입력 후, Enter를 누르세요">
+            </div>
+          </div>
+          <button class="plus"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    //하나만 선택됨
+    // document.querySelector(".plus").addEventListener("click", function(){
+    //   document.querySelector(".plus").classList.toggle("cancel");
+    // });
+
+    //전부 다 선택됨
+    // document.querySelectorAll(".plus").forEach((el) => {
+    //   el.addEventListener("click", function(){
+    //     this.classList.toggle("cancel");
+    //     document.querySelector(".list-input").classList.toggle("show");
+    //   });
+    // });
+
+    document.querySelectorAll(".plus").forEach((el, index) => {
+      el.addEventListener("click", function(){
+        this.classList.toggle("cancel");
+        document.querySelectorAll(".list-input").forEach(li => {
+          // li.classList.remove("active");
+        });
+        document.querySelector(".list-input:nth-child("+(index+1)+")").classList.toggle("show");
+      });
+      console.log(document.querySelector(".list-input:nth-child("+(index+1)+")"))
+    });
+  </script>
+</body>
+
+</html>
