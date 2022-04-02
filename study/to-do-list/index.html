@@ -223,9 +223,10 @@
         document.querySelectorAll(".list-input").forEach(li => {
           // li.classList.remove("active");
         });
-        document.querySelector(".list-input:nth-child("+(index+1)+")").classList.toggle("show");
+        // document.querySelector(".list-input:nth-child("+(index)+")").classList.toggle("show");
+        this.previousElementSibling.querySelector(".list-input").classList.toggle("show");
+        console.log(this.previousElementSibling.querySelector(".list-input"))
       });
-      console.log(document.querySelector(".list-input:nth-child("+(index+1)+")"))
     });
   </script>
 </body>
