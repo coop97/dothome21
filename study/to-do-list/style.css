@@ -52,6 +52,7 @@ h1 {
   border-radius: 10px;
   margin-bottom: 40px;
 }
+/* .boxLabel input:checked+.box {border: 2px solid var(--red);} */
 .box .box-top {
   position: relative;
   height: 90px;

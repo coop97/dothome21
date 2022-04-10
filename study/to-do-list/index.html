@@ -33,7 +33,7 @@
             <h3 class="ir_so">tltle</h3>
             <label for="search-box">검색하기</label>
             <input type="text" name="title" id="title" placeholder="제목을 입력하세요">
-            <span class="date">2022년 03월 12일 토요일(자동생성)</span>
+            <span class="date"></span>
             <!-- <em>할 일 <span>n</span>개 남음</em> -->
           </div>
           <div class="box-bottom">
@@ -201,6 +201,10 @@
         </div>
       </div>
     </div>
+
+    <!-- <input type="text" id="inputName" placeholder="이름입력" />
+    <button onclick="saveName()">저장</button>
+    <span class="save"></span> -->
   </section>
 
   <script>
@@ -216,18 +220,39 @@
     //     document.querySelector(".list-input").classList.toggle("show");
     //   });
     // });
-
+    
+    //선택된 input만 나옴
     document.querySelectorAll(".plus").forEach((el, index) => {
       el.addEventListener("click", function(){
         this.classList.toggle("cancel");
         document.querySelectorAll(".list-input").forEach(li => {
-          // li.classList.remove("active");
         });
-        // document.querySelector(".list-input:nth-child("+(index)+")").classList.toggle("show");
         this.previousElementSibling.querySelector(".list-input").classList.toggle("show");
-        console.log(this.previousElementSibling.querySelector(".list-input"))
+        // console.log(this.previousElementSibling.querySelector(".list-input"));
       });
     });
+    
+    //현재 날짜
+    const date = document.querySelector(".date");
+    const now = new Date();
+    date.innerHTML = now;
+
+
+    /* //입력한 이름을 저장할 Array (배열)
+    var names=[];
+    var save = document.querySelector(".save");
+
+    function saveName(){
+    //input 요소에 입력한 문자열을 읽어온다.
+    var name = document.getElementById("inputName").value;
+    //배열에 저장한다.
+    names.push(name);
+
+    
+    save.innerHTML = names;
+    console.log(names)
+    }; */
+
   </script>
 </body>
 
