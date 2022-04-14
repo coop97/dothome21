@@ -202,9 +202,9 @@
       </div>
     </div>
 
-    <!-- <input type="text" id="inputName" placeholder="이름입력" />
+    <input type="text" id="inputName" placeholder="이름입력" />
     <button onclick="saveName()">저장</button>
-    <span class="save"></span> -->
+    <span class="save"></span>
   </section>
 
   <script>
@@ -237,8 +237,10 @@
     const now = new Date();
     date.innerHTML = now;
 
+    const USER_LS = "로컬스토리지의 Key값, 사용자 이름";
 
-    /* //입력한 이름을 저장할 Array (배열)
+
+    //입력한 이름을 저장할 Array (배열)
     var names=[];
     var save = document.querySelector(".save");
 
@@ -251,7 +253,7 @@
     
     save.innerHTML = names;
     console.log(names)
-    }; */
+    };
 
   </script>
 </body>
