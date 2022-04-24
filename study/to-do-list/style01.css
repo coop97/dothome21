@@ -30,14 +30,14 @@ header h1 {font-size: 2.5rem; font-weight: bold;}
 .btnArea button {border-radius: 8px; padding: 5px 24px; font-size: 1rem; font-weight: 500; margin-right: 10px; box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .2);}
 .btnArea button:last-child {margin-right: 0;}
 
-/* boxArea */
-.boxArea input[type="checkbox"] { display: none; }
-/* .boxArea {display: flex; gap: 40px; justify-content: left; flex-wrap: wrap;} */
-.boxArea {display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; max-width:1130px; margin: 0 auto;}
-.boxArea .in {padding: 20px;}
-.boxArea .boxLabel {display: inline-block; background-color: #fff; max-width: 350px; width: 100%; border-radius: 10px; box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 20%);}
-.boxArea .box {border-radius: 10px;}
-.boxArea .boxLabel input:checked+.box {border: 2px solid var(--red);}
+/* box */
+.box input[type="checkbox"] { display: none; }
+/* .box {display: flex; gap: 40px; justify-content: left; flex-wrap: wrap;} */
+.box {display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; max-width:1130px; margin: 0 auto;}
+.box .in {padding: 20px;}
+.box .boxLabel {display: inline-block; background-color: #fff; max-width: 350px; width: 100%; border-radius: 10px; box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 20%);}
+.box .box {border-radius: 10px;}
+.box .boxLabel input:checked+.box {border: 2px solid var(--red);}
 .box {position: relative;}
 .box .title {border-bottom: 1px solid var(--gray);line-height: 1;}
 .box .title input {width: 100%; padding: 0; font-size: 1.37rem; line-height: 1.5;  font-weight: 500; }
@@ -71,7 +71,7 @@ header h1 {font-size: 2.5rem; font-weight: bold;}
 
 
 @media only all and (max-width:1179px){
-	.boxArea {gap:40px 20px; max-width:740px;}
+	.box {gap:40px 20px; max-width:740px;}
 }
 @media only all and (max-width:779px){
 }
@@ -80,5 +80,5 @@ header h1 {font-size: 2.5rem; font-weight: bold;}
 
 }
 @media only all and (max-width:759px) {/*기본 759 + 패딩 15 이하 모바일 */
-	.boxArea .in {padding: 15px;}
+	.box .in {padding: 15px;}
 }
